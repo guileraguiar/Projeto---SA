@@ -1,0 +1,17 @@
+
+
+.titulo{
+    width: 300px;
+
+}
+
+.fundo{
+    background: url(../images/fundo.jpg);
+    filter: blur(90);
+    position: absolute;
+    
+}
+
+.fonteLabel{
+    font-family: 'Press Start 2P', cursive;
+}
