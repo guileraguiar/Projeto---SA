@@ -17,7 +17,13 @@
 }
 
 .fundobranco{
-    background-color:white;
+    background-color:#3F3F40;
     border-radius:10px;
     padding:10px;
+    opacity: 0.9;
+}
+
+.colortonav{
+    background-color:#3F3F40;
+    opacity: 0.9;
 }

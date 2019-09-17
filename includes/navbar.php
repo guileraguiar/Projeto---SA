@@ -14,8 +14,8 @@
       <span class="text-muted">Toggleable via the navbar brand.</span>
     </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark" style="opacity:0.7;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-dark colortonav" style="opacity:0.7;">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
