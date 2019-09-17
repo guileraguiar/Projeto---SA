@@ -32,7 +32,7 @@ include '../includes/navbar.php';
                         <label for="pass" style="margin-left:515px;"  class="text-light fonteLabel">Senha</label>
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
-                        <button type="submit" class="btn btn-light mx-auto fonteLabel">Enviar</button>
+                        <button type="submit" style="margin-left:500px;"class="btn btn-light mx-auto fonteLabel">Enviar</button>
 
                     </div>
                 </div>
