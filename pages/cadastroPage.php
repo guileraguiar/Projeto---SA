@@ -26,13 +26,13 @@ include '../includes/navbar.php';
                 <div class="form-row">
                     <div class="col">    
 
-                        <label for="user" class="text-dark fonteLabel" style="margin-left:190px;">Usuário</label>
+                        <label for="user" class="text-light fonteLabel" style="margin-left:190px;">Usuário</label>
                         <input type="text" class="form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
 
-                        <label for="pass" class="text-dark fonteLabel" style="margin-left:200px;">Senha</label>
+                        <label for="pass" class="text-light fonteLabel" style="margin-left:200px;">Senha</label>
                         <input type="password" class="form-control" minlength="6" placeholder="Senha" name="pass" required><br>
 
-                        <label for="email" class="text-dark fonteLabel" style="margin-left:200px;">E-mail</label>
+                        <label for="email" class="text-light fonteLabel" style="margin-left:200px;">E-mail</label>
                         <input type="email" class="form-control" placeholder="seuemail@exemplo.com" name="email" required><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
