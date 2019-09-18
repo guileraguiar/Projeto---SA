@@ -17,14 +17,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">
-          <i class="fab fa-facebook-f"></i> Facebook
+        <a class="nav-link" href="../../pages/user/login_page.php">
+          <i class="fab fa-facebook-f"></i>Login
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fab fa-instagram"></i> Instagram</a>
+        <a class="nav-link" href="../../pages/user/register_page.php">
+          <i class="fab fa-instagram"></i>Cadastrar-se</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
