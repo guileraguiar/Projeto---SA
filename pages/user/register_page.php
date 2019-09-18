@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,3 +49,7 @@ include '../../includes/navbar.php';
     </div>
 </body>
 </html>
+<?php if (isset($_SESSION["registerErro"])){
+                echo $_SESSION["registerErro"];
+                unset($_SESSION["registerErro"]);
+                }?>
