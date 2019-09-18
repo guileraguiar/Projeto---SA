@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro</title>
+    <title>Criação Personagem</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/imagem.css">
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
@@ -33,18 +33,15 @@ include '../../includes/navbar.php';
 
 ?>
 </head>
-<header>
-
-</header>
 <body style="background-image: url(../../images/fundo.png); ">
-    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
-        <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
-            <form action="../includes/register_validation.php" method="post">
-                <div class="form-row">
+    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+    <div class="container fundobranco" style="width:1000px;">   
+            <form action="../../includes/register_validation.php"  method="post">
+            <div class="form-row">
                     <div class="col">    
 
-                        <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" class="form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
+                        <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
+                        <input type="text" class="form-control" maxlength="10" placeholder="ex: NoobMaster69" name="nickname" required width="10px"><br>
 
                         <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
                         <input type="password" class="form-control" minlength="6" placeholder="Senha" name="pass" required><br>

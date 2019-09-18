@@ -9,7 +9,7 @@
     <body>
        <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color colortonav">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"><img src="../../images/logo.png" width="150px"</img></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
     aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,7 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">
-          <i class="fab fa-facebook-f"></i> Facebook
+          <i class="fab fa-facebook-f"></i> Cadastro
           <span class="sr-only">(current)</span>
         </a>
       </li>
