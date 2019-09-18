@@ -22,7 +22,7 @@ include '../../includes/navbar.php';
 <body style="background-image: url(http://pm1.narvii.com/6820/7ddf33ce1599382400d041d296b0879cb397447e_00.jpg); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
         <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
-            <form action="../actions/register_validation.php" method="post">
+            <form action="../../actions/register_validate.php" method="post">
                 <div class="form-row">
                     <div class="col">    
 
