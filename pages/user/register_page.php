@@ -46,10 +46,10 @@ include '../../includes/navbar.php';
                     </div>
                 </div>
             </form>
-    </div>
-</body>
-</html>
-<?php if (isset($_SESSION["registerErro"])){
+            <?php if (isset($_SESSION["registerErro"])){
                 echo $_SESSION["registerErro"];
                 unset($_SESSION["registerErro"]);
                 }?>
+    </div>
+</body>
+</html>
