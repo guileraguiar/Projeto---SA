@@ -23,8 +23,8 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fab fa-instagram"></i> Instagram</a>
+        <a class="nav-link" href="../../pages/user/register_page.php">
+          <i class="fab fa-instagram"></i>Cadastrar-se</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"

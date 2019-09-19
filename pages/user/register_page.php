@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +42,7 @@ include '../../includes/navbar.php';
 <body style="background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
         <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
-            <form action="../includes/register_validation.php" method="post">
+            <form action="../../actions/register_validate.php" method="post">
                 <div class="form-row">
                     <div class="col">    
 
@@ -50,7 +53,7 @@ include '../../includes/navbar.php';
                         <input type="password" class="form-control" minlength="6" placeholder="Senha" name="pass" required><br>
                         
                         <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                        <input type="password" class="form-control" minlength="6" placeholder="Senha" name="pass" required><br>
+                        <input type="password" class="form-control" minlength="6" placeholder="Senha" name="cpass" required><br>
 
                         <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
                         <input type="email" class="form-control" placeholder="seuemail@exemplo.com" name="email" required><br>
@@ -60,6 +63,10 @@ include '../../includes/navbar.php';
                     </div>
                 </div>
             </form>
+            <?php if (isset($_SESSION["registerErro"])){
+                echo $_SESSION["registerErro"];
+                unset($_SESSION["registerErro"]);
+                }?>
     </div>
 </body>
 </html>

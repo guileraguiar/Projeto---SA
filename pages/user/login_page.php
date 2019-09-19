@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,21 +42,27 @@ include '../../includes/navbar.php';
 <body style="background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:500px;">   
-            <form action="../../includes/register_validation.php"  method="post">
+            <form action="../../actions/login_validate.php"  method="post">
                 <div class="form-row">
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
+                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Email" name="email" required><br>
 
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Entrar</button>
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar">Entrar</button>
 
                     </div>
                 </div>
             </form>
+            <p class="text-center text-danger">
+                <?php if (isset($_SESSION["loginErro"])){
+                echo $_SESSION["loginErro"];
+                unset($_SESSION["loginErro"]);
+                }?>
+            </p>
     </div>
 </body>
 </html>
