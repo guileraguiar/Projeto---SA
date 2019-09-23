@@ -3,13 +3,19 @@
     session_start();
 
     $emailUser = isset($_POST["email"])?($_POST["email"]):"";
-    $senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
+    $User = isset($_POST["user"])?($_POST["user"]):"";
+    $senhaUser = md5((isset($_POST["pass"])?($_POST["pass"]):""));
 
     $local = "localhost";
     $userRoot = "root";
-    $passRoot = "root";
-    $db_name = "db_agonizingvillage";
+    $passRoot = "";
+    $db_name = "db_agonizingVillage";
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
+
+
+    //configuração
+    $link = "../pages/user/login_page.php";
+    $msg = "Erro inesperado"; 
 ?>
 
 <!-- redimensiona a pagina em 5 segunda (1000 milisegundos) caso login correto, ou incorreto-->
@@ -28,19 +34,21 @@
 <?php
 
     //consulta com o banco 
-        $select = mysqli_query($conexao,"SELECT * FROM usuario WHERE email = '$emailUser' AND senha = '$senhaUser'") or die(mysqli_error());
+        $select = mysqli_query($conexao,"SELECT * FROM usuario WHERE user = '$User' AND senha = '$senhaUser'") or die(mysqli_error());
         $rowsBD = mysqli_num_rows($select);
-
-    if ($rowsBD==1){
-        $_SESSION["email"] = $_POST["email"];
-        $_SESSION["pass"] = $_POST["pass"];
         
+    if ($rowsBD==1){
+        $_SESSION["user"] = $_POST["user"];
+        $_SESSION["pass"] = $_POST["pass"];
+
+        $link = "../menu.php";
     }else{
         echo "<center>Usuário ou senha incorretos!</center>";
         echo "<script>loginfailed()</script>";
+        $msg = "Usuário ou senha incorretos.";
     }
 
-    header("Location:../menu.php");
+    header("Location: $link?msg=$msg");
    
 
     mysqli_close($conexao);
