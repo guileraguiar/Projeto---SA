@@ -12,7 +12,7 @@
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
 ?>
 
-<!-- redimensiona a pagina em 5 segunda (5000 milisegundos) caso login correto, ou incorreto-->
+<!-- redimensiona a pagina em 5 segunda (1000 milisegundos) caso login correto, ou incorreto-->
 <html>
     <head>
         <title>autentication</title>
@@ -28,10 +28,10 @@
 <?php
 
     //consulta com o banco 
-        $select = mysqli_query($conexao,"SELECT * FROM usuario WHERE  email = '$emailUser' AND senha = '$senhaUser'") or die(mysqli_error());
+        $select = mysqli_query($conexao,"SELECT * FROM usuario WHERE email = '$emailUser' AND senha = '$senhaUser'") or die(mysqli_error());
         $rowsBD = mysqli_num_rows($select);
 
-      if (($emailUser != "") && ($senhaUser != "")){
+    if ($rowsBD==1){
         $_SESSION["email"] = $_POST["email"];
         $_SESSION["pass"] = $_POST["pass"];
         
