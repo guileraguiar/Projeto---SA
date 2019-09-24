@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
     <title>Menu</title>
     
     <!-- CSS //-->
@@ -49,5 +50,11 @@
             <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
             <button type="submit" class="btn btn-white mx-auto d-block" href="#">Login</button>
     </div>
+=======
+    <title>Document</title>
+</head>
+<body>
+    <h1>asdas</h1>
+>>>>>>> master
 </body>
 </html>

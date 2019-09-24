@@ -56,8 +56,13 @@ include '../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
+<<<<<<< HEAD
                         <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Email" name="email" required><br>
             
+=======
+                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Email" name="user" required><br>
+
+>>>>>>> master
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
@@ -67,10 +72,11 @@ include '../../includes/navbar.php';
                 </div>
             </form>
             <p class="text-center text-danger">
-                <?php if (isset($_SESSION["loginErro"])){
-                echo $_SESSION["loginErro"];
-                unset($_SESSION["loginErro"]);
-                }?>
+                <?php 
+                    if(isset($_GET['msg'])){
+                        echo $_GET['msg'];
+                    }
+                ?>
             </p>
     </div>
 </body>
