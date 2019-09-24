@@ -6,14 +6,14 @@ $senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
 $csenhaUser = MD5(isset($_POST["cpass"])?($_POST["cpass"]):"");
 $emailUser = isset($_POST["email"])?($_POST["email"]):"";
 
-$conexao = mysqli_connect("localhost", "root", "", "db_agonizingVillage");
+$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingVillage");
 $select = mysqli_query($conexao,"SELECT * FROM usuario");
 // $arrayUsers = mysqli_fetch_all($select,MYSQLI_ASSOC);
 // print_r($arrayUsers);
 echo $emailUser;
 if($senhaUser == $csenhaUser){
     
-    $query = mysqli_query($conexao,"INSERT INTO usuario VALUES('email = $emailUser',user = '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
+    $query = mysqli_query($conexao,"INSERT INTO usuario VALUES('$emailUser', '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
 }else{
     
     // if((isset($_POST["email"])) && (isset($_POST["pass"]))){
