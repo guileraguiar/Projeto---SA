@@ -48,7 +48,6 @@
             <button type="submit" class="btn btn-white mx-auto d-block" href="#">Cadastrar</button>
             <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
             <button type="submit" class="btn btn-white mx-auto d-block" href="#">Login</button>
-            <h1>a</h1>
     </div>
 </body>
 </html>

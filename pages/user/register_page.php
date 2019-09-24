@@ -72,10 +72,13 @@ include '../../includes/navbar.php';
                     </div>
                 </div>
             </form>
-            <?php if (isset($_SESSION["registerErro"])){
-                echo $_SESSION["registerErro"];
-                unset($_SESSION["registerErro"]);
-                }?>
+            <p class="text-center text-danger">
+            <?php 
+                    if(isset($_GET['msg'])){
+                        echo $_GET['msg'];
+                    }
+                ?>
+            </p>
     </div>
 </body>
 </html>
