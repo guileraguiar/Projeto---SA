@@ -7,6 +7,8 @@ $emailUser = isset($_POST["email"])?($_POST["email"]):"";
 
 $conexao = mysqli_connect("localhost", "root", "root", "db_agonizingVillage");
 $select = mysqli_query($conexao,"SELECT * FROM usuario");
+$conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+$select = mysqli_query($conexao,"SELECT * FROM users");
 // $arrayUsers = mysqli_fetch_all($select,MYSQLI_ASSOC);
 // print_r($arrayUsers);
 
@@ -27,17 +29,10 @@ if(mysql_num_rows($verifyEmail) == 1){
   }
 
 if($senhaUser == $csenhaUser){
-    
-    $query = mysqli_query($conexao,"INSERT INTO usuario VALUES('$emailUser', '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
-    $linkError = "../menu.php";
+    $query = mysqli_query($conexao,"INSERT INTO users VALUES('$emailUser', '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
 }else{
-    
-    // if((isset($_POST["email"])) && (isset($_POST["pass"]))){
-    //     $escapeEmail = mysqli_real_escape_string($conn, $_POST['email']);
-    //     $escapeUsuario = mysqli_real_escape_string($conn, $_POST['pass']);
-    // }else{
-        echo "<center>senhas não coincidem</center>";
-        $ConfirmationErrorMSG = "Senhas não coincidem";
+    $_SESSION['registerErro'] = "Senhas nao conferem";
+    header("Location:../pages/user/register_page.php");
 }
 header("Location: $linkError?msg=$ConfirmationErrorMSG");
 mysqli_close($conexao);
