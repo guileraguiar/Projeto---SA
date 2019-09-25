@@ -34,10 +34,11 @@
         </a>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
+          aria-haspopup="true" aria-expanded="true">
           <i class="fas fa-user"></i> Perfil </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
           <a class="dropdown-item" href="#">Minha Conta</a>
+          <a class="dropdown-item" href="#">Meu Personagem</a>
           <a class="dropdown-item" href="#">Log out</a>
         </div>
       </li>

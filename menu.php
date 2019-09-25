@@ -43,12 +43,19 @@
 
 </head>
 <body style="background-image: url(images/fundo.png); ">
+<img src="images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
     <div class="container fundobranco" style="width:1000px; margin-bottom:50px;">
         <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
-            <button type="submit" class="btn btn-white mx-auto d-block" href="#">Cadastrar</button>
+            <button type="submit" class="btn btn-white mx-auto d-block" style=":" href="#">Cadastrar</button>
             <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
             <button type="submit" class="btn btn-white mx-auto d-block" href="#">Login</button>
-            <h1>a</h1>
+            
     </div>
+
 </body>
+<div class="py-2 bg-dark text-white-50 footer">
+    <div class="text-center">
+      <small>Copyright &copy; SteelFreak™</small>
+    </div>
+  </div>
 </html>

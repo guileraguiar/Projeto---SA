@@ -53,30 +53,56 @@ include '../../includes/navbar.php';
 
                         <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
                         <input type="text" class="form-control" maxlength="10" placeholder="ex: NoobMaster69" name="nickname" required width="10px"><br>
-
+                        <center><label for="user" class="text-light fonteLabel">Escolha sua Raça</label></center>
                         <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Opções</label>
+                            <label class="input-group-text" for="inputGroupSelect01">Opções de Raça</label>
                         </div>
                         <select class="custom-select" id="inputGroupSelect01" required>
                             <option selected>Escolher...</option>
-                            <option id="1">Um</option>
-                            <option value="2">Dois</option>
-                            <option value="3">Três</option>
+                            <option id="elfo">Elfo (Flex)</option>
+                            <option value="orc">Orc (Tanque)</option>
+                            <option value="mago">Mago (Dano Mágico)</option>
+                            <option value="humano">Humano (Dano Verdadeiro)</option>
                         </select>
                         </div>
                         
-                        <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                        <input type="password" class="form-control" minlength="6" placeholder="Senha" name="pass" required><br>
+                        <center><label for="user" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
+                        <div class="card-deck">
+                        
+                            <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../../images/personagens/character1.gif" alt="Imagem de capa do card">
+                            <div class="card-body">
+                            </div>
+                            </div>
 
-                        <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
-                        <input type="email" class="form-control" placeholder="seuemail@exemplo.com" name="email" required><br>
+                            <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../../images/personagens/character2.gif" alt="Imagem de capa do card">
+                            <div class="card-body">
+                            </div>
+                            </div>
 
+                            <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../../images/personagens/character3.gif" alt="Imagem de capa do card">
+                            <div class="card-body">
+                            </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <br>
+                    
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 
                     </div>
                 </div>
             </form>
     </div>
+
+<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
+<!--    <div class="text-center">//-->
+<!--      <small>Copyright &copy; SteelFreak™</small>//-->
+<!--    </div>//-->
+<!--</div>//-->
 </body>
 </html>

@@ -26,3 +26,18 @@ h4{
     font-family: 'Press Start 2P', cursive;
 
 }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #EC00FF;
+   border-top: 3px solid #EC00FF;   
+  }
+
+  .character{
+    height: 10%;
+
+
+
+  }

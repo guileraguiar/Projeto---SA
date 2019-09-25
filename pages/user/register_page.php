@@ -76,6 +76,11 @@ include '../../includes/navbar.php';
                 echo $_SESSION["registerErro"];
                 unset($_SESSION["registerErro"]);
                 }?>
-    </div>
+</div>
+<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
+<!--    <div class="text-center">//-->
+<!--      <small>Copyright &copy; SteelFreak™</small>//-->
+<!--    </div>//-->
+<!--</div>//-->
 </body>
 </html>
