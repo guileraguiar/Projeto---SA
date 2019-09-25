@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- sucesso ao cadastrar-->
+<script type="text/javascript">
+        setTimeout(function success(){ alert("Usuário cadastrado com sucesso!!"); },0);
+        </script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu</title>
-    
     <!-- CSS //-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">

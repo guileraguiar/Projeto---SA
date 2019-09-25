@@ -10,7 +10,7 @@
     $userRoot = "root";
     $passRoot = "root";
     $db_name = "db_agonizingVillage";
-    $passRoot = "";
+    $passRoot = "riit";
     $db_name = "db_agonizingvillage";
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
 
@@ -33,6 +33,7 @@
     </head>
     <body>
     </body>
+</html>
 <?php
 
     //consulta com o banco 
