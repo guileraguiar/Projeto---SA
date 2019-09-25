@@ -23,7 +23,8 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/user/register_page.php">
+        <a class="nav-link" href="index.php?pages/user/register_page.php">
+        <!-- index.php?pagina=orcamentos -->
           <i class="fab fa-facebook-f"></i> Cadastro
         </a>
       </li>
