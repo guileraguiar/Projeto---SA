@@ -60,10 +60,10 @@ include '../../includes/navbar.php';
                         </div>
                         <select class="custom-select" id="inputGroupSelect01" required>
                             <option selected>Escolher...</option>
-                            <option id="elfo">Elfo (Flex)</option>
+                            <option id="elfo">Elfo (Dano Verdadeiro)</option>
                             <option value="orc">Orc (Tanque)</option>
                             <option value="mago">Mago (Dano Mágico)</option>
-                            <option value="humano">Humano (Dano Verdadeiro)</option>
+                            <option value="humano">Humano (Flex)</option>
                         </select>
                         </div>
                         
@@ -73,18 +73,21 @@ include '../../includes/navbar.php';
                             <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="../../images/personagens/character1.gif" alt="Imagem de capa do card">
                             <div class="card-body">
+                            <button type="submit" name="personagem" value="person1" class="btn btn-light mx-auto d-block">Selecionar</button>
                             </div>
                             </div>
 
                             <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="../../images/personagens/character2.gif" alt="Imagem de capa do card">
                             <div class="card-body">
+                            <button type="submit" name="personagem" value="person2" class="btn btn-light mx-auto d-block">Selecionar</button>
                             </div>
                             </div>
 
                             <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="../../images/personagens/character3.gif" alt="Imagem de capa do card">
                             <div class="card-body">
+                            <button type="submit" name="personagem" value="person3" class="btn btn-light mx-auto d-block">Selecionar</button>
                             </div>
                             </div>
                             
@@ -92,17 +95,17 @@ include '../../includes/navbar.php';
                         
                         <br>
                     
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
+                        <button type="submit" name="enviar" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 
                     </div>
                 </div>
             </form>
     </div>
 
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
+    <div class="py-3 bg-dark text-white-50 footer">
+    <div class="text-center">
+      <small>Copyright &copy; SteelFreak™</small>
+    </div>
+</div>
 </body>
 </html>
