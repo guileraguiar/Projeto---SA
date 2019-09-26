@@ -45,11 +45,17 @@
 <body style="background-image: url(images/fundo.png); ">
 <img src="images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
     <div class="container fundobranco" style="width:1000px; margin-bottom:50px;">
+        <br>
         <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
-            <button type="submit" class="btn btn-white mx-auto d-block" style=":" href="#">Cadastrar</button>
-            <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
-            <button type="submit" class="btn btn-white mx-auto d-block" href="#">Login</button>
-            
+        <form action="http://localhost/SteelFreak/pages/user/register_page.php">
+        <button type="onclick" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Cadastrar</button>
+            <br>
+        </form>
+        <form action="http://localhost/SteelFreak/pages/user/login_page.php">
+        <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
+        <button type="submit" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/login_page.php">Login</button>
+        </form>
+        <br>
     </div>
 
 </body>
