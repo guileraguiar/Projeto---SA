@@ -72,6 +72,9 @@ include '../../includes/navbar.php';
                     </div>
                 </div>
             </form>
+            
+            <!-- <a href="mailto:felipe.machado1@outlook.com?cc=felipe.machado1@live.com&amp;subject=Teste%20Super%20Testado&amp;body=O%20Carai">Enviar Email para confirmacao</a> -->
+            
             <?php if (isset($_SESSION["registerErro"])){
                 echo $_SESSION["registerErro"];
                 unset($_SESSION["registerErro"]);

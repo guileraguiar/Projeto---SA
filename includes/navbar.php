@@ -43,6 +43,8 @@
           <a class="dropdown-item" href="#">Minha Conta</a>
           <a class="dropdown-item" href="#">Meu Personagem</a>
           <a class="dropdown-item" href="#">Log out</a>
+
+          
         </div>
       </li>
     </ul>
