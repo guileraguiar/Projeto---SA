@@ -10,7 +10,7 @@
     $userRoot = "root";
     $passRoot = "root";
     $db_name = "db_agonizingVillage";
-    $passRoot = "riit";
+    $passRoot = "root";
     $db_name = "db_agonizingvillage";
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
 
@@ -37,17 +37,16 @@
 <?php
 
     //consulta com o banco 
-        $select = mysqli_query($conexao,"SELECT * FROM usuario WHERE user = '$User' AND senha = '$senhaUser'") or die(mysqli_error());
+        $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$User' AND u_pass = '$senhaUser'") or die(mysqli_error());
         $rowsBD = mysqli_num_rows($select);
         
     if ($rowsBD==1){
         $_SESSION["user"] = $_POST["user"];
         $_SESSION["pass"] = $_POST["pass"];
 
-        $link = "../menu.php";
+        $link = "../menu.php?code=777";
     }else{
         echo "<center>Usuário ou senha incorretos!</center>";
-        echo "<script>loginfailed()</script>";
         $msg = "Usuário ou senha incorretos.";
     }
 

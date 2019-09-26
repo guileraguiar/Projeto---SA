@@ -17,37 +17,21 @@ $linkError = "../pages/user/register_page.php";
 $ConfirmationErrorMSG = "erro inesperado"; 
 
 echo $emailUser;
-?>
-<html>
-    <head>
-        <title>autentication</title>
-        <script type="text/javascript">
-
-        function emailfailed(){
-            setTimeout("window.location='../pages/user/login_page.php'",1000);
-        }
-        </script>
-    </head>
-    <body>
-    </body>
-</html>
-<?php
 //verifica se email a ser cadastrado já existe
 
-if ($_GET["email"]==$emailUser){
-    $query = mysqli_query($conexao,"SELECT * FROM users WHERE email='$emailUser'");
-    $numeros = mysqli_num_rows($query);
-        if ($numeros>"0"){
-        $emailError = "E-mail já cadastrado!!";
-        }
-        header("Location: $linkError?msg=$emailError");
-    exit;
-    }
+//if($emailUser != ""){
+ //   $query = mysqli_query($conexao,"SELECT * FROM users WHERE email='$emailUser'");
+ //   $numeros = mysql_affected_rows($query);
+ //   if($numeros ==){
+  //      $emailError = "E-mail já cadastrado!!";
+ //       header("Location: $linkError?msg=$emailError");
+  //      exit;
+  //      }
+//}
 
 if($senhaUser == $csenhaUser){
     $query = mysqli_query($conexao,"INSERT INTO users VALUES('$emailUser', '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
-    echo "<script>function success()</script>";
-    $linkError = "../menu.php";
+    $linkError = "../pages/user/login_page.php?code=254";
 }else{
     header("Location:../pages/user/register_page.php");
     $ConfirmationErrorMSG = "Senhas não coincidem";

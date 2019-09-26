@@ -43,13 +43,7 @@ session_start();
     
     <?php 
 include '../../includes/navbar.php';
-    if(isset($_GET["code"])){
-        $erro = $_GET["code"];
-        
-            if($erro == 254){
-                echo "<script>alert('Usuário registrado com sucesso');</script>";
-            }
-        }
+
 ?>
 </head>
 <header>
@@ -57,30 +51,10 @@ include '../../includes/navbar.php';
 <body style="background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:500px;">   
-            <form action="../../actions/login_validate.php"  method="post">
-                <div class="form-row">
-                    <div class="col">    
-
-                        <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-            
-                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Email" name="user" required><br>
-
-                        <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
-
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar">Entrar</button>
-
-                    </div>
-                </div>
-            </form>
-            <p class="text-center text-danger">
-                <?php 
-                    if(isset($_GET['msg'])){
-                        echo $_GET['msg'];
-                    }
-                ?>
-            </p>
-            
+        <h1 class=" mx-auto d-block fonteLabel">SENHA ALTERADA COM SUCESSO!!</h1>
+        <form action="http://localhost/SteelFreak/pages/user/login_page.php">
+            <center><button class="btn btn-light mx-auto d-block fonteLabel" type="submit">voltar</button></center>
+        </form>
     </div>
 </body>
 </html>
