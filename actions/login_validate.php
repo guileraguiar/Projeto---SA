@@ -1,7 +1,5 @@
 <?php
     //conexao com o banco de dados 
-    session_start();
-
     $emailUser = isset($_POST["email"])?($_POST["email"]):"";
     $User = isset($_POST["user"])?($_POST["user"]):"";
     $senhaUser = md5((isset($_POST["pass"])?($_POST["pass"]):""));
@@ -17,9 +15,8 @@
     $link = "../pages/user/login_page.php";
     $msg = "Erro inesperado"; 
 ?>
-
 <!-- redimensiona a pagina em 5 segunda (1000 milisegundos) caso login correto, ou incorreto-->
-<html>
+<!-- <html>
     <head>
         <title>autentication</title>
         <script type="text/javascript">
@@ -31,25 +28,31 @@
     </head>
     <body>
     </body>
-</html>
+</html>-->
 <?php
-
     //consulta com o banco 
-        $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$User' AND u_pass = '$senhaUser'") or die(mysqli_error());
-        $rowsBD = mysqli_num_rows($select);
-        
-    if ($rowsBD==1){
-        $_SESSION["user"] = $_POST["user"];
-        $_SESSION["pass"] = $_POST["pass"];
-
-        $link = "../menu.php?code=777";
+    if ((isset($_POST["user"]) && isset($_POST["pass"])) || isset($_SESSION["userLogado"])){
+        if (isset($_POST["user"]) && isset($_POST["pass"])){
+            $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$User' AND u_pass = '$senhaUser'") or die(mysqli_error());
+            if (mysqli_num_rows($select) != 0){
+                if ($select = mysqli_fetch_assoc($select)){
+                    $_SESSION["userLogado"] = $select['id_user'];
+                    header("Location:login_validate.php");
+                }else{
+                    $msg = "Usuario ou senha incorretos!!";
+                    header("Location: $link?msg=$msg");
+                }
+            }else{
+                $msg = "Usuario ou senha incorretos!!";
+                header("Location: $link?msg=$msg"); 
+            }
+        }else{
+            $QueryLogado = mysqli_fetch_assoc(mysqli_query($conexao,"SELECT id_user, u_user, u_pass FROM users"));
+            echo "Bem vindo <b>".$QueryLogado['u_user']."</b>";
+        }
     }else{
-        echo "<center>Usuário ou senha incorretos!</center>";
-        $msg = "Usuário ou senha incorretos.";
+        header('Location: ../menu.php');
     }
-
-    header("Location: $link?msg=$msg");
-   
 
     mysqli_close($conexao);
   

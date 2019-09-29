@@ -13,31 +13,31 @@ $select = mysqli_query($conexao,"SELECT * FROM users");
 // print_r($arrayUsers);
 
 //redimensionamento do erro
-$linkError = "../pages/user/register_page.php";
+$link = "../pages/user/register_page.php";
 $ConfirmationErrorMSG = "erro inesperado"; 
 
 echo $emailUser;
 //verifica se email a ser cadastrado já existe
 
-if($emailUser != ""){
-   $query = mysqli_query($conexao,"SELECT * FROM users WHERE email='$emailUser'");
-   $numeros = mysqli_num_rows($query);
-   if($numeros == $emailUser ){
-        $emailError = "E-mail já cadastrado!!";
-       header("Location: $linkError?msg=$emailError");
-        exit;
-        }
-}
+//if($emailUser != ""){
+ //  $query = mysqli_query($conexao,"SELECT * FROM users WHERE email='$emailUser'");
+  // $numeros = mysqli_num_rows($query);
+ //  if($numeros == $emailUser ){
+  //      $emailError = "E-mail já cadastrado!!";
+   //    header("Location: $linkError?msg=$emailError");
+   //     exit;
+   //     }
+//}
 
 if($senhaUser == $csenhaUser){
     $query = mysqli_query($conexao,"INSERT INTO users VALUES('$emailUser', '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
-    $linkError = "../pages/user/login_page.php?code=254";
+    $link = "../pages/user/login_page.php?code=254";
 }else{
     header("Location:../pages/user/register_page.php");
     $ConfirmationErrorMSG = "Senhas não coincidem";
 }
 
-header("Location: $linkError?msg=$ConfirmationErrorMSG");
+header("Location: $link?msg=$ConfirmationErrorMSG");
 mysqli_close($conexao);
 ?>
 

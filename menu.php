@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- sucesso ao cadastrar-->
+<?php
+session_start();
 
+if(isset($_SESSION['userLogado'])){
+	include('actions/login_validate.php');
+}else{
+	include('../pages/user/login_page.php');
+}
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
