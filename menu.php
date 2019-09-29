@@ -7,7 +7,7 @@ session_start();
 if(isset($_SESSION['userLogado'])){
 	include('actions/login_validate.php');
 }else{
-	include('../pages/user/login_page.php');
+    include("Location: pages/user/login_page.php");
 }
 ?>
 <head>
