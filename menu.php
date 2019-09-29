@@ -55,9 +55,6 @@
     <div class="container fundobranco" style="width:1000px; margin-bottom:50px;">
         <br>
         <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
-            <button type="submit" class="btn btn-white mx-auto d-block" href="#">Cadastrar</button>
-            <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
-            <button type="submit" class="btn btn-white mx-auto d-block" href="#">Login</button>
         <form action="http://localhost/SteelFreak/pages/user/register_page.php">
         <button type="onclick" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Cadastrar</button>
             <br>
@@ -68,7 +65,6 @@
         </form>
         <br>
     </div>
-
 </body>
 <div class="py-2 bg-dark text-white-50 footer">
     <div class="text-center">

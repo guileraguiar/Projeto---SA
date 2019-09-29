@@ -8,10 +8,8 @@
 
     $local = "localhost";
     $userRoot = "root";
-    $passRoot = "root";
+    $passRoot = "";
     $db_name = "db_agonizingVillage";
-    $passRoot = "root";
-    $db_name = "db_agonizingvillage";
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
 
 
