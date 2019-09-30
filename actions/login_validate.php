@@ -1,15 +1,14 @@
 <?php
-    //conexao com o banco de dados 
-    session_start();
 
+    //conexao com o banco de dados 
     $emailUser = isset($_POST["email"])?($_POST["email"]):"";
     $User = isset($_POST["user"])?($_POST["user"]):"";
     $senhaUser = md5((isset($_POST["pass"])?($_POST["pass"]):""));
 
     $local = "localhost";
     $userRoot = "root";
-    $passRoot = "";
-    $db_name = "db_agonizingvillage";
+    $passRoot = "root";
+    $db_name = "db_agonizingVillage";
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
 
 
@@ -17,39 +16,30 @@
     $link = "../pages/user/login_page.php";
     $msg = "Erro inesperado"; 
 ?>
-
-<!-- redimensiona a pagina em 5 segunda (1000 milisegundos) caso login correto, ou incorreto-->
-<html>
-    <head>
-        <title>autentication</title>
-        <script type="text/javascript">
-
-        function loginfailed(){
-            setTimeout("window.location='../pages/user/login_page.php'",1000);
-        }
-        </script>
-    </head>
-    <body>
-    </body>
 <?php
-
     //consulta com o banco 
-        $select = mysqli_query($conexao,"SELECT * FROM usuario WHERE user = '$User' AND senha = '$senhaUser'") or die(mysqli_error());
-        $rowsBD = mysqli_num_rows($select);
-        
-    if ($rowsBD==1){
-        $_SESSION["user"] = $_POST["user"];
-        $_SESSION["pass"] = $_POST["pass"];
-
-        $link = "../menu.php";
+    if ((isset($_POST["user"]) && isset($_POST["pass"])) || (isset($_SESSION["userLogado"]))){
+        if (isset($_POST["user"]) && isset($_POST["pass"])){
+            $select1 = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$User' AND u_pass = '$senhaUser'") or die(mysqli_error());
+            if (mysqli_num_rows($select1) != 0){
+                if ($select = mysqli_fetch_assoc($select1)){
+                    $_SESSION["userLogado"] = $select['id_user'];
+                    header("Location:login_validate.php");
+                }else{
+                    $msg = "Usuario ou senha incorretos!!";
+                    header("Location: $link?msg=$msg");
+                }
+            }else{
+                $msg = "Usuario ou senha incorretos!!";
+                header("Location: $link?msg=$msg"); 
+            }
+        }else{
+            $QueryLogado = mysqli_fetch_assoc(mysqli_query($conexao,"SELECT id_user, u_user, u_pass FROM users"));
+            echo "<script>alert(' Bem vindo ".$QueryLogado['u_user']."!!');</script>";
+        }
     }else{
-        echo "<center>Usuário ou senha incorretos!</center>";
-        echo "<script>loginfailed()</script>";
-        $msg = "Usuário ou senha incorretos.";
+        header('Location: ../menu.php');
     }
-
-    header("Location: $link?msg=$msg");
-   
 
     mysqli_close($conexao);
   
