@@ -56,16 +56,16 @@ include '../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" class="form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
-
+                        <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Usuário" name="user" required><br>
+                        <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
                         <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" class="form-control" minlength="6" placeholder="Senha" name="pass" required><br>
+                        <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="pass" required><br>
                         
                         <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                        <input type="password" class="form-control" minlength="6" placeholder="Senha" name="cpass" required><br>
+                        <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="cpass" required><br>
 
                         <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
-                        <input type="email" class="form-control" placeholder="seuemail@exemplo.com" name="email" required><br>
+                        <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email" required><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 

@@ -5,9 +5,9 @@ $senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
 $csenhaUser = MD5(isset($_POST["cpass"])?($_POST["cpass"]):"");
 $emailUser = isset($_POST["email"])?($_POST["email"]):"";
 
-$conexao = mysqli_connect("localhost", "root", "", "db_agonizingVillage");
+$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingVillage");
 $select = mysqli_query($conexao,"SELECT * FROM usuario");
-$conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
 $select = mysqli_query($conexao,"SELECT * FROM users");
 // $arrayUsers = mysqli_fetch_all($select,MYSQLI_ASSOC);
 // print_r($arrayUsers);
