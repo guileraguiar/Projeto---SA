@@ -58,7 +58,7 @@ include '../../includes/navbar.php';
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">Opções de Raça</label>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01" required>
+                        <select class="custom-select" for="raca" id="inputGroupSelect01" required>
                             <option selected>Escolher...</option>
                             <option id="elfo">Elfo (Dano Verdadeiro)</option>
                             <option value="orc">Orc (Tanque)</option>
@@ -67,7 +67,7 @@ include '../../includes/navbar.php';
                         </select>
                         </div>
                         
-                        <center><label for="user" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
+                        <center><label for="foto" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
                         <div class="card-deck">
                         
                             <div class="card" style="width: 18rem;">
