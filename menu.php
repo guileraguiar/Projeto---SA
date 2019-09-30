@@ -16,6 +16,7 @@ if(isset($_SESSION['userLogado'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu</title>
     <!-- CSS //-->
+    bugbugubug
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">
    
