@@ -12,7 +12,7 @@
     <body>
        <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color colortonav">
-  <a class="navbar-brand" href="#"><img src="../../images/logo.png" width="150px"</img></a>
+  <a class="navbar-brand" href="http://localhost/SteelFreak/menu.php"><img src="http://localhost/SteelFreak/images/logo.png" width="150px"</img></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
     aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -40,8 +40,8 @@
           aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i> Perfil </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="#">Minha Conta</a>
-          <a class="dropdown-item" href="#">Meu Personagem</a>
+          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewprofile_page.php">Minha Conta</a>
+          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewcharacter_page.php">Meu Personagem</a>
           <a class="dropdown-item" href="#">Log out</a>
 
           
