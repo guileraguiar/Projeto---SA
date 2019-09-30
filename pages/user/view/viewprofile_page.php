@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Minha conta</title>
 
     <!-- CSS //-->
     <link rel="stylesheet" href="../../../css/bootstrap.min.css">
@@ -56,12 +56,12 @@ include '../../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" readonly="true" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block" maxlength="100" placeholder="Email" name="email" required><br>
+                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" maxlength="100" name="email" required><br>
             
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
+                        <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" minlength="6" name="pass" required><br>
 
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar">Entrar</button>
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Editar</button>
 
                     </div>
                 </div>

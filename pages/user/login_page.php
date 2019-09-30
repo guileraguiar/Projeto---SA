@@ -43,7 +43,13 @@ session_start();
     
     <?php 
 include '../../includes/navbar.php';
-
+    if(isset($_GET["code"])){
+        $erro = $_GET["code"];
+        
+            if($erro == 254){
+                echo "<script>alert('Usuário registrado com sucesso');</script>";
+            }
+        }
 ?>
 </head>
 <header>
@@ -56,7 +62,7 @@ include '../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Email" name="email" required><br>
+                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
             
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
@@ -73,6 +79,7 @@ include '../../includes/navbar.php';
                     }
                 ?>
             </p>
+            
     </div>
     
 <!--    <div class="py-3 bg-dark text-white-50 footer">//-->

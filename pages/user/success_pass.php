@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,16 +8,16 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro</title>
+    <title>Login</title>
 
     <!-- CSS //-->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/imagem.css">
-    
+
     <!-- Fontes //-->
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-    
+
     <!-- Icone //-->
     <link rel="apple-touch-icon" sizes="57x57" href="../../images/logo/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../../images/logo/apple-icon-60x60.png">
@@ -46,39 +47,14 @@ include '../../includes/navbar.php';
 ?>
 </head>
 <header>
-
 </header>
 <body style="background-image: url(../../images/fundo.png); ">
-    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
-        <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
-            <form action="../../actions/register_validate.php" method="post">
-                <div class="form-row">
-                    <div class="col">    
-
-                        <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Usuário" name="user" required><br>
-                        <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
-                        <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="pass" required><br>
-                        
-                        <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                        <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="cpass" required><br>
-
-                        <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
-                        <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email" required><br>
-
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
-
-                    </div>
-                </div>
-            </form>
-            <p class="text-center text-danger">
-            <?php 
-                    if(isset($_GET['msg'])){
-                        echo $_GET['msg'];
-                    }
-                ?>
-            </p>
+    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+    <div class="container fundobranco" style="width:500px;">   
+        <h1 class=" mx-auto d-block fonteLabel">SENHA ALTERADA COM SUCESSO!!</h1>
+        <form action="http://localhost/SteelFreak/pages/user/login_page.php">
+            <center><button class="btn btn-light mx-auto d-block fonteLabel" type="submit">voltar</button></center>
+        </form>
     </div>
 </body>
 </html>
