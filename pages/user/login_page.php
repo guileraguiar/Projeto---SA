@@ -68,7 +68,8 @@ session_start();
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar" value="logar">Entrar</button>
-                        <center><p>Esqueceu a senha?<a href="http://localhost/SteelFreak/pages/user/forgot_pass.php"> Clique aqui</a> para recupera-la!</p></center>
+                        <br>
+                        <center><p style="color:white;">Esqueceu a senha?<a href="http://localhost/SteelFreak/pages/user/forgot_pass.php"> Clique aqui</a> para recupera-la!</p></center>
 
                     </div>
                 </div>
@@ -83,10 +84,5 @@ session_start();
             
     </div>
     
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
 </body>
 </html>

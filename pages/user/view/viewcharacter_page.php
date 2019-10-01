@@ -69,11 +69,5 @@ include '../../../includes/navbar.php';
             <p class="text-center text-danger">
             </p>
     </div>
-    
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
 </body>
 </html>

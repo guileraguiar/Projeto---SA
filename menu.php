@@ -74,9 +74,4 @@
         <br>
     </div>
 </body>
-<div class="py-2 bg-dark text-white-50 footer">
-    <div class="text-center">
-      <small>Copyright &copy; SteelFreak™</small>
-    </div>
-  </div>
 </html>
