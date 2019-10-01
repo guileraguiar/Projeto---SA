@@ -68,7 +68,7 @@ session_start();
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar" value="logar">Entrar</button>
-
+aaaaaaaa
                     </div>
                 </div>
             </form>
