@@ -42,14 +42,14 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     
     <?php 
-include '../../includes/navbar.php';
-    if(isset($_GET["code"])){
-        $erro = $_GET["code"];
+ include '../../includes/navbar.php';
+//     if(isset($_GET["code"])){
+//         $erro = $_GET["code"];
         
-            if($erro == 254){
-                echo "<script>alert('Usuário registrado com sucesso');</script>";
-            }
-        }
+//             if($erro == 254){
+//                 echo "<script>alert('Usuário registrado com sucesso');</script>";
+//             }
+//         }
 ?>
 </head>
 <header>
@@ -67,6 +67,7 @@ include '../../includes/navbar.php';
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar" value="logar">Entrar</button>
                         <center><p>Esqueceu a senha?<a href="http://localhost/SteelFreak/pages/user/forgot_pass.php"> Clique aqui</a> para recupera-la!</p></center>
 
                     </div>
@@ -74,9 +75,9 @@ include '../../includes/navbar.php';
             </form>
             <p class="text-center text-danger">
                 <?php 
-                    if(isset($_GET['msg'])){
-                        echo $_GET['msg'];
-                    }
+                    // if(isset($_GET['msg'])){
+                    //     echo $_GET['msg'];
+                    // }
                 ?>
             </p>
             
