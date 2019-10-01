@@ -8,11 +8,11 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Meu personagem</title>
+    <title>Login</title>
 
     <!-- CSS //-->
-    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../css/imagem.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/imagem.css">
 
     <!-- Fontes //-->
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
@@ -42,32 +42,28 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     
     <?php 
-include '../../../includes/navbar.php';
-
+include '../../includes/navbar.php';
 ?>
 </head>
 <header>
 </header>
-<body style="background-image: url(../../../images/fundo.png); ">
-    <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+<body style="background-image: url(../../images/fundo.png); ">
+    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:500px;">   
-            <form action="#"  method="post">
+            <form action="../../actions/login_validate.php"  method="post">
                 <div class="form-row">
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
-                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="nickname"><br>
-            
-                        <center><label for="raca"  class="text-light fonteLabel">Raça</label></center>
-                        <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="raca"><br>
-
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_character.php" name="editar">Editar</button>
-
+                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user"><br>
+    
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Enviar</button>
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="cancel" href="http://localhost/SteelFreak/menu.php">Cancelar</button>
                     </div>
                 </div>
             </form>
-            <p class="text-center text-danger">
             </p>
+            
     </div>
     
 <!--    <div class="py-3 bg-dark text-white-50 footer">//-->
