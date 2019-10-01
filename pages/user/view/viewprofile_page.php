@@ -56,12 +56,15 @@ include '../../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" maxlength="100" name="email" required><br>
+                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="user" ><br>
             
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" minlength="6" name="pass" required><br>
+                        <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="pass"><br>
 
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Editar</button>
+                        <center><label for="user" class="text-light fonteLabel">E-mail</label></center>
+                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="email" ><br>
+
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_login.php" name="editar">Editar</button>
 
                     </div>
                 </div>

@@ -68,6 +68,9 @@ include '../../includes/navbar.php';
                         <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar">Entrar</button>
+                        <br>
+
+                        <center><p>Esqueceu a senha?<a href="http://localhost/SteelFreak/pages/user/forgot_pass.php"> Clique aqui</a> para recupera-la!</p></center>
 
                     </div>
                 </div>
