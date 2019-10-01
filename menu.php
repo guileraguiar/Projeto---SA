@@ -2,13 +2,13 @@
 <html lang="en">
 <!-- sucesso ao cadastrar-->
 <?php
-session_start();
+// session_start();
 
-if(isset($_SESSION['userLogado'])){
-	include('Location:actions/login_validate.php');
-}else{
-    include 'pages/user/login_page.php';
-}
+// if(isset($_SESSION['userLogado'])){
+// 	include('Location:actions/login_validate.php');
+// }else{
+//     include 'pages/user/login_page.php';
+// }
 ?>
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,6 @@ if(isset($_SESSION['userLogado'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu</title>
     <!-- CSS //-->
-    bugbugubug
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">
    

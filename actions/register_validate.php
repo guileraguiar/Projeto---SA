@@ -5,41 +5,48 @@ $senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
 $csenhaUser = MD5(isset($_POST["cpass"])?($_POST["cpass"]):"");
 $emailUser = isset($_POST["email"])?($_POST["email"]):"";
 
-$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingVillage");
-$select = mysqli_query($conexao,"SELECT * FROM usuario");
-$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
-$select = mysqli_query($conexao,"SELECT * FROM users");
-// $arrayUsers = mysqli_fetch_all($select,MYSQLI_ASSOC);
-// print_r($arrayUsers);
+$conexao = mysqli_connect("localhost", "root", "root","db_agonizingVillage") or die ("Erro");
+$query_select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$usuario' OR u_email='$emailUser'");
 
-//redimensionamento do erro
-$link = "../pages/user/register_page.php";
-$ConfirmationErrorMSG = "erro inesperado"; 
+$array = mysqli_fetch_assoc($query_select);
 
-echo $emailUser;
-//verifica se email a ser cadastrado já existe
+if($usuario == "" || $usuario == null){
+     echo"<script language='javascript' type='text/javascript'>
+     alert('O campo usuario deve ser preenchido');window.location.href='../pages/user/register_page.php';</script>";
 
-//if($emailUser != ""){
- //  $query = mysqli_query($conexao,"SELECT * FROM users WHERE email='$emailUser'");
-  // $numeros = mysqli_num_rows($query);
- //  if($numeros == $emailUser ){
-  //      $emailError = "E-mail já cadastrado!!";
-   //    header("Location: $linkError?msg=$emailError");
-   //     exit;
-   //     }
-//}
-
-if($senhaUser == $csenhaUser){
-    $query = mysqli_query($conexao,"INSERT INTO users VALUES('$emailUser', '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
-    $link = "../pages/user/login_page.php?code=254";
-}else{
-    header("Location:../pages/user/register_page.php");
-    $ConfirmationErrorMSG = "Senhas não coincidem";
 }
+elseif($array['u_user'] == $usuario){
 
-header("Location: $link?msg=$ConfirmationErrorMSG");
-mysqli_close($conexao);
+    echo"<script language='javascript' type='text/javascript'>
+    alert('O usuário cadastrado já existe!!'); window.location.href='../pages/user/register_page.php';</script>";
+  //  die();
+
+}
+elseif($array['u_email'] == $emailUser){
+
+    echo"<script language='javascript' type='text/javascript'>
+    alert('O email cadastrado já existe!!'); window.location.href='../pages/user/register_page.php';</script>";
+  //  die();
+
+}
+else{
+    $query = "INSERT INTO users (u_user,u_pass,u_email) VALUES ('$usuario','$senhaUser','$emailUser')";
+    $insert = mysqli_query($conexao, $query);
+        
+    if($insert){
+        echo"<script language='javascript' type='text/javascript'>
+        alert('O seu cadastro foi efetuado com sucesso!!');window.location.
+        href='../pages/user/login_page.php'</script>";
+    }else{
+        echo"<script language='javascript' type='text/javascript'>
+        alert('Não foi possível efetuar esse cadastro!!'); window.location.href='../pages/user/login_page.php'</script>";
+    }
+}
 ?>
+
+
+
+
 
 
 
