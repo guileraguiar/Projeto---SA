@@ -56,12 +56,12 @@ include '../../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
-                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" maxlength="100" name="nickname" required><br>
+                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="nickname"><br>
             
                         <center><label for="raca"  class="text-light fonteLabel">Raça</label></center>
-                        <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" minlength="6" name="raca" required><br>
+                        <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="raca"><br>
 
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Editar</button>
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_character.php" name="editar">Editar</button>
 
                     </div>
                 </div>
