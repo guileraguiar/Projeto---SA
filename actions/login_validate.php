@@ -10,14 +10,14 @@
     $passRoot = "root";
     $db_name = "db_agonizingVillage";
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
-    $Sigin = $_POST["logar"];
+    $Signin = $_POST["logar"];
 
     //configuração
     $link = "../pages/user/login_page.php";
     $msg = "Erro inesperado"; 
 ?>
 <?php
-    if (isset($Sigin)) {
+    if (isset($Signin)) {
             
         $verifica = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = 
         '$usuario' AND u_pass = '$senhaUser'") or die("Algo de errado aconteceu!!");
@@ -27,7 +27,8 @@
             .href='../pages/user/login_page.php';</script>";
             die();
         }else{
-            setcookie("u_user",$usuario);
+            $_SESSION['user'] = $usuario;
+            $_SESSION['pass'] = $senhaUser;
             header("Location:../menu.php");
         }
     }
