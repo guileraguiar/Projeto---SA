@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     //conexao com o banco de dados 
     $emailUser = isset($_POST["email"])?($_POST["email"]):"";
     $usuario = isset($_POST["user"])?($_POST["user"]):"";
