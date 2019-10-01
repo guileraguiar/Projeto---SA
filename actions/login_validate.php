@@ -23,7 +23,7 @@
             $select1 = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$User' AND u_pass = '$senhaUser'") or die(mysqli_error());
             if (mysqli_num_rows($select1) != 0){
                 if ($select = mysqli_fetch_assoc($select1)){
-                    $_SESSION["userLogado"] = $select['id_user'];
+                    $_SESSION["userLogado"] = $select1['id_user'];
                     header("Location:login_validate.php");
                 }else{
                     $msg = "Usuario ou senha incorretos!!";
