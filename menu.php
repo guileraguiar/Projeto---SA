@@ -2,13 +2,8 @@
 <html lang="en">
 <!-- sucesso ao cadastrar-->
 <?php
-// session_start();
+session_start()
 
-// if(isset($_SESSION['userLogado'])){
-// 	include('Location:actions/login_validate.php');
-// }else{
-//     include 'pages/user/login_page.php';
-// }
 ?>
 <head>
     <meta charset="UTF-8">
