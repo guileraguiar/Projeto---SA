@@ -48,13 +48,24 @@ include '../../includes/navbar.php';
 </head>
 <header>
 </header>
-<body style="background-image: url(../../images/fundo.png); ">
-    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-    <div class="container fundobranco" style="width:500px;">   
-        <h1 class=" mx-auto d-block fonteLabel">ALTERAÇÃO EFETUADA COM SUCESSO!!</h1>
-        <form action="http://localhost/SteelFreak/pages/user/login_page.php">
-            <center><button class="btn btn-light mx-auto d-block fonteLabel" type="submit">voltar</button></center>
-        </form>
-    </div>
-</body>
+    <body style="background-image: url(../../images/fundo.png); ">
+        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+        <div class="container fundobranco" style="width:500px;">   
+                <form action="../../actions/alter_user.php"  method="post">
+                    <div class="form-row">
+                        <div class="col">    
+
+                            <center><label for="user" class="text-light fonteLabel">Novo Usuário</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="usuario" name="user" ><br>
+
+                            <center><label for="pass" class="text-light fonteLabel">senha</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="cpass" ><br>
+                            
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
+
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </body>
 </html>

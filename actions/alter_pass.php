@@ -1,5 +1,7 @@
 <?php 
 session_start();
+
+    $userSession = $_SESSION['user'];
     if (isset($_SESSION['user'])){
         $senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
         $csenhaUser = MD5(isset($_POST["cpass"])?($_POST["cpass"]):"");
@@ -9,15 +11,15 @@ session_start();
             echo"<script language='javascript' type='text/javascript'>
             alert('As senhas devem coincidir!!');window.location.href='../pages/user/alter_pass.php';</script>";
         }else{
-            $conexao = mysqli_connect("localhost", "root", "root","db_agonizingVillage") or die ("Erro");
-            $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$usuario' AND  u_senha = '$senhaUser'");
+            $conexao = mysqli_connect("localhost", "root", "","db_agonizingVillage") or die ("Erro");
+            $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$usuario' AND  u_pass = '$senhaUser'");
 
-            $query = mysqli_query($conexao,"UPDATE 'db_agonizingVillage' SET u_pass ='$senhaUser' WHERE u_user = '$usuario'");
+            $query = mysqli_query($conexao,"UPDATE users SET u_pass ='$senhaUser' WHERE u_user = '$usuario'");
             $alter = mysqli_query($conexao,$query);
-            if($alter){
+
                 echo"<script language='javascript' type='text/javascript'>
                 alert('Senha alterada com sucesso!!');window.location.
-                href='../pages/users/success_pass.php'</script>";
-        }
+                href='../pages/user/success_pass.php'</script>";
     }
+}
 ?>
