@@ -48,30 +48,37 @@
 
 <?php 
     include 'includes/navbar.php';
-    if(isset($_GET["code"])){
-        $erro = $_GET["code"];
-        
-            if($erro == 777){
-                echo "<script>alert('Login efetuado com sucesso!!');</script>";
-            }
-        }
+//    if(isset($_GET["code"])){
+//        $erro = $_GET["code"];
+//        
+//            if($erro == 777){
+//                echo "<script>alert('Login efetuado com sucesso!!');</script>";
+//            }
+//        }
 ?>
 
 </head>
-<body style="background-image: url(images/fundo.png); ">
+<body style="background-size: 100%;background-image: url(images/fundo.png); ">
 <img src="images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
-    <div class="container fundobranco" style="width:1000px; margin-bottom:50px;">
-        <br>
-        <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
-        <form action="http://localhost/SteelFreak/pages/user/register_page.php">
-        <button type="onclick" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Cadastrar</button>
+    <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
+        <center><div class="containerBranco"  style="width:600px; margin-top:50px; margin-bottom:50px;">    
             <br>
-        </form>
-        <form action="http://localhost/SteelFreak/pages/user/login_page.php">
-        <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
-        <button type="submit" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/login_page.php">Login</button>
-        </form>
-        <br>
+            <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
+            <form action="http://localhost/SteelFreak/pages/user/register_page.php">
+            <button type="onclick" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Cadastrar</button>
+                <br>
+            </form>
+            <form action="http://localhost/SteelFreak/pages/user/login_page.php">
+            <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
+            <button type="submit" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/login_page.php">Login</button>
+            </form>
+            </div></center>
+            <br>
+            <br>
+            <br>
+            <center><h5>Você Sábia?</h5></center>
+            <center><p style="white;"></p></center>
+            <br>
     </div>
 </body>
 </html>
