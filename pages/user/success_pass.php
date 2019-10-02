@@ -48,7 +48,7 @@ include '../../includes/navbar.php';
 </head>
 <header>
 </header>
-<body style="background-image: url(../../images/fundo.png); ">
+<body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:500px;">   
         <h1 class=" mx-auto d-block fonteLabel">ALTERAÇÃO EFETUADA COM SUCESSO!!</h1>
