@@ -1,5 +1,7 @@
 <?php
 session_start();
-unset($_SESSION['userLogado']);
+$userSession= $_SESSION['user'];
+if (isset($_SESSION['user']));
+session_destroy();
 header('Location: ../menu.php');
 ?>

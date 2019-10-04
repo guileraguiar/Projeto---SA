@@ -44,7 +44,7 @@ include '../../includes/navbar.php';
 
 ?>
 </head>
-<body style="background-image: url(../../images/fundo.png); ">
+<body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:1000px;">   
             <form action="http://localhost/SteelFreak/actions/char_validate.php"  method="post">
@@ -101,10 +101,5 @@ include '../../includes/navbar.php';
             </form>
     </div>
 
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
 </body>
 </html>

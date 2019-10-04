@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Minha conta</title>
+    <title>Login</title>
 
     <!-- CSS //-->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -48,25 +48,24 @@ include '../../includes/navbar.php';
 </head>
 <header>
 </header>
-<body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-    <div class="container fundobranco" style="width:500px;">   
-            <form action="#"  method="post">
-                <div class="form-row">
-                    <div class="col">    
+    <body style="background-image: url(../../images/fundo.png); ">
+        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+        <div class="container fundobranco" style="width:500px;">   
+                <form action="../../actions/alter_user.php"  method="post">
+                    <div class="form-row">
+                        <div class="col">    
 
-                        <center><label for="user" class="text-light fonteLabel">E-mail</label></center>
-                        <input type="text" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="email"><br>
+                            <center><label for="user" class="text-light fonteLabel">Novo Usuário</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="usuario" name="user" ><br>
 
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/receive_email.php" name="enviar">Enviar</button>
+                            <center><label for="pass" class="text-light fonteLabel">senha</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="cpass" ><br>
+                            
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
 
+                        </div>
                     </div>
-                </div>
-            </form>
-            <p class="text-center text-danger">
-            </p>
-    </div>
-    
-
-</body>
+                </form>
+        </div>
+    </body>
 </html>

@@ -42,13 +42,13 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     
     <?php 
-include '../../../includes/navbar.php';
+include '../../../includes/navbar_after.php';
 
 ?>
 </head>
 <header>
 </header>
-<body style="background-image: url(../../../images/fundo.png); ">
+<body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
     <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:500px;">   
             <form action="#"  method="post">
@@ -69,11 +69,5 @@ include '../../../includes/navbar.php';
             <p class="text-center text-danger">
             </p>
     </div>
-    
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
 </body>
 </html>
