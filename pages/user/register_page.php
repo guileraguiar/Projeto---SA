@@ -48,7 +48,7 @@ include '../../includes/navbar.php';
 <header>
 
 </header>
-<body style="background-image: url(../../images/fundo.png); ">
+<body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
         <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
             <form action="../../actions/register_validate.php" method="post">
@@ -56,31 +56,29 @@ include '../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" class="form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
-
+                        <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Usuário" name="user" ><br>
+                        <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
                         <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" class="form-control" minlength="6" placeholder="Senha" name="pass" required><br>
+                        <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="pass" ><br>
                         
                         <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                        <input type="password" class="form-control" minlength="6" placeholder="Senha" name="cpass" required><br>
+                        <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="cpass" ><br>
 
                         <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
-                        <input type="email" class="form-control" placeholder="seuemail@exemplo.com" name="email" required><br>
+                        <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email" ><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 
                     </div>
                 </div>
             </form>
-            <?php if (isset($_SESSION["registerErro"])){
-                echo $_SESSION["registerErro"];
-                unset($_SESSION["registerErro"]);
-                }?>
-</div>
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
+            <p class="text-center text-danger">
+            <?php 
+                    if(isset($_GET['msg'])){
+                        echo $_GET['msg'];
+                    }
+                ?>
+            </p>
+    </div>
 </body>
 </html>

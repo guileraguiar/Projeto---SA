@@ -44,7 +44,7 @@ include '../../includes/navbar.php';
 
 ?>
 </head>
-<body style="background-image: url(../../images/fundo.png); ">
+<body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:1000px;">   
             <form action="../../includes/register_validation.php"  method="post">
@@ -58,7 +58,7 @@ include '../../includes/navbar.php';
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">Opções de Raça</label>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01" required>
+                        <select class="custom-select" for="raca" id="inputGroupSelect01" required>
                             <option selected>Escolher...</option>
                             <option id="elfo">Elfo (Dano Verdadeiro)</option>
                             <option value="orc">Orc (Tanque)</option>
@@ -67,7 +67,7 @@ include '../../includes/navbar.php';
                         </select>
                         </div>
                         
-                        <center><label for="user" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
+                        <center><label for="foto" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
                         <div class="card-deck">
                         
                             <div class="card" style="width: 18rem;">
@@ -102,10 +102,5 @@ include '../../includes/navbar.php';
             </form>
     </div>
 
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
 </body>
 </html>

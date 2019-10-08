@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Minha conta</title>
 
     <!-- CSS //-->
     <link rel="stylesheet" href="../../../css/bootstrap.min.css">
@@ -42,13 +42,13 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     
     <?php 
-include '../../../includes/navbar.php';
+include '../../../includes/navbar_after.php';
 
 ?>
 </head>
 <header>
 </header>
-<body style="background-image: url(../../../images/fundo.png); ">
+<body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
     <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:500px;">   
             <form action="#"  method="post">
@@ -56,12 +56,15 @@ include '../../../includes/navbar.php';
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" readonly="true" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block" maxlength="100" placeholder="Email" name="email" required><br>
+                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="user" ><br>
             
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
+                        <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="pass"><br>
 
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar">Entrar</button>
+                        <center><label for="user" class="text-light fonteLabel">E-mail</label></center>
+                        <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="email" ><br>
+
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_login.php" name="editar">Editar</button>
 
                     </div>
                 </div>
