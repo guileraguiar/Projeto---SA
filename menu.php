@@ -54,7 +54,7 @@ session_start()
 ?>
 
 </head>
-<body style="background-size: 100%;background-image: url(images/fundo.png); ">
+<body class="fadeIn" style="background-size: 100%;background-image: url(images/fundo.png); ">
 <img src="images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
     <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
         <center style="margin-top:50px;"><h1>Bem Vindo!</h1></center>
