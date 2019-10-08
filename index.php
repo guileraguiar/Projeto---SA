@@ -21,6 +21,9 @@ session_start()
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
 
     
     <!-- Icone //-->
@@ -48,10 +51,15 @@ session_start()
 
 
 </head>
-<body style="background-color:#302140;">
+<body class="fadeIn" style="background-color:#302140;">
     <div class="container">
         <img src="images/TITULO.png" class="mx-auto d-block imgIndex"  alt="">
         <center><h1 class="letraMenuIndex">Powered By SteelFreak Inc.</h1></center>
+        <center><h1 class="phrase">"Make the Magic Happen."</h1></center>
+        <br>
+        <center><img style="width:80px;" src="images/wand.png" alt=""></center>
+        <br>
+        <br>
         <center><button type="onclick" href="http://localhost/SteelFreak/menu.php" class="btn btn-light mx-auto d-block">Entrar</button></center>
     </div>
 </body>

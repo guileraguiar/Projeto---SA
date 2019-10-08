@@ -98,3 +98,16 @@ h1{
     color: #fff;
     font-family: 'Press Start 2P', cursive;
 }
+
+.fadeIn {
+    -webkit-animation: fadeIn 3s ease-in-out;
+    -moz-animation: fadeIn 3s ease-in-out;
+    -o-animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out;
+    }
+
+.phrase{
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+}
