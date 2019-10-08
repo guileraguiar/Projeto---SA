@@ -29,6 +29,12 @@
         <a class="nav-link" href="http://localhost/SteelFreak/pages/user/login_page.php">
           <i class="fab fa-facebook-f"></i> Login
         </a>
+        <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/menuBatalha.php">
+          <i class="fab fa-facebook-f"></i> Batalhas
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
