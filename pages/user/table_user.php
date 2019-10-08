@@ -30,10 +30,11 @@
                     echo "<td>";
                     echo "<a href='../../actions/delete.php?codigo=".$valor["id_user"]."'>Excluir</a>";
                     echo "</td>";
+                    echo "<a href='../../actions/delete.php?codigo=".$valor["id_user"]."'>Excluir</a>";s
                     echo "</tr>";
                 }
             ?>
         </table>
     </center>
 </body>
-</html>
+</htmls
