@@ -1,4 +1,34 @@
+.fundoBatalha{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    opacity: 0,9; 
+}
 
+.letraBatalhaGosma{
+    color: #F207E3;
+    font-family: 'Creepster', cursive;
+    text-shadow: #F207E3 1px 1px 3px;
+    font-size: 60px;
+}
+
+.letraBatalhaSwamer{
+    color: #F207E3;
+    font-family: 'Creepster', cursive;
+    text-shadow: #F207E3 1px 1px 3px;
+    font-size: 60px;
+}
+
+.letraBatalhaGosma{
+    color: #F207E3;
+    font-family: 'Creepster', cursive;
+    text-shadow: #F207E3 1px 1px 3px;
+    font-size: 60px;
+}
+
+.textoMenuBatalha{
+    color: #3F3F40;
+}
 
 .titulo{
     width: 300px;
