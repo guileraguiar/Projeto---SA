@@ -5,6 +5,13 @@
     opacity: 0,9; 
 }
 
+.letraMenuIndex{
+    color: #F207E3;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: #F207E3 1px 1px 3px;
+    font-size: 40px;
+}
+
 .letraBatalhaGosma{
     color: #F207E3;
     font-family: 'Creepster', cursive;
@@ -32,6 +39,11 @@
 
 .titulo{
     width: 300px;
+
+}
+
+.imgIndex{
+    width: 450px;
 
 }
 
