@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$user = isset($_SESSION['user']) ? $_SESSION['user'] : '';
+$userSession = $_SESSION["user"];
     if (isset($_SESSION['user'])){
          $senha = (isset($_POST["cpass"])?($_POST["cpass"]):"");
          $usuario = (isset($_POST["user"])?($_POST["user"]):"");

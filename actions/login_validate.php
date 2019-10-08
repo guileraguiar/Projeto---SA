@@ -27,7 +27,7 @@
             die();
         }else{
             $array = mysqli_fetch_all($verifica,MYSQLI_ASSOC);
-            $_SESSION['user'] = $array;
+            $_SESSION[''] = $array;
             ///print_r($_SESSION['user']);
             header("Location:../menu.php");
         }
