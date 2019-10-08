@@ -28,10 +28,7 @@
                     echo "<td>".$valor["u_user"]."</td>";
                     echo "<td>".$valor["u_email"]."</td>";
                     echo "<td>";
-                    echo "<a href='edit.php?codigo=".$valor["id_user"]."'>Editar</a>";
-                    echo "</td>";
-                    echo "<td>";
-                    echo "<a href='delete.php?codigo=".$valor["id_user"]."'>Excluir</a>";
+                    echo "<a href='../../actions/delete.php?codigo=".$valor["id_user"]."'>Excluir</a>";
                     echo "</td>";
                     echo "</tr>";
                 }
