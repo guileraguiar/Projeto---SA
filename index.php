@@ -8,7 +8,7 @@ session_start()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Slime Batalha</title>
+    <title>Bem vindo!</title>
     <!-- CSS //-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">
@@ -36,7 +36,7 @@ session_start()
     <link rel="apple-touch-icon" sizes="144x144" href="images/logo/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="images/logo/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../images/logo/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/logo/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/logo/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
@@ -60,7 +60,9 @@ session_start()
         <center><img style="width:80px;" src="images/wand.png" alt=""></center>
         <br>
         <br>
-        <center><button type="onclick" href="http://localhost/SteelFreak/menu.php" class="btn btn-light mx-auto d-block">Entrar</button></center>
+        <form action="http://localhost/SteelFreak/menu.php">
+        <center><button type="submit" class="btn mx-auto d-block">Entrar</button></center>
+        </form>
     </div>
 </body>
 </html>
