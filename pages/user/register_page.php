@@ -48,7 +48,7 @@ include '../../includes/navbar.php';
 <header>
 
 </header>
-<body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
+<body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
         <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
             <form action="../../actions/register_validate.php" method="post">
