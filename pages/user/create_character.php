@@ -47,7 +47,7 @@ include '../../includes/navbar.php';
 <body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:1000px;">   
-            <form action="http://localhost/SteelFreak/actions/char_validate.php"  method="post">
+            <form action="http://localhost/SteelFreak/actions/char_validate.php" enctype="multipart/form-data" method="post">
             <div class="form-row">
                     <div class="col">    
 
@@ -71,12 +71,11 @@ include '../../includes/navbar.php';
                         <div class="card-deck">
                         
                             <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../../images/personagens/character1.gif" alt="Imagem de capa do card">
                             <div class="card-body">
-                            <input type="radio" name="personagem" value="person1" class="btn btn-light mx-auto d-block"><center>Foto 1</center>
+                            <input type="file" name="foto-personagem" class="btn btn-light mx-auto d-block">
                             </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <!-- <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="../../images/personagens/character2.gif" alt="Imagem de capa do card">
                             <div class="card-body">
                             <input type="radio" name="personagem" value="person2" class="btn btn-light mx-auto d-block"><center>Foto 2</center>
@@ -88,7 +87,7 @@ include '../../includes/navbar.php';
                             <div class="card-body">
                             <input type="radio" name="personagem" value="person3" class="btn btn-light mx-auto d-block"><center>Foto 3</center>
                             </div>
-                            </div>
+                            </div> -->
                             
                         </div>
                         
