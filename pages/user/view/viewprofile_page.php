@@ -53,13 +53,13 @@ session_start();
                         <div class="col">    
 
                             <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="user" ><br>
+                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="user" placeholder="Digite seu usuário" required><br>
                 
                             <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                            <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="pass"><br>
+                            <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="pass" placeholder="Digite sua senha" required><br>
 
                             <center><label for="user" class="text-light fonteLabel">E-mail</label></center>
-                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="email" ><br>
+                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="email" placeholder="Digite seu E-mail" required><br>
 
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_login.php" name="editar">Editar</button>
 

@@ -55,10 +55,10 @@ session_start();
                         <div class="col">    
 
                             <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user"><br>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
                 
                             <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                            <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass"><br>
+                            <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Enviar</button>
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="cancel" href="http://localhost/SteelFreak/menu.php">Cancelar</button>

@@ -53,13 +53,13 @@ session_start();
                         <div class="col">    
 
                             <center><label for="user" class="text-light fonteLabel">Senha Atual</label></center>
-                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Atual senha" name="pass" ><br>
+                            <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Atual senha" name="pass" required><br>
 
                             <center><label for="pass" class="text-light fonteLabel">Nova senha</label></center>
-                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="newPass" ><br>
+                            <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="newPass" required><br>
 
                             <center><label for="cpass"  class="text-light fonteLabel">Confirmar senha</label></center>
-                            <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Confirmar nova senha" name="cNewPass" ><br>
+                            <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Confirmar nova senha" name="cNewPass" required><br>
                             
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
 

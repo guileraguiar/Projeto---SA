@@ -53,7 +53,7 @@ session_start();
                     <div class="col">    
 
                         <center><label for="user" class="text-light fonteLabel">E-mail</label></center>
-                        <input type="text" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="email"><br>
+                        <input type="text" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="email" placeholder="Digite seu E-mail"><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/receive_email.php" name="enviar">Enviar</button>
 

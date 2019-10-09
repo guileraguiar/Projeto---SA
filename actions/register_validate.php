@@ -12,6 +12,7 @@ $conexao = mysqli_connect("localhost", "root", "root","db_agonizingVillage") or 
 $query_select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$usuario' OR u_email='$emailUser'");
 $array = mysqli_fetch_assoc($query_select);
 
+
 if($usuario == "" || $usuario == null){
      echo"<script language='javascript' type='text/javascript'>
      alert('O campo usuario deve ser preenchido');window.location.href='../pages/user/register_page.php';</script>";
@@ -30,6 +31,10 @@ elseif($array['u_email'] == $emailUser){
     alert('O email cadastrado já existe!!'); window.location.href='../pages/user/register_page.php';</script>";
   //  die();
 
+}
+elseif($senhaUser != $csenhaUser){
+    echo"<script language='javascript' type='text/javascript'>
+    alert('As senhas devem coincidir!!'); window.location.href='../pages/user/register_page.php';</script>";
 }
 else{
     $query = "INSERT INTO users (u_user,u_pass,u_email) VALUES ('$usuario','$senhaUser','$emailUser')";

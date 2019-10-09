@@ -3,10 +3,7 @@ session_start();
     $login = $_SESSION['user'];
     
     if (isset($_SESSION['user'])){
-
-    
         $conexao = mysqli_connect("localhost", "root", "root","db_agonizingVillage") or die ("Erro");
-        
         $senhaBanco = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = '".$login["u_user"]."'");
         
         $senhaUser = MD5(isset($_POST["newPass"])?($_POST["newPass"]):"");
