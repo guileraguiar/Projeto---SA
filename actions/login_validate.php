@@ -9,7 +9,7 @@
     //criando a conexão com o banco de dados
     $local = "localhost";
     $userRoot = "root";
-    $passRoot = "";
+    $passRoot = "root";
     $db_name = "db_agonizingVillage";
     $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
 
@@ -27,7 +27,7 @@
             die();
         }else{
             $array = mysqli_fetch_all($verifica,MYSQLI_ASSOC);
-            $_SESSION['user'] = $array;
+            $_SESSION['user'] = $array[0];
             ///print_r($_SESSION['user']);
             header("Location:../menu.php");
         }

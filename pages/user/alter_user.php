@@ -52,12 +52,15 @@ session_start();
                     <div class="form-row">
                         <div class="col">    
 
-                            <center><label for="user" class="text-light fonteLabel">Novo Usuário</label></center>
-                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="usuario" name="user" ><br>
+                            <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nome de usuário atual" name="user" ><br>
 
-                            <center><label for="pass" class="text-light fonteLabel">senha</label></center>
-                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="cpass" ><br>
+                            <center><label for="pass" class="text-light fonteLabel">Novo usuário</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Novo usuário" name="newUser" ><br>
                             
+                            <center><label for="pass" class="text-light fonteLabel">senha</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="senha" name="pass" ><br>
+
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
 
                         </div>
