@@ -44,7 +44,7 @@ include '../../includes/navbar.php';
 
 ?>
 </head>
-<body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
+<body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:1000px;">   
             <form action="http://localhost/SteelFreak/actions/char_validate.php" enctype="multipart/form-data" method="post">
