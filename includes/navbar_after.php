@@ -25,10 +25,6 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/login_page.php">
-          <i class="fab fa-facebook-f"></i> Login
-        </a>
         <li class="nav-item">
         <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/menuBatalha.php">
           <i class="fab fa-facebook-f"></i> Batalhas
