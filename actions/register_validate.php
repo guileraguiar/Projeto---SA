@@ -6,16 +6,11 @@ $senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
 $csenhaUser = MD5(isset($_POST["cpass"])?($_POST["cpass"]):"");
 $emailUser = isset($_POST["email"])?($_POST["email"]):"";
 
-$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
+$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingVillage");
 $select = mysqli_query($conexao,"SELECT * FROM users");
-// $arrayUsers = mysqli_fetch_all($select,MYSQLI_ASSOC);
-// print_r($arrayUsers);
+
 echo $emailUser;
-if($senhaUser == $csenhaUser){
-    $query = mysqli_query($conexao,"INSERT INTO users VALUES('$emailUser', '$usuario', '$senhaUser',DEFAULT)") or die(mysqli_error($conexao));
-}else{
-    $_SESSION['registerErro'] = "Senhas nao conferem";
-    header("Location:../pages/user/register_page.php");
+
 //conexão com o banco de dados
 $conexao = mysqli_connect("localhost", "root", "root","db_agonizingVillage") or die ("Erro");
 
@@ -35,6 +30,15 @@ elseif($array['u_user'] == $usuario){
   //  die();
 
 }
+
+elseif($senhaUser != $csenhaUser){
+
+    echo"<script language='javascript' type='text/javascript'>
+    alert('As senhas não conferem!!'); window.location.href='../pages/user/register_page.php';</script>";
+  //  die();
+
+}
+
 elseif($array['u_email'] == $emailUser){
 
     echo"<script language='javascript' type='text/javascript'>
@@ -60,11 +64,3 @@ else{
     }
 }
 ?>
-
-
-
-
-
-
-
-
