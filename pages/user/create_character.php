@@ -43,50 +43,51 @@
 <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
     <div class="container fundobranco" style="width:1000px;">   
-            <form action="../../includes/register_validation.php"  method="post">
+            <form action="http://localhost/SteelFreak/actions/char_validate.php" enctype="multipart/form-data" method="post">
             <div class="form-row">
                     <div class="col">    
                         <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
                             <input type="text" class="form-control" maxlength="10" placeholder="ex: NoobMaster69" name="nickname" required width="10px"><br>
                         <center><label for="user" class="text-light fonteLabel">Escolha sua Raça</label></center>
                         <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Opções de Raça</label>
-                            </div>
-                            <select class="custom-select" for="raca" id="inputGroupSelect01" required>
-                                <option selected>Escolher...</option>
-                                <option id="elfo">Elfo (Dano Verdadeiro)</option>
-                                <option value="orc">Orc (Tanque)</option>
-                                <option value="mago">Mago (Dano Mágico)</option>
-                                <option value="humano">Humano (Flex)</option>
-                            </select>
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Opções de Raça</label>
+                        </div>
+                        <select class="custom-select" for="raca" id="inputGroupSelect01" name="raca" required>
+                            <option selected value="">Escolher...</option>
+                            <option value="elfo">Elfo (Dano Verdadeiro)</option>
+                            <option value="orc">Orc (Tanque)</option>
+                            <option value="mago">Mago (Dano Mágico)</option>
+                            <option value="humano">Humano (Flex)</option>
+                        </select>
                         </div>
                         
                         <center><label for="foto" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
                         <div class="card-deck">
                         
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="../../images/personagens/character1.gif" alt="Imagem de capa do card">
-                                <div class="card-body">
-                                    <button type="submit" name="personagem" value="person1" class="btn btn-light mx-auto d-block">Selecionar</button>
-                                </div>
+                            <div class="card-body">
+                            <input type="file" name="foto-personagem" class="btn btn-light mx-auto d-block">
                             </div>
-
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="../../images/personagens/character2.gif" alt="Imagem de capa do card">
-                                <div class="card-body">
-                                    <button type="submit" name="personagem" value="person2" class="btn btn-light mx-auto d-block">Selecionar</button>
-                                </div>
+                            </div>
+                            <!-- <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../../images/personagens/character2.gif" alt="Imagem de capa do card">
+                            <div class="card-body">
+                            <input type="radio" name="personagem" value="person2" class="btn btn-light mx-auto d-block"><center>Foto 2</center>
+                            </div>
                             </div>
 
                             <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="../../images/personagens/character3.gif" alt="Imagem de capa do card">
-                                <div class="card-body">
-                                    <button type="submit" name="personagem" value="person3" class="btn btn-light mx-auto d-block">Selecionar</button>
-                                </div>
-                            </div>  
-                        </div> 
-                        <br>   
+                            <div class="card-body">
+                            <input type="radio" name="personagem" value="person3" class="btn btn-light mx-auto d-block"><center>Foto 3</center>
+                            </div>
+                            </div> -->
+                            
+                        </div>
+                        
+                        <br>
+                    
                         <button type="submit" name="enviar" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
                     </div>
                 </div>
