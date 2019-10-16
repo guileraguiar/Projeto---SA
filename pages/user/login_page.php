@@ -36,17 +36,18 @@ session_start();
         <!-- Importação JS //-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        
-        <?php 
-            include '../../includes/navbar.php';
-
-        ?>
-    </head>
-    <header>
-    </header>
-    <body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-        <div class="container fundobranco" style="width:500px;">   
+        <?php
+//             if($erro == 254){
+//                 echo "<script>alert('Usuário registrado com sucesso');</script>";
+//             }
+//         }
+?>
+</head>
+<header>
+</header>
+<body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
+    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+    <div class="container fundobranco" style="width:500px;">   
             <form action="../../actions/login_validate.php"  method="post">
                 <div class="form-row">
                     <div class="col">    

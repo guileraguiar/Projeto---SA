@@ -45,9 +45,9 @@ session_start();
     </head>
     <header>
     </header>
-    <body style="background-image: url(../../images/fundo.png); ">
+    <body class="fadeInPages" style="background-image: url(../../images/fundo.png); ">
         <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-        <div class="container fundobranco" style="width:500px;">   
+        <div class="container fundobranco" style="width:500px;"> 
                 <form action="../../actions/alter_pass.php"  method="post">
                     <div class="form-row">
                         <div class="col">    
