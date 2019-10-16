@@ -71,6 +71,11 @@ session_start()
             <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
             <button type="submit" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/login_page.php">Login</button>
             </form>
+            <br>
+            <form action="http://localhost/SteelFreak/pages/battle/introBattle.php">
+            <center><h4>Dúvidas sobre o funcionamento das batalhas? Comece com uma simples demonstração agora mesmo!</h4></center>
+            <button type="submit" class="btn btn-light mx-auto d-block">Introdução</button>
+            </form>
             </div></center>
             <br>
             <br>
