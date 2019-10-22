@@ -62,21 +62,27 @@ session_start()
         <center style="margin-top:50px;"><h1>Bem Vindo!</h1></center>
         <center><div class="containerBranco"  style="width:600px; margin-top:50px; margin-bottom:50px;">    
             <br>
-            <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
             <form action="http://localhost/SteelFreak/pages/user/register_page.php">
-            <button type="onclick" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Cadastrar</button>
-                <br>
+                <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
+                <button type="onclick" class="btn btn-dark mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Cadastrar</button>
             </form>
+            <br>
             <form action="http://localhost/SteelFreak/pages/user/login_page.php">
-            <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
-            <button type="submit" class="btn btn-light mx-auto d-block" href="http://localhost/SteelFreak/pages/user/login_page.php">Login</button>
+                <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
+                <button type="submit" class="btn btn-dark mx-auto d-block" href="http://localhost/SteelFreak/pages/user/login_page.php">Login</button>
+            </form>
+            <br>
+            <form action="http://localhost/SteelFreak/pages/user/login_admin.php">
+                <center><h4>És Administrador? Entre por aqui!</h4></center>    
+                <button type="onclick" class="btn btn-dark mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Entrar como ADMIN</button>
             </form>
             <br>
             <form action="http://localhost/SteelFreak/pages/battle/introBattle.php">
-            <center><h4>Dúvidas sobre o funcionamento das batalhas? Comece com uma simples demonstração agora mesmo!</h4></center>
-            <button type="submit" class="btn btn-light mx-auto d-block">Introdução</button>
+                <center><h4>Dúvidas sobre o funcionamento das batalhas? Comece com uma simples demonstração agora mesmo!</h4></center>
+                <button type="submit" class="btn btn-dark mx-auto d-block">Introdução</button>
             </form>
-            </div></center>
+            <br>
+        </div>
             <br>
             <br>
             <br>
