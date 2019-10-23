@@ -46,6 +46,10 @@ elseif($array['u_email'] == $emailUser){
   //  die();
 
 }
+elseif($senhaUser != $csenhaUser){
+    echo"<script language='javascript' type='text/javascript'>
+    alert('As senhas devem coincidir!!'); window.location.href='../pages/user/register_page.php';</script>";
+}
 else{
     $query = "INSERT INTO users (u_user,u_pass,u_email) VALUES ('$usuario','$senhaUser','$emailUser')";
     $insert = mysqli_query($conexao, $query);

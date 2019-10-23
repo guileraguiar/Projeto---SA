@@ -3,7 +3,6 @@
 <!-- sucesso ao cadastrar-->
 <?php
 session_start()
-
 ?>
 <head>
     <meta charset="UTF-8">
@@ -98,6 +97,6 @@ session_start()
                 anterior (Agonizing Village), referindo-se ao lobo Fenrir, na qual Fenrir estava em apuros, e você poderia decidir se iria salva-lo, ou deixa-lo sozinho
                 em seu sofrimento...
             </p><img style="width:300px;" src="images/logoav2.png" alt=""></center>
-    </div>
-</body>
+        </div>
+    </body>
 </html>
