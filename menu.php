@@ -44,7 +44,13 @@ session_start()
   
     
 <?php 
-    include 'includes/navbar.php';
+$userSession = $_SESSION['user'];
+    if(isset($userSession)){
+        include 'includes/navbar_after.php';
+    }else{
+        include 'includes/navbar.php';
+    }
+    
 //    if(isset($_GET["code"])){
 //        $erro = $_GET["code"];
 //        
