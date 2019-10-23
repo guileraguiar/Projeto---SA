@@ -28,7 +28,6 @@
         }else{
             $array = mysqli_fetch_all($verifica,MYSQLI_ASSOC);
             $_SESSION['user'] = $array[0];
-            print_r($_SESSION['user']);
             header("Location:../menu.php");
         }
     }
