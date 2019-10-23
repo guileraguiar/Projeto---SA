@@ -25,7 +25,23 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/login_page.php">
+          <i class="fab fa-facebook-f"></i> Login
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/register_page.php">
+          <i class="fab fa-facebook-f"></i> Cadastro
+        </a>
+      </li>
         <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/table_user.php">
+          <i class="fab fa-facebook-f"></i> Visualização de Usuários
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/menuBatalha.php">
           <i class="fab fa-facebook-f"></i> Batalhas
           <span class="sr-only">(current)</span>

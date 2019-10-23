@@ -26,6 +26,11 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/introBattle.php">
+          <i class="fab fa-facebook-f"></i> Batalha
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="http://localhost/SteelFreak/pages/user/register_page.php">
         <!-- index.php?pagina=orcamentos -->
           <i class="fab fa-facebook-f"></i> Cadastro
@@ -35,15 +40,6 @@
         <a class="nav-link" href="http://localhost/SteelFreak/pages/user/login_page.php">
           <i class="fab fa-facebook-f"></i> Login
         </a>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i> Perfil </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewprofile_page.php">Minha Conta</a>
-          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewcharacter_page.php">Meu Personagem</a>
-          <a class="dropdown-item" href="http://localhost/SteelFreak/actions/logout.php">Log out</a>
-        </div>
       </li>
     </ul>
   </div>
