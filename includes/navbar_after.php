@@ -11,10 +11,9 @@
     </head>
     <body>
        <!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color colortonav">
-  <a class="navbar-brand" href="http://localhost/SteelFreak/menu.php"><img src="http://localhost/SteelFreak/images/logo.png" width="150px"</img></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-nowrap">
+  <a class="navbar-brand" href="http://localhost/SteelFreak/menu.php"><img src="http://localhost/SteelFreak/images/logo.png" width="80px"</img></a>
+  <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">

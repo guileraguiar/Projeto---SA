@@ -19,9 +19,6 @@ $userRoot = "root";
 $passRoot = "root";
 $db_name = "db_agonizingVillage";
 $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error());
-   
-
-$insert = mysqli_query($conexao, $query);
     
 //     if($insert){
 //         echo"<script language='javascript' type='text/javascript'>
@@ -44,15 +41,15 @@ if ($picture == 0) {
   // Tamanho máximo (em bytes)
   $tamanhoPermitido = 1920 * 1080; // 500 Kb
   // O nome original do arquivo no computador do usuário
-  $arqName = $_FILES['arquivo']['name'];
+  $arqName = $_FILES['foto-personagem']['name'];
   // O tipo mime do arquivo. Um exemplo pode ser "image/gif"
-  $arqType = $_FILES['arquivo']['type'];
+  $arqType = $_FILES['foto-personagem']['type'];
   // O tamanho, em bytes, do arquivo
-  $arqSize = $_FILES['arquivo']['size'];
+  $arqSize = $_FILES['foto-personagem']['size'];
   // O nome temporário do arquivo, como foi guardado no servidor
-  $arqTemp = $_FILES['arquivo']['tmp_name'];
+  $arqTemp = $_FILES['foto-personagem']['tmp_name'];
   // O código de erro associado a este upload de arquivo
-  $arqError = $_FILES['arquivo']['error'];
+  $arqError = $_FILES['foto-personagem']['error'];
   if ($arqError == 0) {
         // Verifica o tipo de arquivo enviado
     if (array_search($arqType, $tiposPermitidos) === false) {
@@ -62,18 +59,13 @@ if ($picture == 0) {
       echo 'O tamanho do arquivo enviado é maior que o limite!';
     // Não houveram erros, move o arquivo
     } else {
-      $pasta = '../images/personagens/';
-      // Pega a extensão do arquivo enviado
-      $extensao = strtolower(end(explode('.', $arqName)));
-      // Define o novo nome do arquivo usando um UNIX TIMESTAMP
-      $nome = time() . '.' . $extensao;
       // Escapa os caracteres protegidos do MySQL (para o nome do usuário)
-      $nomeMySQL = mysql_real_escape_string($_POST['nome']);
-      $upload = move_uploaded_file($arqTemp, $pasta . $nome);
+      $nomeMySQL = mysqli_real_escape_string($conexao,$_POST['nickname']);
+      $upload = move_uploaded_file($arqTemp, $pasta);
       // Verifica se o arquivo foi movido com sucesso
       if ($upload == true) {
         // Cria uma query MySQL
-        $query = mysql_query("INSERT INTO characters (c_nickname,c_race,c_picture) VALUES ('$nick','$race','$picture')");
+        $query = mysqli_query($conexao, "INSERT INTO characters (c_nickname,c_race,c_picture) VALUES ('$nick','$race','$picture')");
         // Executa a consulta
         if ($query == true) {
                     echo 'Usuário inserido com sucesso!';
