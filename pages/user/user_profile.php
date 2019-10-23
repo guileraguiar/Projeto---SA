@@ -45,8 +45,10 @@ session_start();
     </head>
     <header>
     </header>
-    <body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-        <div class="container fundobranco" style="width:600px; height:300px;">   
+    <body style="background-size: 100%;background-image: url(../../images/cyberpunk.jpg); ">
+        <div class="container fundobranco" style="width:600px; height:300px; margin-top:90px;"> 
+        <center><h4 style="color:white;">imagem do personagem</h4></center>  
+            <br>
           <?php
 
           $userSession = $_SESSION['user'];
@@ -58,21 +60,18 @@ session_start();
           
             $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
           
-            $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["id_user"]."");
-          
-        //        echo $userSession["u_user"]."<br>";
-        //       echo $userSession["u_email"]."<br>";
-        //       echo $userSession["id_user"];
-        //   }
-          
+            $selectEmail = mysqli_query($conexao,"SELECT id_user FROM users WHERE u_user = ".$userSession["id_user"]."");
+
+            $selectEmail = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = ".$userSession["u_pass"]."");
+        
           ?> 
-                <br>
-                <br>
-                <h3 style="color:white;" >Seu nome de usuario:<?php echo $userSession["u_user"] ?></h3>
+          
+                <center><h4 style="color:white;">Usuário:<?php echo $userSession["u_user"] ?></h4></center>
                 <br> 
-                <h3 style="color:white;">Seu email de usuario:<?php echo $userSession["u_email"] ?></h3> 
+                <center><h4 style="color:white;">E-mail:<?php echo $userSession["u_email"] ?></h4></center> 
                 <br>
-                <h3 style="color:white;">Seu ID de usuário:<?php echo $userSession["id_user"] ?></h3>         
+                <center><h4 style="color:white;">ID:<?php echo $userSession["id_user"] ?></h4></center>
+                <br>        
             </form>
         </div>
     </body>
