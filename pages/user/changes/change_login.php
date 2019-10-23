@@ -4,19 +4,19 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login</title>
 
-    <!-- CSS //-->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/imagem.css">
+        <!-- CSS //-->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/imagem.css">
 
-    <!-- Fontes //-->
-    <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- Fontes //-->
+        <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <!-- Icone //-->
     <link rel="apple-touch-icon" sizes="57x57" href="../../images/logo/apple-icon-57x57.png">
@@ -54,25 +54,24 @@ include '../../includes/navbar_after.php';
                 <div class="form-row">
                     <div class="col">    
 
-                        <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user"><br>
-            
-                        <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass"><br>
+                            <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
+                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
+                
+                            <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
+                            <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Enviar</button>
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="cancel" href="http://localhost/SteelFreak/menu.php">Cancelar</button>
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Enviar</button>
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="cancel" href="http://localhost/SteelFreak/menu.php">Cancelar</button>
+                        </div>
                     </div>
-                </div>
-            </form>
-            </p>
-            
-    </div>
-    
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
-</body>
+                </form>
+                </p>
+        </div>
+        
+    <!--    <div class="py-3 bg-dark text-white-50 footer">//-->
+    <!--    <div class="text-center">//-->
+    <!--      <small>Copyright &copy; SteelFreak™</small>//-->
+    <!--    </div>//-->
+    <!--</div>//-->
+    </body>
 </html>

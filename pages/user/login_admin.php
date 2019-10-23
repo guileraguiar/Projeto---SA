@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Login ADMIN</title>
 
     <!-- CSS //-->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -42,30 +42,48 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     
     <?php 
-include '../../includes/navbar.php';
-
+ include '../../includes/navbar.php';
+//     if(isset($_GET["code"])){
+//         $erro = $_GET["code"];
+        
+//             if($erro == 254){
+//                 echo "<script>alert('Usuário registrado com sucesso');</script>";
+//             }
+//         }
 ?>
 </head>
 <header>
 </header>
-    <body class="fadeInPages" style="background-image: url(../../images/fundo.png); ">
-        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-        <div class="container fundobranco" style="width:500px;">   
-                <form action="../../actions/alter_user.php"  method="post">
-                    <div class="form-row">
-                        <div class="col">    
+<body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
+    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+    <div class="container fundobranco" style="width:500px;">   
+            <form action="../../actions/login_validate.php"  method="post">
+                <div class="form-row">
+                    <div class="col">    
 
-                            <center><label for="user" class="text-light fonteLabel">Novo Usuário</label></center>
-                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="usuario" name="user" ><br>
+                    <center><h5>LOGIN ADMIN</h5></center>
+                        <br>
+                        <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
+                        <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Usuário" name="user" required><br>
+            
+                        <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
+                        <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Senha" name="pass" required><br>
 
-                            <center><label for="pass" class="text-light fonteLabel">senha</label></center>
-                            <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="cpass" ><br>
-                            
-                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar" value="logar">Entrar</button>
+                        <br>
 
-                        </div>
                     </div>
-                </form>
-        </div>
-    </body>
+                </div>
+            </form>
+            <p class="text-center text-danger">
+                <?php 
+                    // if(isset($_GET['msg'])){
+                    //     echo $_GET['msg'];
+                    // }
+                ?>
+            </p>
+            
+    </div>
+    
+</body>
 </html>

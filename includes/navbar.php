@@ -12,7 +12,7 @@
     <body>
        <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color colortonav">
-  <a class="navbar-brand" href="http://localhost/SteelFreak/menu.php"><img src="http://localhost/SteelFreak/images/logo.png" width="150px"</img></a>
+  <a class="navbar-brand" href="http://localhost/SteelFreak/menu.php"><img src="http://localhost/SteelFreak/images/logo.png" width="80px"</img></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
     aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,6 +29,7 @@
         <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/introBattle.php">
           <i class="fab fa-facebook-f"></i> Batalha
         </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost/SteelFreak/pages/user/register_page.php">
         <!-- index.php?pagina=orcamentos -->
@@ -39,7 +40,7 @@
         <a class="nav-link" href="http://localhost/SteelFreak/pages/user/login_page.php">
           <i class="fab fa-facebook-f"></i> Login
         </a>
-
+      </li>
     </ul>
   </div>
 </nav>

@@ -11,9 +11,10 @@
     </head>
     <body>
        <!--Navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-nowrap">
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color colortonav">
   <a class="navbar-brand" href="http://localhost/SteelFreak/menu.php"><img src="http://localhost/SteelFreak/images/logo.png" width="80px"</img></a>
-  <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
@@ -24,7 +25,23 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/login_page.php">
+          <i class="fab fa-facebook-f"></i> Login
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/register_page.php">
+          <i class="fab fa-facebook-f"></i> Cadastro
+        </a>
+      </li>
         <li class="nav-item">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/table_user.php">
+          <i class="fab fa-facebook-f"></i> Visualização de Usuários
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/menuBatalha.php">
           <i class="fab fa-facebook-f"></i> Batalhas
           <span class="sr-only">(current)</span>

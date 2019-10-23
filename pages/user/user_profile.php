@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,7 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Login</title>
+        <title>Minha conta</title>
         <!-- CSS //-->
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/imagem.css">
@@ -38,7 +39,7 @@ session_start();
         
         <?php 
 
-            include '../../includes/navbar.php';
+        include '../../includes/navbar_after.php';
 
         ?>
     </head>
@@ -46,11 +47,36 @@ session_start();
     </header>
     <body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
         <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-        <div class="container fundobranco" style="width:500px;">   
-            <h1 class=" mx-auto d-block fonteLabel">ALTERAÇÃO EFETUADA COM SUCESSO!!</h1>
-            <form action="http://localhost/SteelFreak/pages/user/login_page.php">
-                <center><button class="btn btn-light mx-auto d-block fonteLabel" type="submit">voltar</button></center>
+        <div class="container fundobranco" style="width:600px; height:300px;">   
+          <?php
+
+          $userSession = $_SESSION['user'];
+          $conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
+          
+          if(isset($userSession)){
+          
+            $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
+          
+            $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
+          
+            $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["id_user"]."");
+          
+        //        echo $userSession["u_user"]."<br>";
+        //       echo $userSession["u_email"]."<br>";
+        //       echo $userSession["id_user"];
+        //   }
+          
+          ?> 
+          
+                <center><h3 >Seu nome de usuario:<?php echo $userSession["u_user"] ?></h3></center>
+                <br> 
+                <center><h3 >Seu email de usuario:<?php echo $userSession["u_email"] ?></h3></center> 
+                <br>
+                <center><h3>Seu ID de usuário:<?php echo $userSession["id_user"] ?></h3></center>           
             </form>
         </div>
     </body>
+    <?php
+          }
+?>
 </html>
