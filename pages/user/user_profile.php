@@ -46,7 +46,6 @@ session_start();
     <header>
     </header>
     <body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
         <div class="container fundobranco" style="width:600px; height:300px;">   
           <?php
 
@@ -67,12 +66,13 @@ session_start();
         //   }
           
           ?> 
-          
-                <center><h3 >Seu nome de usuario:<?php echo $userSession["u_user"] ?></h3></center>
-                <br> 
-                <center><h3 >Seu email de usuario:<?php echo $userSession["u_email"] ?></h3></center> 
                 <br>
-                <center><h3>Seu ID de usuário:<?php echo $userSession["id_user"] ?></h3></center>           
+                <br>
+                <h3 style="color:white;" >Seu nome de usuario:<?php echo $userSession["u_user"] ?></h3>
+                <br> 
+                <h3 style="color:white;">Seu email de usuario:<?php echo $userSession["u_email"] ?></h3> 
+                <br>
+                <h3 style="color:white;">Seu ID de usuário:<?php echo $userSession["id_user"] ?></h3>         
             </form>
         </div>
     </body>
