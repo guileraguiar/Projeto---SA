@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- sucesso ao cadastrar-->
-<?php
-session_start()
-?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,8 +41,10 @@ session_start()
   
     
 <?php 
-$userSession = $_SESSION['user'];
-    if(isset($userSession)){
+session_start();
+if (isset($_SESSION['user'])){
+    $userSession = $_SESSION['user'];
+} if(isset($userSession)){
         include 'includes/navbar_after.php';
     }else{
         include 'includes/navbar.php';
