@@ -2,12 +2,12 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Login</title>
+        <title>Cadastro</title>
         <!-- CSS //-->
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/imagem.css">
@@ -35,22 +35,44 @@ session_start();
         <!-- Importação JS //-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        
+    
         <?php 
 
             include '../../includes/navbar.php';
 
         ?>
-    </head>
-    <header>
-    </header>
-    <body style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-        <div class="container fundobranco" style="width:500px;">   
-            <h1 class=" mx-auto d-block fonteLabel">ALTERAÇÃO EFETUADA COM SUCESSO!!</h1>
-            <form action="http://localhost/SteelFreak/pages/user/login_page.php">
-                <center><button class="btn btn-light mx-auto d-block fonteLabel" type="submit">voltar</button></center>
-            </form>
+        </head>
+        <header>
+        </header>
+
+        <div class="container">   
+                <form method="post">
+                    <div class="form-row">
+                        <div class="col">    
+
+                            <center><label for="armor" class="text-light fonteLabel">Armadura Adicional</label></center>
+                            <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Armadura" name="armor"><br>
+                            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
+                            <center><label for="attack" class="text-light fonteLabel">Poder de Ataque</label></center>
+                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Poder de ataque" name="attack"><br>
+                            
+                            <center><label for="life" class="text-light fonteLabel">Vida adicional</label></center>
+                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Vida Adicional" name="life"><br>
+
+                            <center><label for="energy" class="text-light fonteLabel">Energia</label></center>
+                            <input type="email" class="form-control" maxlength="30" placeholder="Energia" name="energy"><br>
+
+                            <center><label for="price" class="text-light fonteLabel">Preço</label></center>
+                            <input type="email" class="form-control" maxlength="30" placeholder="Preço" name="price"><br>
+                            
+                            <center><label for="crit" class="text-light fonteLabel">Chance de Crítico</label></center>
+                            <input type="email" class="form-control" maxlength="30" placeholder="Chance de Crítico" name="crit"><br>
+
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
+
+                        </div>
+                    </div>
+                </form>
         </div>
     </body>
 </html>

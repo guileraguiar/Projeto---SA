@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +13,7 @@ session_start();
     <link rel="stylesheet" href="../../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/imagem.css">
 
-    <!-- Fontes //-->
-    <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+            include '../../includes/navbar_after.php';
 
     <!-- Icone //-->
     <link rel="apple-touch-icon" sizes="57x57" href="../../../images/logo/apple-icon-57x57.png">
@@ -64,13 +61,11 @@ include '../../../includes/navbar_after.php';
                 </div>
             </form>
             </p>
-            
-    </div>
-    
-<!--    <div class="py-3 bg-dark text-white-50 footer">//-->
-<!--    <div class="text-center">//-->
-<!--      <small>Copyright &copy; SteelFreak™</small>//-->
-<!--    </div>//-->
-<!--</div>//-->
-</body>
+        </div>
+    <!--    <div class="py-3 bg-dark text-white-50 footer">//-->
+    <!--    <div class="text-center">//-->
+    <!--      <small>Copyright &copy; SteelFreak™</small>//-->
+    <!--    </div>//-->
+    <!--</div>//-->
+    </body>
 </html>
