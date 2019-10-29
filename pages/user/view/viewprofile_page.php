@@ -63,12 +63,13 @@ include '../../../includes/navbar_after.php';
 
                         <center><label for="user" class="text-light fonteLabel">E-mail</label></center>
                         <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="email" ><br>
-
-                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_login.php" name="editar">Editar</button>
-
+                        
                     </div>
                 </div>
             </form>
+            <form action="http://localhost/SteelFreak/pages/user/changes/change_login.php">
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel"  name="editar">Editar</button>
+                        </form>
             <p class="text-center text-danger">
             </p>
     </div>
