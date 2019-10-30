@@ -42,13 +42,20 @@
     
 <?php 
 session_start();
+
 if (isset($_SESSION['user'])){
     $userSession = $_SESSION['user'];
-} if(isset($userSession)){
+    $conexao = mysqli_connect("localhost", "root", "","db_agonizingVillage") or die ("Erro");
+
+    $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user ='".$userSession["u_user"]."'");
+    if($userSession['u_nivel']==2){
+        include 'includes/navbar_admin.php';
+    }else if($userSession['u_nivel']==1){
         include 'includes/navbar_after.php';
-    }else{
-        include 'includes/navbar.php';
     }
+}else{
+    include 'includes/navbar.php';
+}
     
 //    if(isset($_GET["code"])){
 //        $erro = $_GET["code"];
