@@ -8,7 +8,7 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Meu personagem</title>
+        <title>Minha conta</title>
         <!-- CSS //-->
         <link rel="stylesheet" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../../css/imagem.css">
@@ -36,13 +36,28 @@ session_start();
         <!-- Importação JS //-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        
         <?php 
 
-            include '../../../includes/navbar_after.php';
+        include '../../../includes/navbar_after.php';
 
-        ?>
+        $userSession = $_SESSION['user'];
+        $conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
+
+            if(isset($userSession)){
+        
+                $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
+                
+                $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
+                
+                $selectEmail = mysqli_query($conexao,"SELECT id_user FROM users WHERE u_user = ".$userSession["id_user"]."");
+                
+                $selectEmail = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = ".$userSession["u_pass"]."");
+        
+        ?> 
     </head>
     <header>
+
     </header>
     <body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
         <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
@@ -51,13 +66,16 @@ session_start();
                     <div class="form-row">
                         <div class="col">    
 
-                            <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
-                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="nickname"><br>
+                            <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
+                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" <?php echo $userSession["u_user"] ?>><br>
                 
-                            <center><label for="raca"  class="text-light fonteLabel">Raça</label></center>
-                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="raca"><br>
+                            <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
+                            <input type="password" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="pass" placeholder="Digite sua senha" required><br>
 
-                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_character.php" name="editar">Editar</button>
+                            <center><label for="user" class="text-light fonteLabel">E-mail</label></center>
+                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="email" placeholder="Digite seu E-mail" required><br>
+
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_login.php" name="editar">Editar</button>
 
                         </div>
                     </div>
@@ -65,5 +83,11 @@ session_start();
                 <p class="text-center text-danger">
                 </p>
         </div>
+        
+    <!--    <div class="py-3 bg-dark text-white-50 footer">//-->
+    <!--    <div class="text-center">//-->
+    <!--      <small>Copyright &copy; SteelFreak™</small>//-->
+    <!--    </div>//-->
+    <!--</div>//-->
     </body>
 </html>

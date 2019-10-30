@@ -43,22 +43,22 @@ session_start()
     
   
     
-<?php 
-$userSession = $_SESSION['user'];
-    if(isset($userSession)){
-        include 'includes/navbar_after.php';
-    }else{
-        include 'includes/navbar.php';
-    }
-    
-//    if(isset($_GET["code"])){
-//        $erro = $_GET["code"];
-//        
-//            if($erro == 777){
-//                echo "<script>alert('Login efetuado com sucesso!!');</script>";
-//            }
-//        }
-?>
+        <?php 
+        $userSession = $_SESSION['user'];
+            if(isset($userSession)){
+                include 'includes/navbar_after.php';
+            }else{
+                include 'includes/navbar.php';
+            }
+            
+        //    if(isset($_GET["code"])){
+        //        $erro = $_GET["code"];
+        //        
+        //            if($erro == 777){
+        //                echo "<script>alert('Login efetuado com sucesso!!');</script>";
+        //            }
+        //        }
+        ?>
 
 </head>
 <body class="fadeIn" style="background-size: 100%;background-image: url(images/fundo.png); ">
