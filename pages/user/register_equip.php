@@ -1,14 +1,13 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Minha conta</title>
+        <title>Cadastro</title>
         <!-- CSS //-->
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/imagem.css">
@@ -36,46 +35,44 @@ session_start();
         <!-- Importação JS //-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        
+    
         <?php 
 
-        include '../../includes/navbar_after.php';
+            include '../../includes/navbar.php';
 
         ?>
-    </head>
-    <header>
-    </header>
-    <body style="background-size: 100%;background-image: url(../../images/cyberpunk.jpg); ">
-        <div class="container fundobranco" style="width:600px; height:300px; margin-top:90px;"> 
-        <center><h4 style="color:white;">imagem do personagem</h4></center>  
-            <br>
-          <?php
+        </head>
+        <header>
+        </header>
 
-          $userSession = $_SESSION['user'];
-          $conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
-          
-          if(isset($userSession)){
-          
-            $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
-          
-            $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
-          
-            $selectEmail = mysqli_query($conexao,"SELECT id_user FROM users WHERE u_user = ".$userSession["id_user"]."");
+        <div class="container">   
+                <form method="post">
+                    <div class="form-row">
+                        <div class="col">    
 
-            $selectEmail = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = ".$userSession["u_pass"]."");
-        
-          ?> 
-          
-                <center><h4 style="color:white;">Usuário:<?php echo $userSession["u_user"] ?></h4></center>
-                <br> 
-                <center><h4 style="color:white;">E-mail:<?php echo $userSession["u_email"] ?></h4></center> 
-                <br>
-                <center><h4 style="color:white;">ID:<?php echo $userSession["id_user"] ?></h4></center>
-                <br>        
-            </form>
+                            <center><label for="armor" class="text-light fonteLabel">Armadura Adicional</label></center>
+                            <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Armadura" name="armor"><br>
+                            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
+                            <center><label for="attack" class="text-light fonteLabel">Poder de Ataque</label></center>
+                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Poder de ataque" name="attack"><br>
+                            
+                            <center><label for="life" class="text-light fonteLabel">Vida adicional</label></center>
+                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Vida Adicional" name="life"><br>
+
+                            <center><label for="energy" class="text-light fonteLabel">Energia</label></center>
+                            <input type="email" class="form-control" maxlength="30" placeholder="Energia" name="energy"><br>
+
+                            <center><label for="price" class="text-light fonteLabel">Preço</label></center>
+                            <input type="email" class="form-control" maxlength="30" placeholder="Preço" name="price"><br>
+                            
+                            <center><label for="crit" class="text-light fonteLabel">Chance de Crítico</label></center>
+                            <input type="email" class="form-control" maxlength="30" placeholder="Chance de Crítico" name="crit"><br>
+
+                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
+
+                        </div>
+                    </div>
+                </form>
         </div>
     </body>
-    <?php
-          }
-?>
 </html>
