@@ -50,7 +50,7 @@ session_start();
                 <form action="#"  method="post">
                     <div class="form-row">
                         <div class="col">    
-
+                            <img src="http://localhost/SteelFreak/images/personagens/orc.jpg" style="display:auto;align:left">
                             <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
                             <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="nickname"><br>
                 

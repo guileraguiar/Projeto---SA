@@ -112,10 +112,10 @@ if (array_search($arqType, $tiposPermitidos) === false) {
       if ($upload == true) {
         // Cria uma query MySQL
         $query = mysqli_query($conexao, "INSERT INTO characters (c_nickname,fk_race,c_experience,c_life,c_energy,c_strenght,c_defense,c_inventory,c_level,c_ability,c_crit_chance,c_money,c_picture) VALUES ('$nick',DEFAULT,'$exp','$vida','$energia','$forca',$defesa,'$inventario','$level','$habilidades','$chanceCrit','$dinheiro','$foto')");
-        print_r ($query);
-        echo 'Usuário inserido com sucesso!';
-        }else {
-          echo 'Ocorreu algum erro com o upload, por favor tente novamente!';
+        echo 'Usuário inserido com sucesso!'.
+        "<script>window.location.href='../menu.php';</script>";
+        }else { 
+          echo 'Ocorreu algum com o cadastro, por favor, tente novamente ou contate o suporte';
       }
     }
   } 
