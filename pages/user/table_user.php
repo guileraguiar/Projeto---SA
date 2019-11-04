@@ -1,6 +1,6 @@
 <?php
 
-    $conexao=mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
+    $conexao=mysqli_connect("localhost", "root", "", "db_agonizingvillage");
     $busca=mysqli_query($conexao,"SELECT * FROM users");
     $arrUser=mysqli_fetch_all($busca, MYSQLI_ASSOC);
     mysqli_close($conexao);

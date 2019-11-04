@@ -6,7 +6,7 @@ $picture = isset($_POST["foto-personagem"])?($_POST["foto-personagem"]):"";
 
 $local = "localhost";
 $userRoot = "root";
-$passRoot = "root";
+$passRoot = "";
 $db_name = "db_agonizingVillage";
 
 switch ($race){
