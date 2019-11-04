@@ -6,13 +6,13 @@ $senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
 $csenhaUser = MD5(isset($_POST["cpass"])?($_POST["cpass"]):"");
 $emailUser = isset($_POST["email"])?($_POST["email"]):"";
 
-$conexao = mysqli_connect("localhost", "root", "root", "db_agonizingVillage");
+$conexao = mysqli_connect("localhost", "root", "", "db_agonizingVillage");
 $select = mysqli_query($conexao,"SELECT * FROM users");
 
 echo $emailUser;
 
 //conexão com o banco de dados
-$conexao = mysqli_connect("localhost", "root", "root","db_agonizingVillage") or die ("Erro");
+$conexao = mysqli_connect("localhost", "root", "","db_agonizingVillage") or die ("Erro");
 
 $query_select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$usuario' OR u_email='$emailUser'");
 $array = mysqli_fetch_assoc($query_select);
