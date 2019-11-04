@@ -47,7 +47,7 @@ session_start();
 
     <body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
     <?php
-        include "../../bd/connection_bd.php";
+        include "http://localhost/SteelFreak/bd/connection_bd.php";
         $query_sel_char = "SELECT * FROM characters";
  
         $array_sel_char = mysqli_fetch_assoc($query_sel_char);
