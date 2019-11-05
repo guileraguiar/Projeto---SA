@@ -40,19 +40,12 @@ if(isset($userSession)){
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/menuBatalha.php">
-          <i class="fab fa-facebook-f"></i> Batalhas
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i><?php echo $userSession["u_user"];?> </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewprofile_page.php">Minha Conta</a>
-          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewcharacter_page.php">Meu Personagem</a>
+          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/admin/admin_page.php">Minha Conta</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/actions/logout.php">Log out</a>
         </div>
       </li>
