@@ -52,7 +52,7 @@ session_start();
           <?php
 
           $userSession = $_SESSION['user'];
-          $conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
+          $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
           
           if(isset($userSession)){
           
