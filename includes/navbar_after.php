@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 $userSession = $_SESSION['user'];
-          $conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
+          $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
           
           if(isset($userSession)){
           
@@ -44,7 +44,7 @@ $userSession = $_SESSION['user'];
           aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i><?php echo $userSession["u_user"];?></a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/user_profile.php">Minha Conta</a>
+          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/user_profile.php">Minha Conta</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewcharacter_page.php">Meu Personagem</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/actions/logout.php">Log out</a>
         </div>

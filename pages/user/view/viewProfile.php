@@ -115,8 +115,5 @@ session_start();
                 <p class="text-center text-danger">
                 </p>
         </div>
-        <?php
-
-            } } ?>
     </body>
 </html> 
