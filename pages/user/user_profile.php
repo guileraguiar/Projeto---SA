@@ -1,13 +1,14 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Cadastro</title>
+        <title>Minha conta</title>
         <!-- CSS //-->
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/imagem.css">
@@ -35,54 +36,46 @@ session_start();
         <!-- Importação JS //-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    
+        
         <?php 
 
-            include '../../includes/navbar.php';
+        include '../../includes/navbar_after.php';
 
-    //         if(isset($_GET["code"])){
-    //             $erro = $_GET["code"];
-               
-    //             if($erro == 1000){
-    //                 echo "<script>alert('Este usuário já está em uso!!');</script>";
-    //                 }elseif($erro == 1001){
-    //                     echo "<script>alert('Preencha o campo usuário corretamente!!');</script>";
-    //                 }elseif($erro == 1002){
-    //                     echo "<script>alert('Este e-mail já está em uso!!');</script>";
-    //                 }
-    //    }
         ?>
     </head>
     <header>
     </header>
-    <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
-            <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
-                <form action="../../actions/register_validate.php" method="post">
-                    <div class="form-row">
-                        <div class="col">    
+    <body style="background-size: 100%;background-image: url(../../images/cyberpunk.jpg); ">
+        <div class="container fundobranco" style="width:600px; height:300px; margin-top:90px;"> 
+        <center><h4 style="color:white;">imagem do personagem</h4></center>  
+            <br>
+          <?php
 
-                            <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                            <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Usuário" name="user" pattern="[a-zA-Z0-9]+" required><br>
-                            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
-                            <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
-                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="pass" required><br>
-                            
-                            <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="cpass" required><br>
+          $userSession = $_SESSION['user'];
+          $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+          
+          if(isset($userSession)){
+          
+            $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
+          
+            $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
+          
+            $selectEmail = mysqli_query($conexao,"SELECT id_user FROM users WHERE u_user = ".$userSession["id_user"]."");
 
-                            <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
-                            <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ><br>
-
-                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
-
-                        </div>
-                    </div>
-                </form>
-                <p class="text-center text-danger">
-                <?php 
-                    ?>
-                </p>
+            $selectEmail = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = ".$userSession["u_pass"]."");
+        
+          ?> 
+          
+                <center><h4 style="color:white;">Usuário:<?php echo $userSession["u_user"] ?></h4></center>
+                <br> 
+                <center><h4 style="color:white;">E-mail:<?php echo $userSession["u_email"] ?></h4></center> 
+                <br>
+                <center><h4 style="color:white;">ID:<?php echo $userSession["id_user"] ?></h4></center>
+                <br>        
+            </form>
         </div>
     </body>
+    <?php
+          }
+?>
 </html>

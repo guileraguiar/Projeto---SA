@@ -1,9 +1,10 @@
 <?php
-
-    $conexao=mysqli_connect("localhost", "root", "", "db_agonizingvillage");
-    $busca=mysqli_query($conexao,"SELECT * FROM users");
-    $arrUser=mysqli_fetch_all($busca, MYSQLI_ASSOC);
-    mysqli_close($conexao);
+    session_start();
+        $conexao=mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+        $busca=mysqli_query($conexao,"SELECT * FROM users");
+        $arrUser=mysqli_fetch_all($busca, MYSQLI_ASSOC);
+        mysqli_close($conexao);
+        include '../../includes/navbar_admin.php';
 ?>
 <html>
 <head>
@@ -50,14 +51,7 @@
     <!-- Importação JS //-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-
 </head>
-
-<?php
-    include '../../includes/navbar.php';
-?>
-
-
 <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png);">
     <center>
         <div class="container fundobranco" style="margin-top: 50px;">
@@ -86,7 +80,8 @@
             </tbody>
             </thead>
         </table>
+        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
         </div>
     </center>
 </body>
-</htmls
+</html>

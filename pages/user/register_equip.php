@@ -51,22 +51,22 @@ session_start();
                         <div class="col">    
 
                             <center><label for="armor" class="text-light fonteLabel">Armadura Adicional</label></center>
-                            <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Armadura" name="armor"><br>
-                            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
+                            <input type="text" class="form-control" placeholder="Armadura" name="armor"><br>
+
                             <center><label for="attack" class="text-light fonteLabel">Poder de Ataque</label></center>
-                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Poder de ataque" name="attack"><br>
+                            <input type="text" class="form-control" placeholder="Poder de ataque" name="attack"><br>
                             
                             <center><label for="life" class="text-light fonteLabel">Vida adicional</label></center>
-                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Vida Adicional" name="life"><br>
+                            <input type="text" class="form-control" placeholder="Vida Adicional" name="life"><br>
 
                             <center><label for="energy" class="text-light fonteLabel">Energia</label></center>
-                            <input type="email" class="form-control" maxlength="30" placeholder="Energia" name="energy"><br>
+                            <input type="text" class="form-control" placeholder="Energia" name="energy"><br>
 
                             <center><label for="price" class="text-light fonteLabel">Preço</label></center>
-                            <input type="email" class="form-control" maxlength="30" placeholder="Preço" name="price"><br>
+                            <input type="text" class="form-control" placeholder="Preço" name="price"><br>
                             
                             <center><label for="crit" class="text-light fonteLabel">Chance de Crítico</label></center>
-                            <input type="email" class="form-control" maxlength="30" placeholder="Chance de Crítico" name="crit"><br>
+                            <input type="text" class="form-control" placeholder="Chance de Crítico" name="crit"><br>
 
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 
