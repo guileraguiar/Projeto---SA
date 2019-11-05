@@ -4,10 +4,7 @@ $race = isset($_POST["raca"])?($_POST["raca"]):"";
 $picture = isset($_POST["foto-personagem"])?($_POST["foto-personagem"]):"";
 
 
-$local = "localhost";
-$userRoot = "root";
-$passRoot = "";
-$db_name = "db_agonizingVillage";
+require_once "../bd/connection_bd.php";
 
 switch ($race){
   case "elfo":
@@ -71,9 +68,6 @@ echo ($race);
 if ($picture == 0) {
     
 
-
-// Aqui você faz a conexão com o banco de dados
-$conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error());
   // Lista de tipos de arquivos permitidos
   //$tiposPermitidos= array('image/jpg','image/jpeg','image/pjpeg','image/png');
 // Array com as extensões permitidas

@@ -64,7 +64,7 @@ session_start();
           <?php
 
           $userSession = $_SESSION['user'];
-          $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+          require_once "../../bd/connection_bd.php";
           
           if(isset($userSession)){
           

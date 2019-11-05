@@ -44,7 +44,7 @@ session_start();
 
 if (isset($_SESSION['user'])){
     $userSession = $_SESSION['user'];
-    $conexao = mysqli_connect("localhost", "root", "","db_agonizingVillage") or die ("Erro");
+    require_once "bd/connection_bd.php";
 
     $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user ='".$userSession["u_user"]."'");
     if($userSession['u_nivel']==2){
@@ -70,7 +70,7 @@ if (isset($_SESSION['user'])){
 
 if(isset($_SESSION['user'])):
      $userSession = $_SESSION['user'];
-          $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+          require_once "bd/connection_bd.php";
           
           if(isset($userSession)):
           
