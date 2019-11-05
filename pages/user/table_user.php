@@ -1,6 +1,5 @@
 <?php
     session_start();
-        header("../../menu.php");
         $conexao=mysqli_connect("localhost", "root", "", "db_agonizingvillage");
         $busca=mysqli_query($conexao,"SELECT * FROM users");
         $arrUser=mysqli_fetch_all($busca, MYSQLI_ASSOC);

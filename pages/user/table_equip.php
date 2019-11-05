@@ -1,8 +1,8 @@
 <?php
 
     $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
-    $busca = mysqli_query($conecxao,"SELECT * FROM equip");
-    $arrUser = mysqli_fetch_all($busca, MYSQLI_ASSOC);  
+    $busca = mysqli_query($conexao,"SELECT * FROM equip");
+    $arrEquip = mysqli_fetch_all($busca, MYSQLI_ASSOC);  
     mysqli_close($conexao);
 
 ?>
@@ -76,11 +76,15 @@
             </tr>
             <tbody>
             <?php
-                foreach($arrUser as $chave => $valor){
+                foreach($arrEquip as $chave => $valor){
                     echo "<tr>";
-                    echo "<th>".$valor["id_user"]."</th>";
-                    echo "<th>".$valor["u_user"]."</th>";
-                    echo "<th>".$valor["u_email"]."</th>";
+                    echo "<th>".$valor["id_equip"]."</th>";
+                    echo "<th>".$valor["e_armor"]."</th>";
+                    echo "<th>".$valor["e_attack"]."</th>";
+                    echo "<th>".$valor["e_life"]."</th>";
+                    echo "<th>".$valor["e_energy"]."</th>";
+                    echo "<th>".$valor["e_price"]."</th>";
+                    echo "<th>".$valor["e_crit_chance"]."</th>";
                     echo "<th>";
                     echo "<a href='../../actions/delete.php?codigo=".$valor["id_user"]."'>Excluir</a>";
                     echo "</th>";

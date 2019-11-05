@@ -44,18 +44,53 @@ session_start();
     </head>
     <header>
     </header>
+
     <body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
+    <?php
+        
+        $query_sel_char = "SELECT * FROM characters";
+ 
+        $array_sel_char = mysqli_fetch_assoc($query_sel_char);
+
+        if ($array_sel_char->rowCount()>0) {
+            while ($sql_sel_char_dados = $array_sel_char->fetch()) {
+
+      ?>
         <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-        <div class="container fundobranco" style="width:500px;">   
+        <div class="container fundobranco" style="width:auto;">   
                 <form action="#"  method="post">
                     <div class="form-row">
-                        <div class="col">    
-
+                        <div class="col">                              
+                            <img src="http://localhost/SteelFreak/images/personagens/orc.jpg" width="210px" height="auto">                            
                             <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
                             <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="nickname"><br>
-                
+                            <?php echo $sql_sel_marcas_dados['c_nickname']; ?>
+                            <center><label for="nivel"  class="text-light fonteLabel">Nível</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="nivel"><br>
+
                             <center><label for="raca"  class="text-light fonteLabel">Raça</label></center>
                             <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="raca"><br>
+
+                            <center><label for="vida"  class="text-light fonteLabel">Vida</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="vida"><br>
+
+                            <center><label for="forca"  class="text-light fonteLabel">Força</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="forca"><br>
+
+                            <center><label for="defesa"  class="text-light fonteLabel">Resistência</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="defesa"><br>
+
+                            <center><label for="estamina"  class="text-light fonteLabel">Estamina</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="estamina"><br>
+
+                            <center><label for="critico"  class="text-light fonteLabel">% Crítico</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="critico"><br>
+
+                            <center><label for="habilidades"  class="text-light fonteLabel">Habilidades Adquiridas</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="habilidades"><br>
+
+                            <center><label for="dinheiro"  class="text-light fonteLabel">Dinheiro</label></center>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="dinheiro "><br>
 
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" href="http://localhost/SteelFreak/pages/user/view/changes/change_character.php" name="editar">Editar</button>
 
@@ -65,5 +100,8 @@ session_start();
                 <p class="text-center text-danger">
                 </p>
         </div>
+        <?php
+
+            } } ?>
     </body>
-</html>
+</html> 
