@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,26 +61,39 @@ session_start();
 
     <body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
     <?php
+        $server = "127.0.0.1";
+        $user = "root";
+        $password = "root";
+        $bd = "db_agonizingvillage";
         
-        $query_sel_char = "SELECT * FROM characters";
+        $connection = mysqli_connect($server,$user,$password,$bd);
+        $query_sel_char = mysqli_query($connection,"SELECT * FROM characters");
  
         $array_sel_char = mysqli_fetch_assoc($query_sel_char);
+        
+        if(mysqli_num_rows($query_sel_char)>0):
+            while ($sql_sel_char_dados = $array_sel_char = mysqli_fetch_assoc($query_sel_char)):
 
-        if ($array_sel_char->rowCount()>0) {
-            while ($sql_sel_char_dados = $array_sel_char->fetch()) {
-
-      ?>
+    ?>
+    <?php 
+    $login=$_SESSION["user"];
+    print_r($_SESSION);
+    if ($login){
+        
+    $dados = mysqli_query($conexao,"SELECT * FROM characters, users WHERE id_user = '".$login["id_user"]."'");
+    }
+    ?>
         <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
         <div class="container fundobranco" style="width:auto;">   
                 <form action="#"  method="post">
                     <div class="form-row">
                         <div class="col">                              
                             <img src="http://localhost/SteelFreak/images/personagens/orc.jpg" width="210px" height="auto">                            
-                            <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
-                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="nickname"><br>
-                            <?php echo $sql_sel_marcas_dados['c_nickname']; ?>
+                            <center><label for="nickname" class="text-light fonteLabel">Apelido</label></center>
+                            <input type="text" readonly="true" style="width:400px;   height:30px;text-align:center;" class=" mx-auto d-block" name="nickname" value="<?php echo $login["c_nickname"]; ?>"><br>
+                            
                             <center><label for="nivel"  class="text-light fonteLabel">Nível</label></center>
-                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="nivel"><br>
+                            <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="nivel" value="<?php echo $login["u_level"]; ?>"><br>
 
                             <center><label for="raca"  class="text-light fonteLabel">Raça</label></center>
                             <input type="text" readonly="true" style="width:400px; height:30px;text-align:center;" class=" mx-auto d-block" name="raca"><br>
@@ -115,5 +127,8 @@ session_start();
                 <p class="text-center text-danger">
                 </p>
         </div>
+        <?php
+
+             endwhile;endif;?>
     </body>
 </html> 
