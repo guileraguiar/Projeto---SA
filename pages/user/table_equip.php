@@ -86,7 +86,7 @@
                     echo "<th>".$valor["e_price"]."</th>";
                     echo "<th>".$valor["e_crit_chance"]."</th>";
                     echo "<th>";
-                    echo "<a href='../../actions/delete.php?codigo=".$valor["id_user"]."'>Excluir</a>";
+                    echo "<a href='../../actions/delete.php?codigo=".$valor["id_equip"]."'>Excluir</a>";
                     echo "</th>";
                     echo "</tr>";
                 }
