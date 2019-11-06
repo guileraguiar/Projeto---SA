@@ -62,11 +62,11 @@ session_start();
                             <center><label for="energy" class="text-light fonteLabel">Energia</label></center>
                             <input type="text" class="form-control" placeholder="Energia" name="energy"><br>
 
-                            <center><label for="price" class="text-light fonteLabel">Preço</label></center>
-                            <input type="text" class="form-control" placeholder="Preço" name="price"><br>
-                            
                             <center><label for="crit" class="text-light fonteLabel">Chance de Crítico</label></center>
                             <input type="text" class="form-control" placeholder="Chance de Crítico" name="crit"><br>
+
+                            <center><label for="price" class="text-light fonteLabel">Preço</label></center>
+                            <input type="text" class="form-control" placeholder="Preço" name="price"><br>
 
                             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 
