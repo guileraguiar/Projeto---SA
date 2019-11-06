@@ -1,7 +1,7 @@
 <?php
 $codigo = $_GET["codigo"];
 
-$conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+require_once "../bd/connection_bd.php";
 
 mysqli_query($conexao,"DELETE FROM users WHERE id_user=".$codigo);
 

@@ -5,11 +5,7 @@ $race = isset($_POST["raca"])?($_POST["raca"]):"";
 $picture = isset($_POST["foto-personagem"])?($_POST["foto-personagem"]):"";
 
 
-
-$local = "localhost";
-$userRoot = "root";
-$passRoot = "";
-$db_name = "db_agonizingVillage";
+require_once "../bd/connection_bd.php";
 
 switch ($race){
   case "elfo":
