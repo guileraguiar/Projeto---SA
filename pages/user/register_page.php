@@ -66,10 +66,10 @@ session_start();
                             <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Usuário" name="user" pattern="[a-zA-Z0-9]+" required><br>
                             <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
                             <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
-                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="pass" required><br>
+                            <input type="password" class="form-control" minlength="1" maxlength="20" placeholder="Senha" name="pass" required><br>
                             
                             <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                            <input type="password" class="form-control" minlength="6" maxlength="20" placeholder="Senha" name="cpass" required><br>
+                            <input type="password" class="form-control" minlength="1" maxlength="20" placeholder="Senha" name="cpass" required><br>
 
                             <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
                             <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ><br>

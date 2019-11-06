@@ -51,7 +51,7 @@ include '../../includes/navbar.php';
                         <input type="text" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Digite seu Usuário" name="user" required><br>
             
                         <center><label for="pass"  class="text-light fonteLabel">Senha</label></center>
-                        <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Digite sua Senha" name="pass" required><br>
+                        <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" placeholder="Digite sua Senha" name="pass" required><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar" value="logar">Entrar</button>
                         <br>
