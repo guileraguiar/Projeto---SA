@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`users` (
   `u_user` VARCHAR(100) NULL DEFAULT NULL,
   `u_pass` CHAR(32) NULL DEFAULT NULL,
   `u_type` INT NULL,
-  UNIQUE INDEX (`u_email` ASC) VISIBLE,
-  UNIQUE INDEX (`u_user` ASC) VISIBLE,
+  UNIQUE INDEX (`u_email` ASC),
+  UNIQUE INDEX (`u_user` ASC),
   PRIMARY KEY (`id_user`));
 
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`duel` (
   `d_date` DATE NULL DEFAULT NULL,
   `d_result` INT NULL DEFAULT NULL,
   PRIMARY KEY (`id_duel`),
-  UNIQUE INDEX (`id_duel` ASC) VISIBLE);
+  UNIQUE INDEX (`id_duel` ASC));
 
 
 -- -----------------------------------------------------
@@ -89,8 +89,8 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`characters` (
   `users_id_user` INT NOT NULL,
   `c_type` INT NOT NULL,
   PRIMARY KEY (`id_characters`),
-  INDEX `fk_characters_race1_idx` (`race_id_race` ASC) VISIBLE,
-  INDEX `fk_characters_users1_idx` (`users_id_user` ASC) VISIBLE,
+  INDEX `fk_characters_race1_idx` (`race_id_race` ASC),
+  INDEX `fk_characters_users1_idx` (`users_id_user` ASC),
   CONSTRAINT `fk_characters_race1`
     FOREIGN KEY (`race_id_race`)
     REFERENCES `db_agonizingvillage`.`race` (`id_race`)
@@ -110,8 +110,8 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`characters_has_equip` (
   `characters_id_characters` INT NOT NULL,
   `equip_id_equip` INT NOT NULL,
   PRIMARY KEY (`characters_id_characters`, `equip_id_equip`),
-  INDEX `fk_characters_has_equip_equip1_idx` (`equip_id_equip` ASC) VISIBLE,
-  INDEX `fk_characters_has_equip_characters1_idx` (`characters_id_characters` ASC) VISIBLE,
+  INDEX `fk_characters_has_equip_equip1_idx` (`equip_id_equip` ASC),
+  INDEX `fk_characters_has_equip_characters1_idx` (`characters_id_characters` ASC),
   CONSTRAINT `fk_characters_has_equip_characters1`
     FOREIGN KEY (`characters_id_characters`)
     REFERENCES `db_agonizingvillage`.`characters` (`id_characters`)
@@ -131,8 +131,8 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`duel_has_characters` (
   `duel_id_duel` INT NOT NULL,
   `characters_id_characters` INT NOT NULL,
   PRIMARY KEY (`duel_id_duel`, `characters_id_characters`),
-  INDEX `fk_duel_has_characters_characters1_idx` (`characters_id_characters` ASC) VISIBLE,
-  INDEX `fk_duel_has_characters_duel1_idx` (`duel_id_duel` ASC) VISIBLE,
+  INDEX `fk_duel_has_characters_characters1_idx` (`characters_id_characters` ASC),
+  INDEX `fk_duel_has_characters_duel1_idx` (`duel_id_duel` ASC),
   CONSTRAINT `fk_duel_has_characters_duel1`
     FOREIGN KEY (`duel_id_duel`)
     REFERENCES `db_agonizingvillage`.`duel` (`id_duel`)
