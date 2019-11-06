@@ -1,88 +1,35 @@
 <?php
 session_start();
+    include '../../includes/header.php';
+    include '../../includes/navbar.php';
 ?>
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Cadastro</title>
-        <!-- CSS //-->
-        <link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../css/imagem.css">
-        <!-- Fontes //-->
-        <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <!-- Icone //-->
-        <link rel="apple-touch-icon" sizes="57x57" href="../../images/logo/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="../../images/logo/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="../../images/logo/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../../images/logo/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="../../images/logo/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="../../images/logo/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="../../images/logo/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../images/logo/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="../../images/logo/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../images/logo/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <!-- Importação JS //-->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    
-        <?php 
-
-            include '../../includes/navbar.php';
-
-    //         if(isset($_GET["code"])){
-    //             $erro = $_GET["code"];
-               
-    //             if($erro == 1000){
-    //                 echo "<script>alert('Este usuário já está em uso!!');</script>";
-    //                 }elseif($erro == 1001){
-    //                     echo "<script>alert('Preencha o campo usuário corretamente!!');</script>";
-    //                 }elseif($erro == 1002){
-    //                     echo "<script>alert('Este e-mail já está em uso!!');</script>";
-    //                 }
-    //    }
-        ?>
-    </head>
-    <header>
-    </header>
     <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
         <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">
-            <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
-                <form action="../../actions/register_validate.php" method="post">
-                    <div class="form-row">
-                        <div class="col">    
+        <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">   
+            <form action="../../actions/register_validate.php" method="post">
+                <div class="form-row">
+                    <div class="col">    
 
-                            <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
-                            <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Usuário" name="user" pattern="[a-zA-Z0-9]+" required><br>
-                            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
-                            <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
-                            <input type="password" class="form-control" minlength="1" maxlength="20" placeholder="Senha" name="pass" required><br>
-                            
-                            <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
-                            <input type="password" class="form-control" minlength="1" maxlength="20" placeholder="Senha" name="cpass" required><br>
+                        <center><label for="user" class="text-light fonteLabel">Usuário</label></center>
+                        <input type="text" class="form-control" minlength="3"  maxlength="20" placeholder="Usuário" name="user" pattern="[a-zA-Z0-9]+" required><br>
+                        <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"  implementado no final-->
+                        <center><label for="pass" class="text-light fonteLabel">Senha</label></center>
+                        <input type="password" class="form-control" minlength="1" maxlength="20" placeholder="Senha" name="pass" required><br>
 
-                            <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
-                            <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ><br>
+                        <center><label for="pass" class="text-light fonteLabel">Confirmar senha</label></center>
+                        <input type="password" class="form-control" minlength="1" maxlength="20" placeholder="Senha" name="cpass" required><br>
 
-                            <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
+                        <center><label for="email" class="text-light fonteLabel">E-mail</label></center>
+                        <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ><br>
 
-                        </div>
+                        <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
+
                     </div>
-                </form>
-                <p class="text-center text-danger">
-                <?php 
-                    ?>
-                </p>
+                </div>
+            </form>
         </div>
     </body>
+    <?php
+    //require_once '../../includes/footer.php';
+    ?>
 </html>
