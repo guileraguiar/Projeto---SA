@@ -52,7 +52,6 @@ session_start();
     <body style="background-size: 100%;background-image: url(../../../images/telaprofile.png); ">
         
         
-            <br>
           <?php
 
           $userSession = $_SESSION['user'];
@@ -69,49 +68,45 @@ session_start();
             $selectEmail = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = ".$userSession["u_pass"]."");
         
           ?> 
+        <br>
         <div class="container fundobranco" style="width:900px; height:420px; margin-top:20px;">
-        <div class="row" style="padding:20px;">
-        <div class="col-sm-3">
-        <img src="../../../images/personagens/character1.gif" style="width:100px;" class="rounded float-left profileImage" alt="..."> 
-          </div>
-        <div class="col-sm-9">
-            <h4 class="minhaconta">Minha conta</h4>
-          </div>
-          </div>
-            
-            <br>
-            <!-- Dados da conta //-->
-                <div class="row no-gutters">
-                    <div class="col"><h4 class="profileBTxt">|Usuário: </h4></div>
-                    <div class="col"><p class="profileTxt" ><?php echo $userSession["u_user"] ?></p></div>
-                </div>
+            <div class="row" style="padding:20px;">
+                <div class="col-sm-3"><img src="../../../images/personagens/character1.gif" style="margin-left:30px; width:100px;" class="rounded float-left profileImage" alt="..."> </div>
+                <div class="col-sm-9"><h4 class="minhaconta">Minha conta</h4></div>
+            </div>
 
-                <div class="row no-gutters">
-                    <div class="col"><h4 class="profileBTxt">|E-mail: </h4></div>
-                    <div class="col"><p class="profileTxt" ><?php echo $userSession["u_email"] ?></p></div>
-                    </div>
+                        <br>
 
-                <div class="row no-gutters">
-                    <div class="col"><h4 class="profileBTxt">|ID: </h4></div>
-                    <div class="col"><p class="profileTxt" ><?php echo $userSession["id_user"] ?></p><div>
-                    
-                </div>
+                    <!-- Dados da conta //-->
+                        <div class="row no-gutters">
+                            <div class="col"><h4 class="profileBTxt">|Usuário: </h4></div>
+                            <div class="col"><p class="profileTxt" ><?php echo $userSession["u_user"] ?></p></div>
+                        </div>
 
+                        <div class="row no-gutters">
+                            <div class="col"><h4 class="profileBTxt">|E-mail: </h4></div>
+                            <div class="col"><p class="profileTxt" ><?php echo $userSession["u_email"] ?></p></div>
+                        </div>
+
+                        <div class="row no-gutters">
+                            <div class="col"><h4 class="profileBTxt">|ID: </h4></div>
+                            <div class="col"><p class="profileTxt" ><?php echo $userSession["id_user"] ?></p><div>
+                        </div>
 
                 <hr>
 
-            <!-- Dados do personagem (ainda não está funcionando) //-->
-                <div class="row no-gutters">
-                    <div class="col"><h4 class="profileBTxt">|Apelido: </h4></div>
-                    <div class="col"><p class="profileTxt" ><?php echo  ?></p></div>
-                </div>
+                    <!-- Dados do personagem (ainda não está funcionando) //-->
+                        <div class="row no-gutters">
+                            <div class="col"><h4 class="profileBTxt">|Apelido: </h4></div>
+                            <div class="col"><p class="profileTxt" ></p></div>
+                        </div>
 
-                <div class="row no-gutters">
-                    <div class="col"><h4 class="profileBTxt">|Raça: </h4></div>
-                    <div class="col"><p class="profileTxt" ><?php echo  ?></p></div>
-                </div>
-            
-            </div>
+                        <div class="row no-gutters">
+                            <div class="col"><h4 class="profileBTxt">|Raça: </h4></div>
+                            <div class="col"><p class="profileTxt" ></p></div>
+                        </div>
+        </div>
+        ht
     </body>
     <?php
           }
