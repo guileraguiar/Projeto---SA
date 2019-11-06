@@ -50,8 +50,8 @@ if (isset($_SESSION['user'])){
         include 'includes/navbar_admin.php';
     }else if($userSession['u_type']==1){
         include 'includes/navbar_after.php';
-    }
-}else{
+        }
+    }else{
     include 'includes/navbar.php';
 }
     
@@ -100,17 +100,17 @@ endif;
                     <br>
                     <form action="http://localhost/SteelFreak/pages/user/register_page.php">
                         <center><h4>Já tem a sua conta? Não? Crie agora!</h4></center>
-                        <button type="onclick" class="btn btn-dark mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Cadastrar</button>
+                        <button type="onclick" class="btn btn-dark mx-auto d-block">Cadastrar</button>
                     </form>
                     <br>
                     <form action="http://localhost/SteelFreak/pages/user/login_page.php">
                         <center><h4>Calma lá, você já tem? Então entre agora!</h4></center>
-                        <button type="submit" class="btn btn-dark mx-auto d-block" href="http://localhost/SteelFreak/pages/user/login_page.php">Login</button>
+                        <button type="submit" class="btn btn-dark mx-auto d-block">Login</button>
                     </form>
                     <br>
-                    <form action="http://localhost/SteelFreak/pages/user/login_admin.php">
+                    <form action="http://localhost/SteelFreak/pages/user/login_page.php">
                         <center><h4>És Administrador? Entre por aqui!</h4></center>    
-                        <button type="onclick" class="btn btn-dark mx-auto d-block" href="http://localhost/SteelFreak/pages/user/register_page.php">Entrar como ADMIN</button>
+                        <button type="onclick" class="btn btn-dark mx-auto d-block">Entrar como ADMIN</button>
                     </form>
                     <br>
                     <form action="http://localhost/SteelFreak/pages/battle/introBattle.php">
