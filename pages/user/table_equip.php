@@ -1,6 +1,6 @@
 <?php
 
-    $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+    require_once "../../bd/connection_bd.php";
     $busca = mysqli_query($conexao,"SELECT * FROM equip");
     $arrEquip = mysqli_fetch_all($busca, MYSQLI_ASSOC);  
     mysqli_close($conexao);

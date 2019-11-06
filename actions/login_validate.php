@@ -7,11 +7,7 @@
     $Signin = isset($_POST["logar"])?($_POST["logar"]):"";
 
     //criando a conexão com o banco de dados
-    $local = "localhost";
-    $userRoot = "root";
-    $passRoot = "";
-    $db_name = "db_agonizingVillage";
-    $conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error()); 
+    require_once "../bd/connection_bd.php";
 
 ?>
 <?php

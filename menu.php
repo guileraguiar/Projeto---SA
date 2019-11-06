@@ -44,12 +44,12 @@ session_start();
 
 if (isset($_SESSION['user'])){
     $userSession = $_SESSION['user'];
-    $conexao = mysqli_connect("localhost", "root", "","db_agonizingVillage") or die ("Erro");
+    require_once "bd/connection_bd.php";
 
     $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user ='".$userSession["u_user"]."'");
-    if($userSession['u_nivel']==2){
+    if($userSession['u_type']==2){
         include 'includes/navbar_admin.php';
-    }else if($userSession['u_nivel']==1){
+    }else if($userSession['u_type']==1){
         include 'includes/navbar_after.php';
     }
 }else{
@@ -70,7 +70,7 @@ if (isset($_SESSION['user'])){
 
 if(isset($_SESSION['user'])):
      $userSession = $_SESSION['user'];
-          $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
+          require_once "bd/connection_bd.php";
           
           if(isset($userSession)):
           
