@@ -1,4 +1,5 @@
 <?php
+session_start();
 $nick = isset($_POST["nickname"])?($_POST["nickname"]):"";
 $race = isset($_POST["raca"])?($_POST["raca"]):"";
 $picture = isset($_POST["foto-personagem"])?($_POST["foto-personagem"]):"";
@@ -68,6 +69,12 @@ echo ($race);
 if ($picture == 0) {
     
 
+
+// Aqui você faz a conexão com o banco de dados
+$conexao = mysqli_connect($local, $userRoot , $passRoot,$db_name) or die (mysqli_error());
+$id = $_SESSION['user'];
+$idUser = mysqli_query($conexao,"SELECT * FROM users WHERE id_user = '".$id["id_user"]."'");
+$arr = mysqli_fetch_all($idUser, MYSQLI_ASSOC);
   // Lista de tipos de arquivos permitidos
   //$tiposPermitidos= array('image/jpg','image/jpeg','image/pjpeg','image/png');
 // Array com as extensões permitidas
@@ -105,9 +112,12 @@ if (array_search($arqType, $tiposPermitidos) === false) {
       // Verifica se o arquivo foi movido com sucesso
       if ($upload == true) {
         // Cria uma query MySQL
-        $query = mysqli_query($conexao, "INSERT INTO characters (c_nickname,fk_race,c_experience,c_life,c_energy,c_strenght,c_defense,c_inventory,c_level,c_ability,c_crit_chance,c_money,c_picture) VALUES ('$nick',DEFAULT,'$exp','$vida','$energia','$forca',$defesa,'$inventario','$level','$habilidades','$chanceCrit','$dinheiro','$foto')");
-        echo 'Usuário inserido com sucesso!'.
-        "<script>window.location.href='../menu.php';</script>";
+        $select = mysqli_query($conexao, "SELECT * FROM characters, users WHERE c_nickname = '$nick'");
+        $query = mysqli_query($conexao, "INSERT INTO characters (c_nickname,fk_id_user,fk_race,c_experience,c_life,c_energy,c_strenght,c_defense,c_inventory,c_level,c_ability,c_crit_chance,c_money,c_picture) VALUES ('$nick',(SELECT id_user FROM users WHERE u_user = {$id["id_user"]}),(SELECT id_race FROM characters WHERE race = {$id["id_user"]}),$exp,$vida,$energia,$forca,$defesa,$inventario,$level,$habilidades,$chanceCrit,$dinheiro,'$foto'");
+        echo 'Usuário inserido com sucesso!';//.
+        print_r($id);
+        print_r ($query);
+        //"<script>window.location.href='../menu.php';</script>";
         }else { 
           echo 'Ocorreu algum com o cadastro, por favor, tente novamente ou contate o suporte';
       }
