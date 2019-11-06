@@ -77,9 +77,7 @@ session_start();
             </form>
             <p class="text-center text-danger">
                 <?php 
-                    // if(isset($_GET['msg'])){
-                    //     echo $_GET['msg'];
-                    // }
+                 
                 ?>
             </p>
             
