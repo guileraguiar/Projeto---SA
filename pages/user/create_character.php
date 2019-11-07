@@ -15,17 +15,26 @@ session_start();
                         <center><label for="user" class="text-light fonteLabel">Apelido</label></center>
                         <input type="text" class="form-control" maxlength="10" placeholder="ex: NoobMaster69" name="nickname" required width="10px"><br>
                         <center><label for="user" class="text-light fonteLabel">Escolha sua Raça</label></center>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="inputGroupSelect01">Opções de Raça</label>
-                                </div>
-                                <select class="custom-select" for="raca" id="inputGroupSelect01" name="raca" required>
-                                <option selected value="">Escolher...</option>
-                                <option value="elfo">Elfo (Dano Verdadeiro)</option>
-                                <option value="orc">Orc (Tanque)</option>
-                                <option value="mago">Mago (Dano Mágico)</option>
-                                <option value="humano">Humano (Flex)</option>
-                                </select>
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Opções de Raça</label>
+                        </div>
+                        <select class="custom-select" for="raca" id="inputGroupSelect01" name="raca" required>
+                            <option selected value="">Escolher...</option>
+                            <option value="1">Orc (Tanque)</option>
+                            <option value="2">Humano (Flex)</option>
+                            <option value="3">Mago (Dano Mágico)</option>
+                            <option value="4">Elfo (Dano Verdadeiro)</option>
+                        </select>
+                        </div>
+                        
+                        <center><label for="foto" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
+                        <div class="card-deck">
+                        
+                            <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                            <input type="file" name="foto-personagem" class="btn btn-light mx-auto d-block">
+                            </div>
                             </div>
                             <center><label for="foto" class="text-light fonteLabel">Escolha a sua foto de perfil</label></center>
                             <div class="card-deck">
