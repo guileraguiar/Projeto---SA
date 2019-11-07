@@ -13,7 +13,7 @@ session_start();
         require_once "../../../bd/connection_bd.php";
           $userSession = $_SESSION['user'];
                    
-          if(isset($userSession)){
+          if(isset($userSession)){ 
           
             $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
             $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
