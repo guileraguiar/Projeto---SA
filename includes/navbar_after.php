@@ -46,7 +46,7 @@ $userSession = $_SESSION['user'];
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
           <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/user_profile.php">Minha Conta</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/viewcharacter_page.php">Meu Personagem</a>
-          <a class="dropdown-item" href="">Configurações</a>
+          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/configurations.php/config_page.php">Configurações</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/actions/logout.php">Log out</a>
         </div>
       </li>
