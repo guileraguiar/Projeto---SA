@@ -7,7 +7,7 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Meu personagem</title>
+        <title>Minha conta</title>
         <!-- CSS //-->
         <link rel="stylesheet" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../../css/imagem.css">
@@ -35,13 +35,28 @@ session_start();
         <!-- Importação JS //-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        
         <?php 
 
-            include '../../../includes/navbar_after.php';
+        include '../../../includes/navbar_after.php';
 
-        ?>
+        $userSession = $_SESSION['user'];
+        $conexao = mysqli_connect("localhost", "root", "root", "db_agonizingvillage");
+
+            if(isset($userSession)){
+        
+                $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
+                
+                $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
+                
+                $selectEmail = mysqli_query($conexao,"SELECT id_user FROM users WHERE u_user = ".$userSession["id_user"]."");
+                
+                $selectEmail = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = ".$userSession["u_pass"]."");
+        
+        ?> 
     </head>
     <header>
+
     </header>
 
     <body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
