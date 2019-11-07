@@ -32,7 +32,7 @@ session_start();
                         <div class="card-deck">
                         
                             <div class="card" style="width: 18rem;">
-                            <div class="card-body">
+                            <div class="card-body"> 
                             <input type="file" name="foto-personagem" class="btn btn-light mx-auto d-block">
                             </div>
                             </div>

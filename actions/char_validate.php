@@ -46,40 +46,43 @@ if (array_search($arqType, $tiposPermitidos) === false) {
       $pasta = "../images/personagens/";  
       $upload = move_uploaded_file($arqTemp, $pasta.$arqName);
       $foto = $_FILES["foto-personagem"]['name'];
+      echo $foto;
       
       // Verifica se o arquivo foi movido com sucesso
       if ($upload == true) {
         // Cria uma query MySQL
         $insertChar = mysqli_query($conexao, "INSERT INTO characters (
-          id_characters,
-          c_nickname,
-          c_experience,
-          c_life,
-          c_energy,
-          c_strenght,
-          c_defense,
-          c_level,
-          c_crit_chance,
-          c_money,
-          race_id_race,
-          users_id_user,
-          c_type) 
-          VALUES (
-          DEFAULT,
-          '$nick',
-          '0',
-          '$arrayRace[r_life]',
-          '$arrayRace[r_energy]',
-          '$arrayRace[r_strenght]',
-          '$arrayRace[r_defense]',
-          '1',
-          '$arrayRace[r_crit_chance]',
-          '0',
-          '$race',
-          '$arrayUser[id_user]' ,
-          '$arrayUser[u_type]')") OR die(mysqli_error($conexao));
+        id_characters,
+        c_nickname,
+        c_experience,
+        c_life,
+        c_energy,
+        c_strenght,
+        c_defense,
+        c_level,
+        c_crit_chance,
+        c_money,
+        race_id_race,
+        users_id_user,
+        c_picture,
+        c_type) 
+        VALUES (
+        DEFAULT,
+        '$nick',
+        '0',
+        '$arrayRace[r_life]',
+        '$arrayRace[r_energy]',
+        '$arrayRace[r_strenght]',
+        '$arrayRace[r_defense]',
+        1,
+        '$arrayRace[r_crit_chance]',
+        '0',
+        '$race',
+        '$arrayUser[id_user]',
+        '$foto',
+        '$arrayUser[u_type]')") OR die(mysqli_error($conexao));
 
-        echo 'Usuário inserido com sucesso!'."<script>window.location.href='../menu.php';</script>";
+        echo 'Usuário inserido com sucesso!';
         
         }else { 
           echo 'Ocorreu algum com o cadastro, por favor, tente novamente ou contate o suporte';

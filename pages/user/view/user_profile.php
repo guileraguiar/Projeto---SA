@@ -52,19 +52,15 @@ session_start();
     <body style="background-size: 100%;background-image: url(../../../images/telaprofile.png); ">
         
         
-          <?php
-
+        <?php
+        require_once "../../../bd/connection_bd.php";
           $userSession = $_SESSION['user'];
-          $conexao = mysqli_connect("localhost", "root", "", "db_agonizingvillage");
-          
+                   
           if(isset($userSession)){
           
             $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
-          
             $selectEmail = mysqli_query($conexao,"SELECT u_email FROM users WHERE u_user = ".$userSession["u_email"]."");
-          
             $selectEmail = mysqli_query($conexao,"SELECT id_user FROM users WHERE u_user = ".$userSession["id_user"]."");
-
             $selectEmail = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = ".$userSession["u_pass"]."");
         
           ?> 

@@ -87,6 +87,7 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`characters` (
   `c_money` INT NULL DEFAULT NULL,
   `race_id_race` INT NOT NULL,
   `users_id_user` INT NOT NULL,
+  `c_picture` VARCHAR(100),
   `c_type` INT NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_characters`),
   INDEX `fk_characters_race1_idx` (`race_id_race` ASC),
