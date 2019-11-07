@@ -46,12 +46,7 @@ session_start();
 
     <body style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
     <?php
-        $server = "127.0.0.1";
-        $user = "root";
-        $password = "root";
-        $bd = "db_agonizingvillage";
-        
-        $connection = mysqli_connect($server,$user,$password,$bd);
+        require_once "bd/connection_bd.php";
         $query_sel_char = mysqli_query($connection,"SELECT * FROM characters");
  
         $array_sel_char = mysqli_fetch_assoc($query_sel_char);

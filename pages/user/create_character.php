@@ -55,10 +55,10 @@
                         </div>
                         <select class="custom-select" for="raca" id="inputGroupSelect01" name="raca" required>
                             <option selected value="">Escolher...</option>
-                            <option value="elfo">Elfo (Dano Verdadeiro)</option>
-                            <option value="orc">Orc (Tanque)</option>
-                            <option value="mago">Mago (Dano Mágico)</option>
-                            <option value="humano">Humano (Flex)</option>
+                            <option value="1">Orc (Tanque)</option>
+                            <option value="2">Humano (Flex)</option>
+                            <option value="3">Mago (Dano Mágico)</option>
+                            <option value="4">Elfo (Dano Verdadeiro)</option>
                         </select>
                         </div>
                         

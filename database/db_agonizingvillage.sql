@@ -21,11 +21,11 @@ USE `db_agonizingvillage` ;
 -- Table `db_agonizingvillage`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`users` (
-  `id_user` INT NULL AUTO_INCREMENT,
+  `id_user` INT NOT NULL AUTO_INCREMENT,
   `u_email` VARCHAR(100) NULL DEFAULT NULL,
   `u_user` VARCHAR(100) NULL DEFAULT NULL,
   `u_pass` CHAR(32) NULL DEFAULT NULL,
-  `u_type` INT NULL,
+  `u_type` INT NULL DEFAULT 1,
   UNIQUE INDEX (`u_email` ASC),
   UNIQUE INDEX (`u_user` ASC),
   PRIMARY KEY (`id_user`));
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`equip` (
 -- Table `db_agonizingvillage`.`duel`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`duel` (
-  `id_duel` INT NULL AUTO_INCREMENT,
+  `id_duel` INT NOT NULL AUTO_INCREMENT,
   `d_date` DATE NULL DEFAULT NULL,
   `d_result` INT NULL DEFAULT NULL,
   PRIMARY KEY (`id_duel`),
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`characters` (
   `c_money` INT NULL DEFAULT NULL,
   `race_id_race` INT NOT NULL,
   `users_id_user` INT NOT NULL,
-  `c_type` INT NOT NULL,
+  `c_type` INT NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_characters`),
   INDEX `fk_characters_race1_idx` (`race_id_race` ASC),
   INDEX `fk_characters_users1_idx` (`users_id_user` ASC),
