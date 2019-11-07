@@ -2,12 +2,12 @@
 session_start();
     include '../../bd/connection_bd.php';
     include '../../includes/header.php';
-    
     include '../../includes/navbar.php';
 
 ?>
-<body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+<html>
+    <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
+        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
         <div class="container fundobranco" style="width:1000px;">   
             <form action="http://localhost/SteelFreak/actions/char_validate.php" enctype="multipart/form-data" method="post">
                 <div class="form-row">
@@ -36,10 +36,10 @@ session_start();
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" name="enviar" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
+                        <button type="submit" name="enviar" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
                     </div>
                 </div>
             </form>
         </div>
-</body>
+    </body>
 </html>

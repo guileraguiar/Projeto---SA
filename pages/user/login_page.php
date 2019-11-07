@@ -3,9 +3,10 @@ session_start();
     include '../../includes/header.php';
     include '../../includes/navbar.php';
 ?>
-<body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-    <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
-    <div class="container fundobranco" style="width:500px;">   
+<html>
+    <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
+        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+        <div class="container fundobranco" style="width:500px;">   
             <form action="../../actions/login_validate.php"  method="post">
                 <div class="form-row">
                     <div class="col">    
