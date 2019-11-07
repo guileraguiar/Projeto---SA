@@ -35,7 +35,7 @@ if(isset($userSession)){
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/table_user.php">
+        <a class="nav-link" href="http://localhost/SteelFreak/pages/user/tables/table_user.php">
           <i class="fab fa-facebook-f"></i> Visualização de Usuários
           <span class="sr-only">(current)</span>
         </a>
@@ -45,7 +45,7 @@ if(isset($userSession)){
           aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i><?php echo $userSession["u_user"];?> </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/admin/admin_page.php">Minha Conta</a>
+          <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/user_profile.php">Minha Conta</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/actions/logout.php">Log out</a>
         </div>
       </li>
