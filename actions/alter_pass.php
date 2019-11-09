@@ -20,7 +20,7 @@ session_start();
         
             echo"<script language='javascript' type='text/javascript'>
             alert('Senha alterada com sucesso!!');window.location.
-             href='../pages/user/success_pass.php'</script>";
+             href='../menu.php'</script>";
     }
 }
 ?>

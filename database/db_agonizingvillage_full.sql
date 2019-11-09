@@ -86,7 +86,6 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`characters` (
   `c_money` INT NULL DEFAULT NULL,
   `race_id_race` INT NOT NULL,
   `users_id_user` INT NOT NULL,
-  `c_picture` VARCHAR(100),
   `c_type` INT NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_characters`),
   INDEX `fk_characters_race1_idx` (`race_id_race` ASC),
@@ -149,5 +148,8 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-/* uasghdyhsa */
-
+INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("adm@adm.com","adm","202cb962ac59075b964b07152d234b70",2);
+INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("artur@gmail.com","artur","202cb962ac59075b964b07152d234b70",1);
+INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("felipe@gmail.com","felipe","202cb962ac59075b964b07152d234b70",1);
+INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("guiler@gmail.com","guiler","202cb962ac59075b964b07152d234b70",1);
+INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("guigo@gmail.com","guigo","202cb962ac59075b964b07152d234b70",1);

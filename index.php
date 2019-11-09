@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
 <?php
-session_start()
     include 'includes/header.php';
 ?>
 <html>
