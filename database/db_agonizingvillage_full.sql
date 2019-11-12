@@ -157,7 +157,7 @@ INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("guiler@gmail.com","gui
 INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("guigo@gmail.com","guigo","202cb962ac59075b964b07152d234b70",1);
 
 -- Insere dados para as raças
-INSERT INTO race values (DEFAULT, "Orc", 200, 100, 200, 100, 0);
-INSERT INTO race values (DEFAULT, "Human", 100, 150, 100, 80, 0);
-INSERT INTO race values (DEFAULT, "Mage", 80, 300, 80, 50, 0);
-INSERT INTO race values (DEFAULT, "Elf", 125, 200, 175, 100, 0);
+INSERT INTO race values (DEFAULT,"Orc", 200, 100, 200, 100, 0);
+INSERT INTO race values (DEFAULT,"Human", 100, 150, 100, 80, 0);
+INSERT INTO race values (DEFAULT,"Mage", 80, 300, 80, 50, 0);
+INSERT INTO race values (DEFAULT,"Elf", 125, 200, 175, 100, 0);
