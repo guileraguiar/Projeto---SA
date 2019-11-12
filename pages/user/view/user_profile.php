@@ -26,12 +26,14 @@ session_start();
         
           ?> 
         <br>
-        <div class="container fundobranco" style="width:auto; height:auto; margin-top:20px;">
+        <div class="container fundobranco w-50 p-12" style="width:auto; height:auto; margin-top:20px;">
             <div class="row" style="padding:20px;">
-                <div class="col-sm-3"><img src="http://localhost/SteelFreak/images/personagens/<?php echo $arrayChar["c_picture"]; ?>" style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'> 
+                <div class="col-sm-5"><img src="http://localhost/SteelFreak/images/personagens/<?php echo $arrayChar["c_picture"]; ?>" style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'> 
                 </div>
-                <div class="col-sm-9">
-                    <h4 class="minhaconta">Minha conta</h4>
+                <div class="col-sm-7">
+                <br>
+                <br>
+                    <h4 class="minhaconta">Minha conta /</h4><h4 class="minhacontaNome"><?php echo $userSession["u_user"] ?></h4>
                 </div>
             </div>
             <br>
@@ -41,7 +43,9 @@ session_start();
                     <h4 class="profileBTxt">|Usuário:</h4>
                 </div>
                 <div class="col">
-                    <p class="profileTxt"><?php echo $userSession["u_user"] ?></p>
+                    <p class="profileTxt"><?php echo $userSession["u_user"] ?>
+                    <a href="../../../actions/Rename/rename_login.php"><input type="image" width="15px" src="../../../images/botoes/iconeEditar.png"/></a>
+                    </p>
                 </div>
             </div>
             <div class="row no-gutters">
@@ -62,12 +66,13 @@ session_start();
             </div>
             <hr>
             <!-- Dados do personagem (ainda não está funcionando) //-->
+            <br>
             <div class="row no-gutters">
                 <div class="col">
                     <h4 class="profileBTxt">|Apelido: </h4>
                 </div>
                 <div class="col">
-                    <p class="profileTxt" ><?php echo $arrayChar["c_nickname"] ?></p>
+                    <p class="profileTxt" ><?php echo $arrayChar["c_nickname"] ?> </p>
                 </div>
         </div>
         <div class="row no-gutters">

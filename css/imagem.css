@@ -117,10 +117,10 @@ h1{
     }
 
 .fadeIn {
-    -webkit-animation: fadeIn 3s ease-in-out;
-    -moz-animation: fadeIn 3s ease-in-out;
-    -o-animation: fadeIn 3s ease-in-out;
-    animation: fadeIn 3s ease-in-out;
+    -webkit-animation: fadeIn 2s ease-in-out;
+    -moz-animation: fadeIn 2s ease-in-out;
+    -o-animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
     }
 
 .fadeInPages {
@@ -136,6 +136,7 @@ h1{
     font-size: 20px;
 }
 .profileBTxt{
+    font-size: 18px;
     margin-left: 20px;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
@@ -143,7 +144,7 @@ h1{
 }
 
 .profileTxt{
-    font-size: 19px;
+    font-size: 15px;
     font-family: 'Jomolhari', serif;
     color: rgb(255, 243, 211);
 }
@@ -156,14 +157,18 @@ hr {
   }
   
   .minhaconta{
-    margin-left: 60px;
-    margin-top: 30px;
     color: #fff;
     font-family: 'Playfair Display', cursive;
-    font-size: 50px;
-    
+    font-size: 20px;
+}
+
+.minhacontaNome{
+    color: rgb(255, 243, 211);
+    font-family: 'Jomolhari', serif;
+    font-size: 30px;
 }
 
 .profileImage{
     border:  1px rgb(255, 243, 211);
 }
+
