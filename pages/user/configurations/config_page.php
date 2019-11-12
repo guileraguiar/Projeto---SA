@@ -18,7 +18,8 @@ if (isset($_SESSION['user'])){
 ?>
 
 <html lang="en">
-    <body class="fadeInPages" style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
+    <body class="fadeInPages battleback" style="background-size: 100%;">
+    <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
     <div class="container fundobranco" style="width:auto; height:auto; margin-top:20px;">
         <div class="row" style="padding:20px;">
             
@@ -229,6 +230,5 @@ if (isset($_SESSION['user'])){
            
     </div>
     <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
-            <div class="container">
     </body>
 </html>
