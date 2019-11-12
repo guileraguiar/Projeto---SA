@@ -49,10 +49,10 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt"><?php echo $userSession["u_pass"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
+            <div class="col">               
+                    <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass" id="btEdit">Editar</button>
+                    <p   id="teste" style="display:none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus voluptates accusamus quibusdam corrupti quos! Excepturi explicabo aspernatur necessitatibus libero nisi possimus voluptatem, iusto suscipit repellat autem eaque facilis dolorum.</p>
+                
             </div>
         </div>
 
@@ -108,11 +108,6 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
-            </div>
         </div>
 
         <div class="row no-gutters">
@@ -122,11 +117,6 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt"><?php echo $userSession["u_pass"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
-            </div>
         </div>
 
         <div class="row no-gutters">
@@ -135,11 +125,6 @@ if (isset($_SESSION['user'])){
             </div>
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
-            </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
             </div>
         </div>
         
@@ -163,11 +148,6 @@ if (isset($_SESSION['user'])){
             </div>
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
-            </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
             </div>
         </div>
 
@@ -206,11 +186,6 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
-            </div>
         </div>
 
         <div class="row no-gutters">
@@ -219,11 +194,6 @@ if (isset($_SESSION['user'])){
             </div>
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
-            </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
             </div>
         </div>
            
