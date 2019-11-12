@@ -7,6 +7,6 @@ mysqli_query($conexao,"DELETE FROM users WHERE id_user='.$codigo' OR u_type <> 2
 
 mysqli_close($conexao);
 
-header("Location: ../pages/user/table_user.php");
+header("Location: ../pages/user/tables/table_user.php");
 
 ?>

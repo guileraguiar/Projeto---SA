@@ -18,8 +18,22 @@ if (isset($_SESSION['user'])){
 ?>
 
 <html lang="en">
-    <body class="fadeInPages battleback" style="background-size: 100%;">
-    <img src="../../../images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
+<head>
+<script>
+$(document).ready( function(){
+    $("#btEdit").click(function(){
+        $("#altSenha").show("slow")
+       
+    })
+    $("#btCancel").click( function (){
+        $("#altSenha").hide("slow");
+                    
+    })
+
+});
+</script>
+</head>
+    <body class="fadeInPages" style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
     <div class="container fundobranco" style="width:auto; height:auto; margin-top:20px;">
         <div class="row" style="padding:20px;">
             
@@ -50,10 +64,23 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt"><?php echo $userSession["u_pass"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
+            <div class="col">               
+                    <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass" id="btEdit">Editar</button>
+                    <button type="onclick" class="btn btn-dark mx-auto d-block" id="btCancel">Cancelar</button>
+                        <form action=""  method="post" id="altSenha" style="display:none">
+                        <center><div class="form-row">
+                                <div class="col">    
+                                    <center><label for="user" class="text-light fonteLabel">Senha Atual</label></center>
+                                    <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Atual senha" name="pass" required><br>
+                                    <center><label for="pass" class="text-light fonteLabel">Nova senha</label></center>
+                                    <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="newPass" required><br>
+                                    <center><label for="cpass"  class="text-light fonteLabel">Confirmar senha</label></center>
+                                    <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Confirmar nova senha" name="cNewPass" required><br>                                    
+                                    <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
+                                </div>
+                            </div></center>
+                        </form>
+                
             </div>
         </div>
 
@@ -65,9 +92,21 @@ if (isset($_SESSION['user'])){
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
             </div>
             <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
+                                
+                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altEmail" id="btEdit">Editar</button>
+                <form action=""  method="post" id="altSenha" style="display:none">
+                        <center><div class="form-row">
+                                <div class="col">    
+                                    <center><label for="user" class="text-light fonteLabel">Senha Atual</label></center>
+                                    <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Atual senha" name="pass" required><br>
+                                    <center><label for="pass" class="text-light fonteLabel">Nova senha</label></center>
+                                    <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="newPass" required><br>
+                                    <center><label for="cpass"  class="text-light fonteLabel">Confirmar senha</label></center>
+                                    <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Confirmar nova senha" name="cNewPass" required><br>                                    
+                                    <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
+                                </div>
+                            </div></center>
+                        </form>
             </div>
         </div>
         
@@ -109,11 +148,6 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
-            </div>
         </div>
 
         <div class="row no-gutters">
@@ -123,11 +157,6 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt"><?php echo $userSession["u_pass"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
-            </div>
         </div>
 
         <div class="row no-gutters">
@@ -136,11 +165,6 @@ if (isset($_SESSION['user'])){
             </div>
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
-            </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
             </div>
         </div>
         
@@ -164,11 +188,6 @@ if (isset($_SESSION['user'])){
             </div>
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
-            </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
             </div>
         </div>
 
@@ -207,11 +226,6 @@ if (isset($_SESSION['user'])){
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
             </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
-            </div>
         </div>
 
         <div class="row no-gutters">
@@ -220,11 +234,6 @@ if (isset($_SESSION['user'])){
             </div>
             <div class="col">
                 <p class="profileTxt" ><?php echo $userSession["u_email"] ?></p>
-            </div>
-            <div class="col">
-                <form action="http://localhost/SteelFreak/pages/user/alter_pass.php">                   
-                <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass">Editar</button>
-                </form>
             </div>
         </div>
            

@@ -1,8 +1,9 @@
 <?php
 
-    require_once "../../../bd/connection_bd.php";
+    //require_once "../../../bd/connection_bd.php";
+    $conexao = mysqli_connect("localhost","root","","db_agonizingvillage");
     $busca = mysqli_query($conexao,"SELECT * FROM equip");
-    $arrEquip = mysqli_fetch_all($busca, MYSQLI_ASSOC);  
+    $arrEquip = mysqli_fetch_all($busca, MYSQLI_ASSOC);
     mysqli_close($conexao);
 
     include '../../../includes/navbar.php';
@@ -23,6 +24,7 @@
                     <th scope="col">Energia</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Chance Critico</th>
+                    <th scope="col">Ação</th>
                 </tr>
                 <tbody>
                 <?php
@@ -36,7 +38,7 @@
                         echo "<th>".$valor["e_price"]."</th>";
                         echo "<th>".$valor["e_crit_chance"]."</th>";
                         echo "<th>";
-                        echo "<a href='../../actions/delete.php?codigo=".$valor["id_equip"]."'>Excluir</a>";
+                        echo "<a href='../../../actions/delete_equip.php?codigo=".$valor["id_equip"]."'>Excluir</a>";
                         echo "</th>";
                         echo "</tr>";
                     }
