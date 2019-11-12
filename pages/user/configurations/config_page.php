@@ -18,6 +18,21 @@ if (isset($_SESSION['user'])){
 ?>
 
 <html lang="en">
+<head>
+<script>
+$(document).ready( function(){
+    $("#btEdit").click( function (){
+        $("#teste").hide("slow")
+        //$("#texto").fadeOut(1000);
+    })
+
+    $("#btEdit").click(function(){
+        $("#altSenha").show("slow")
+        //$("#texto").fadeIn(1000);
+    })
+});
+</script>
+</head>
     <body class="fadeInPages" style="background-size: 100%;background-image: url(../../../images/fundo.png); ">
     <div class="container fundobranco" style="width:auto; height:auto; margin-top:20px;">
         <div class="row" style="padding:20px;">
@@ -51,7 +66,19 @@ if (isset($_SESSION['user'])){
             </div>
             <div class="col">               
                     <button type="onclick" class="btn btn-dark mx-auto d-block" name="altPass" id="btEdit">Editar</button>
-                    <p   id="teste" style="display:none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus voluptates accusamus quibusdam corrupti quos! Excepturi explicabo aspernatur necessitatibus libero nisi possimus voluptatem, iusto suscipit repellat autem eaque facilis dolorum.</p>
+                        <center><form action=""  method="post" id="altSenha" style="display:none">
+                            <div class="form-row">
+                                <div class="col">    
+                                    <center><label for="user" class="text-light fonteLabel">Senha Atual</label></center>
+                                    <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Atual senha" name="pass" required><br>
+                                    <center><label for="pass" class="text-light fonteLabel">Nova senha</label></center>
+                                    <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="newPass" required><br>
+                                    <center><label for="cpass"  class="text-light fonteLabel">Confirmar senha</label></center>
+                                    <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Confirmar nova senha" name="cNewPass" required><br>                                    
+                                    <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
+                                </div>
+                            </div>
+                        </form></center>
                 
             </div>
         </div>
