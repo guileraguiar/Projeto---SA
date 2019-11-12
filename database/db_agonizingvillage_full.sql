@@ -148,8 +148,16 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+
+-- Insere dados de usuários administradores
 INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("adm@adm.com","adm","202cb962ac59075b964b07152d234b70",2);
 INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("artur@gmail.com","artur","202cb962ac59075b964b07152d234b70",1);
 INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("felipe@gmail.com","felipe","202cb962ac59075b964b07152d234b70",1);
 INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("guiler@gmail.com","guiler","202cb962ac59075b964b07152d234b70",1);
 INSERT INTO users (u_email,u_user,u_pass,u_type) VALUES ("guigo@gmail.com","guigo","202cb962ac59075b964b07152d234b70",1);
+
+-- Insere dados para as raças
+INSERT INTO race values (DEFAULT, "Orc", 200, 100, 200, 100, 0);
+INSERT INTO race values (DEFAULT, "Human", 100, 150, 100, 80, 0);
+INSERT INTO race values (DEFAULT, "Mage", 80, 300, 80, 50, 0);
+INSERT INTO race values (DEFAULT, "Elf", 125, 200, 175, 100, 0);
