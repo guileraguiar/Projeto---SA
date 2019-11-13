@@ -84,6 +84,7 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`characters` (
   `c_level` INT NULL DEFAULT NULL,
   `c_crit_chance` INT NULL DEFAULT NULL,
   `c_money` INT NULL DEFAULT NULL,
+  `c_picture` VARCHAR(100),
   `race_id_race` INT NOT NULL,
   `users_id_user` INT NOT NULL,
   `c_type` INT NOT NULL DEFAULT 1,
@@ -100,7 +101,6 @@ CREATE TABLE IF NOT EXISTS `db_agonizingvillage`.`characters` (
     REFERENCES `db_agonizingvillage`.`users` (`id_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
-
 
 -- -----------------------------------------------------
 -- Table `db_agonizingvillage`.`characters_has_equip`
@@ -161,3 +161,16 @@ INSERT INTO race values (DEFAULT,"Orc", 200, 100, 200, 100, 0);
 INSERT INTO race values (DEFAULT,"Human", 100, 150, 100, 80, 0);
 INSERT INTO race values (DEFAULT,"Mage", 80, 300, 80, 50, 0);
 INSERT INTO race values (DEFAULT,"Elf", 125, 200, 175, 100, 0);
+
+/* Inserir dados na tabela de characters */
+INSERT INTO characters (c_nickname, c_experience, c_life, c_energy, c_strenght, c_defense, c_level, c_crit_chance, c_money, c_picture, race_id_race, users_id_user, c_type) 
+VALUES ("Roger", 10, 25, 24, 5, 10, 1, 1, 666, "orc.jpg", 1, 2, 1);
+
+INSERT INTO characters (c_nickname, c_experience, c_life, c_energy, c_strenght, c_defense, c_level, c_crit_chance, c_money, c_picture, race_id_race, users_id_user, c_type) 
+VALUES ("ASHDAJSHD", 10, 25, 24, 5, 10, 1, 1, 666, "orc.jpg", 1, 3, 1);
+
+/*  BOOT */
+INSERT INTO characters (c_nickname, c_experience, c_life, c_energy, c_strenght, c_defense, c_level, c_crit_chance, c_money, c_picture, race_id_race, users_id_user, c_type) 
+VALUES ("BOT", 10, 10, 10, 5, 11, 1, 0, 666, "orc.jpg", 1, 1, 2);
+
+/* ELECT * FROM characters WHERE c_type = 1 AND users_id_user = 3; */
