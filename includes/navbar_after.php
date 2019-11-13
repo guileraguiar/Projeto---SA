@@ -40,10 +40,10 @@ $userSession = $_SESSION['user'];
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle clicavel" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i><?php echo $userSession["u_user"];?></a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+        <div class="dropdown-menu dropdown-menu-right dropdown-info clicavel" aria-labelledby="navbarDropdownMenuLink-4">
           <a class="dropdown-item" href="http://localhost/SteelFreak/pages/user/view/user_profile.php">Minha Conta</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/pages/configurations.php/config_page.php">Configurações</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/actions/logout.php">Log out</a>

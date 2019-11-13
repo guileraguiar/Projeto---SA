@@ -31,20 +31,27 @@ session_start();
                 <div class="col-sm-5"><img src="http://localhost/SteelFreak/images/personagens/<?php echo $arrayChar["c_picture"]; ?>" style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'> 
                 </div>
                 <div class="col-sm-7">
-                <br>
-                <br>
-                    <h4 class="minhaconta">Minha conta /</h4><h4 class="minhacontaNome"><?php echo $userSession["u_user"] ?></h4>
+                    <h4 style="margin-top:80px;" class="minhaconta">Minha conta / <?php echo $userSession["u_user"] ?></h4>
                 </div>
             </div>
-            <br>
             <!-- Dados da conta //-->
-            <div class="row no-gutters">
+            <div style="margin-top:10px ;" class="row no-gutters">
                 <div class="col">
                     <h4 class="profileBTxt">|Usuário:</h4>
                 </div>
                 <div class="col">
                     <p class="profileTxt"><?php echo $userSession["u_user"] ?>
                     <a href="../../../actions/Rename/rename_login.php"><input type="image" width="15px" src="../../../images/botoes/iconeEditar.png"/></a>
+                    </p>
+                </div>
+            </div>            
+            <div class="row no-gutters">
+                <div class="col">
+                    <h4 class="profileBTxt">|Senha:</h4>
+                </div>
+                <div class="col">
+                    <p class="profileTxt">********
+                    <a href="../alter_pass.php"><input type="image" width="15px" src="../../../images/botoes/iconeEditar.png"/></a>
                     </p>
                 </div>
             </div>

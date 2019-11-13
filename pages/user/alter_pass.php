@@ -4,9 +4,12 @@ session_start();
     include '../../includes/navbar_after.php';
     ?>
 <html>
-    <body class="fadeInPages" style="background-image: url(../../images/fundo.png); ">
+    <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
         <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
         <div class="container fundobranco" style="width:500px;"> 
+            <div class="col">
+                <h4 style="margin-top:20px; margin-bottom:30px;" class="minhaconta">Trocar Senha /<?php echo $userSession["u_user"] ?></h4>
+            </div>
             <form action="../../actions/alter_pass.php"  method="post">
                 <div class="form-row">
                     <div class="col">    

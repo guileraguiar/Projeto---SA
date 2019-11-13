@@ -1,3 +1,15 @@
+/*Mouse*/
+
+body{
+    cursor: url(../images/botoes/lightCursor.ani), default;
+}
+
+.clicavel{
+    cursor: pointer;
+}
+
+
+/*Estilização*/
 .fundoBatalha{
     background-color: white;
     border-radius: 5px;
@@ -159,7 +171,7 @@ hr {
   .minhaconta{
     color: #fff;
     font-family: 'Playfair Display', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .minhacontaNome{

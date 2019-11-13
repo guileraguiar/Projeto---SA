@@ -10,7 +10,9 @@ session_start();
     <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">  
 
     <div class="container fundobranco" style="width:500px;">   
-        <center><h1>Renomear <br> Usuário</h1></center>
+        <div class="col">
+            <h4 style="margin-top:20px; margin-bottom:30px;" class="minhaconta">Renomear Usuário /<?php echo $userSession["u_user"] ?></h4>
+        </div>
             <form action="../../actions/login_validate.php"  method="post">
                 <div class="form-row">
                     <div class="col">    
