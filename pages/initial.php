@@ -11,8 +11,6 @@
         <center><img style="width:80px;" src="images/wand.png" alt=""></center>
         <br>
         <br>
-        <form action="http://localhost/SteelFreak/public/index.php">
-            <center><button type="submit" class="btn mx-auto d-block">Entrar</button></center>
-        </form>
+        <center><a href="?pagina=menu" class="btn btn-light ">Entrar</a></center>
     </div>
 </body>

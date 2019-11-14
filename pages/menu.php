@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+
 <?php
     include 'actions/verify/verify_navMenu.php';
 ?>
@@ -13,14 +12,6 @@ if(isset($_SESSION['user'])):
           
             $select = mysqli_query($conexao,"SELECT u_user FROM users WHERE u_user = ".$userSession["u_user"]."");
 ?>
-<body class="fadeIn" style="background-size: 100%;background-image: url(images/fundo.png); ">
-    <img src="images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
-    <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
-        <center style="margin-top:50px;"><h1>Bem-Vindo!</h1></center>
-        <center><h1><?php echo $userSession["u_user"] ?></h1></center>
-        <br>
-    </div>
-</body>
 <?php
 endif; 
 endif;

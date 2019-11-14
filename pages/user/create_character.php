@@ -1,5 +1,4 @@
 <?php 
-session_start();
     include '../../actions/verify/verify_nav.php';
 ?>
 <?php include '../../includes/header.php'; ?>
