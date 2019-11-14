@@ -1,9 +1,10 @@
 <?php
 session_start();
     include '../../includes/header.php';
-    include '../../includes/navbar_after.php';
-    ?>
-<html id="altPass">
+    include '../../actions/verify/verify_nav.php';
+?>
+<?php include '../../includes/header.php'; ?>
+<html lang="pt-BR" id="altPass">
     <body class="fadeInPages" style="background-image: url(../../images/fundo.png); ">
         <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
         <div class="container fundobranco" style="width:500px;"> 

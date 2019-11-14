@@ -1,20 +1,6 @@
 <?php
-session_start();
-require_once "bd/connection_bd.php";
-
 /* navbar */
-if (isset($_SESSION['user'])) {
-    $userSession = $_SESSION['user'];
-
-    $select = mysqli_query($conexao, "SELECT * FROM users WHERE u_user ='" . $userSession["u_user"] . "'");
-    if ($userSession['u_type'] == 2) {
-        include 'includes/navbar_admin.php';
-    } else if ($userSession['u_type'] == 1) {
-        include 'includes/navbar_after.php';
-    }
-} else {
-    include 'includes/navbar.php';
-}
+include 'actions/verify/verify_navMenu.php';
 /* Fim navbar */
 /* Consulta */
 echo "<h1> " . $userSession["id_user"]  . " </h1>";
@@ -26,7 +12,7 @@ if (!$select_player) {
 } elseif (!$select_player) {
     die("Falha na consulta do boot");
 }
-
+/* fimconsulta */
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

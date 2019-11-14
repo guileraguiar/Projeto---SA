@@ -1,11 +1,9 @@
 <head>
 <?php
-session_start();
-        
-        include '../../../includes/navbar_after.php';
+        include 'actions/verify/verify_navConfView.php';
         require '../../../includes/header.php';
 ?>
-<html>
+<html lang="pt-BR">
     <body style="background-size: 100%;background-image: url(../../../images/telaprofile.png); ">
         
         

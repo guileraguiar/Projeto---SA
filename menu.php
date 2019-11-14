@@ -1,27 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <?php
-session_start();
-    include 'includes/header.php';
-    require_once "bd/connection_bd.php";
-if (isset($_SESSION['user'])){
-    $userSession = $_SESSION['user'];
-    
-    $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user ='".$userSession["u_user"]."'");
-    if($userSession['u_type']==2){
-        include 'includes/navbar_admin.php';
-    }else if($userSession['u_type']==1){
-        include 'includes/navbar_after.php';
-        }
-    }else{
-    include 'includes/navbar.php';
-}
-    
+    include 'actions/verify/verify_navMenu.php';
 ?>
-
-</head>
 <?php 
-
+include 'includes/header.php'; 
 if(isset($_SESSION['user'])):
      $userSession = $_SESSION['user'];
           require_once "bd/connection_bd.php";
@@ -32,14 +15,14 @@ if(isset($_SESSION['user'])):
 ?>
 <body class="fadeIn" style="background-size: 100%;background-image: url(images/fundo.png); ">
     <img src="images/TITULO.png"class="mx-auto d-block titulo"  alt=""> 
-        <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
-            <center style="margin-top:50px;"><h1>Bem-Vindo!</h1></center>
-            <center><h1><?php echo $userSession["u_user"] ?></h1></center>
-            <br>
-        </div>
+    <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
+        <center style="margin-top:50px;"><h1>Bem-Vindo!</h1></center>
+        <center><h1><?php echo $userSession["u_user"] ?></h1></center>
+        <br>
+    </div>
 </body>
 <?php
-        endif; 
+endif; 
 endif;
 ?>
 <?php 
@@ -90,7 +73,7 @@ endif;
                     </p><img style="width:300px;" src="images/logoav2.png" alt=""></center>
                 </div>
     </body>
-    <?php 
-    endif;
-    ?>
+<?php 
+endif;
+?>
 </html>
