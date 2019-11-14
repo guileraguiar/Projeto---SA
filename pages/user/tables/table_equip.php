@@ -18,12 +18,13 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
+                    <th scope="col">Armadura</th>
                     <th scope="col">Ataque</th>
                     <th scope="col">Vida</th>
                     <th scope="col">Energia</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Chance Critico</th>
+                    <th scope="col">Nome do Equipamento</th>
                     <th scope="col">Ação</th>
                 </tr>
                 <tbody>
@@ -37,6 +38,7 @@
                         echo "<th>".$valor["e_energy"]."</th>";
                         echo "<th>".$valor["e_price"]."</th>";
                         echo "<th>".$valor["e_crit_chance"]."</th>";
+                        echo "<th>".$valor["type_equip"]."</th>";
                         echo "<th>";
                         echo "<a href='../../../actions/delete_equip.php?codigo=".$valor["id_equip"]."'>Excluir</a>";
                         echo "</th>";

@@ -29,6 +29,9 @@ session_start();
                         <label for="price" class="text-light fonteLabel">Preço</label>
                         <input type="text" class="form-control" placeholder="Preço" name="price"><br>
 
+                        <label for="type_equip" class="text-light fonteLabel">Nome do Equipamento</label>
+                        <input type="text" class="form-control" placeholder="Nome do Equipamento" name="type_equip"><br>
+
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 
                     </div>
