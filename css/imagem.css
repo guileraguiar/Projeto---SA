@@ -167,3 +167,12 @@ hr {
 .profileImage{
     border:  1px rgb(255, 243, 211);
 }
+.battletxt{
+    margin-left: 20px;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+.battleback{
+    background-color:#290333;
+}

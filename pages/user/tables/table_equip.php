@@ -1,15 +1,14 @@
 <?php
-
     //require_once "../../../bd/connection_bd.php";
-    $conexao = mysqli_connect("localhost","root","","db_agonizingvillage");
+    include 'actions/verify/verify_navConfView.php';
     $busca = mysqli_query($conexao,"SELECT * FROM equip");
     $arrEquip = mysqli_fetch_all($busca, MYSQLI_ASSOC);
     mysqli_close($conexao);
-
-    include '../../../includes/navbar.php';
-    include '../../../includes/header.php';
 ?>
 <html>
+<?php
+include '../../../includes/header.php';
+?>
     <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png);">
         <center>
             <div class="container fundobranco" style="margin-top: 50px;">

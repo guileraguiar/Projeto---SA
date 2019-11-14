@@ -1,10 +1,11 @@
 <?php
 session_start();
-
-            include '../../includes/navbar.php';
-            include '../../includes/header.php';
-        ?>
-<html>
+    include '../../actions/verify/verify_nav.php';
+?>
+<?php 
+    include '../../includes/header.php';
+?>
+<html lang="pt-BR">
     <body>
         <div class="container">   
             <form  action="../../actions/validate_equip.php" method="post">
