@@ -6,7 +6,7 @@ session_start();
         require '../../../includes/header.php';
 ?>
 <html>
-    <body style="background-size: 100%;background-image: url(../../../images/telaprofile.png); ">
+    <body style="fadeInPages background-size: 100%;background-image: url(../../../images/telaprofile.png); ">
         
         
         <?php

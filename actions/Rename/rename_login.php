@@ -11,7 +11,7 @@ session_start();
 
     <div class="container fundobranco" style="width:500px;">   
         <div class="col">
-            <h4 style="margin-top:20px; margin-bottom:30px;" class="minhaconta">Renomear Usuário /<?php echo $userSession["u_user"] ?></h4>
+            <center><h4 style="margin-top:20px;  margin-bottom:30px;" class="minhaconta">Renomear Usuário /<?php echo $userSession["u_user"] ?></h4></center>
         </div>
             <form action="../../actions/login_validate.php"  method="post">
                 <div class="form-row">
@@ -25,7 +25,7 @@ session_start();
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="editar">Enviar</button>
                         <br>
-                        <button type="reset" class="btn btn-light mx-auto d-block fonteLabel" name="cancel" href="http://localhost/SteelFreak/menu.php">Cancelar</button>
+                        <a href="http://localhost/SteelFreak/pages/user/view/user_profile.php"> <button type="button" class="btn btn-light mx-auto d-block fonteLabel" name="cancel">Voltar</button></a>
                     </div>
                 </form>
                 </p>
