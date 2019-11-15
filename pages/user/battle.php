@@ -17,7 +17,7 @@ if (!$select_player) {
 <!DOCTYPE html>
 <html lang="pt-BR">
 <?php include 'includes/header.php' ?>
-
+1
 <body class="fadeIn battleback" style="">
     <img src="images/TITULO.png" class="mx-auto d-block titulo" alt="">
     <div class="container fundobranco w-75" style="border-radius:3px; margin-bottom:20px">
