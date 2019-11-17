@@ -1,22 +1,10 @@
-<?php
-    session_start();
-        require_once '../../../bd/connection_bd.php';
-        include '../../../includes/header.php';
-        
-        if (isset($_SESSION['user'])){
-            $userSession = $_SESSION['user'];
-            $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user ='".$userSession["u_user"]."'");
-
-            if($userSession['u_type']==2){
-                include '../../../includes/navbar_admin.php';
-            }else if($userSession['u_type']==1){
-                include '../../../includes/navbar_after.php';
-                }
-            }else{
-            include '../../../includes/navbar.php';
-        }
+<?php   
+    include 'actions/verify/verify_navConfView.php';
 ?>
 <html>
+<?php 
+    include '../../../includes/header.php';
+?>
 <body class="fadeInPages" style="background-size: 100%;background-image: url(../../../images/fundo.png);">
     <center>
         <div class="container fundobranco" style="margin-top: 50px;">

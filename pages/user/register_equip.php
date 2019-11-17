@@ -1,10 +1,10 @@
 <?php
-session_start();
-
-            include '../../includes/navbar.php';
-            include '../../includes/header.php';
-        ?>
-<html>
+    include '../../actions/verify/verify_nav.php';
+?>
+<?php 
+    include '../../includes/header.php';
+?>
+<html lang="pt-BR">
     <body>
         <div class="container">   
             <form  action="../../actions/validate_equip.php" method="post">
@@ -28,6 +28,9 @@ session_start();
 
                         <label for="price" class="text-light fonteLabel">Preço</label>
                         <input type="text" class="form-control" placeholder="Preço" name="price"><br>
+
+                        <label for="type_equip" class="text-light fonteLabel">Nome do Equipamento</label>
+                        <input type="text" class="form-control" placeholder="Nome do Equipamento" name="type_equip"><br>
 
                         <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 

@@ -1,11 +1,11 @@
 <?php
-session_start();
-    include '../../includes/header.php';
-    include '../../includes/navbar.php';
+    //include '../../actions/verify/verify_login.php';
+    include '../../actions/verify/verify_nav.php';
 ?>
-<html>
-    <body class="fadeInPages" style="background-size: 100%;background-image: url(../../images/fundo.png); ">
-        <img src="../../images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
+<html lang="pt-BR">
+<?php include '../../includes/header.php';?>
+    <body class="fadeInPages" style="background-size: 100%;background-image: url(images/fundo.png); ">
+        <img src="images/TITULO.png"class="mx-auto d-block titulo"  alt="">    
         <div class="container fundobranco" style="width:500px;">   
             <form action="../../actions/login_validate.php"  method="post">
                 <div class="form-row">

@@ -34,7 +34,7 @@ $userSession = $_SESSION['user'];
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost/SteelFreak/pages/battle/menuBatalha.php">
+        <a class="nav-link" href="http://localhost/SteelFreak/battle.php">
           <i class="fab fa-facebook-f"></i> Batalhas
           <span class="sr-only">(current)</span>
         </a>
