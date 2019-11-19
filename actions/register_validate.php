@@ -14,7 +14,15 @@ $query_select = mysqli_query($conexao, "SELECT * FROM users WHERE u_user = '$usu
 $array = mysqli_fetch_assoc($query_select);
 
 
-$erro = null;
+$erro = "Verifique o preenchimento dos campos!";
+if ($usuario == "" || $usuario == null) {
+    $erro = 'erro no nome';
+        echo "<div class='alert alert-danger' role='alert'>
+        " . $erro . "
+      </div>";
+}
+
+/*$erro = null;
 if ($usuario == "" || $usuario == null) {
     $erro = 'erro no nome';
     if (isset($erro)) {
@@ -25,7 +33,7 @@ if ($usuario == "" || $usuario == null) {
     
 } elseif ($login) {
     $erro = 'erro login';
-}
+}*/
 
 
 
