@@ -24,7 +24,7 @@
         }else{
             $array = mysqli_fetch_all($verifica,MYSQLI_ASSOC);
             $_SESSION['user'] = $array[0];
-            header("Location:../menu.php");
+            header("Location:../public/index.php?pagina=menu");
         }
     }
 ?>

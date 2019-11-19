@@ -12,7 +12,7 @@ session_start();
 
         if($senhaAtual != $login['u_pass']){
              echo"<script language='javascript' type='text/javascript'>
-             alert('As senhas devem coincidir!!');window.location.href='../pages/user/alter_pass.php';</script>";
+             alert('As senhas devem coincidir!!');window.location.href='index.php?codigo=alterPass';</script>";
 
         }else if (($login['u_pass'] == $senhaAtual) && ($senhaUser == $csenhaUser)){
             $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '".$login["u_user"]."'");
@@ -20,7 +20,7 @@ session_start();
         
             echo"<script language='javascript' type='text/javascript'>
             alert('Senha alterada com sucesso!!');window.location.
-             href='../menu.php'</script>";
+             href='index.php?codigo=menu'</script>";
     }
 }
 ?>
