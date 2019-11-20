@@ -1,3 +1,6 @@
+<?php 
+include '../actions/verify/verify_lvlAccess.php';
+?>
     <center>
         <div class="container fundobranco" style="margin-top: 50px;">
             <center>
@@ -23,7 +26,7 @@
                         echo "<th>" . $valor["u_user"] . "</th>";
                         echo "<th>" . $valor["u_email"] . "</th>";
                         echo "<th>";
-                        echo "<a href='../../actions/delete.php?codigo=" . $valor["id_user"] . "'>Excluir</a>";
+                        echo "<a href='../actions/delete.php?codigo=" . $valor['id_user'] . "'>Excluir</a>";
                         echo "</th>";
                         echo "</tr>";
                     }
