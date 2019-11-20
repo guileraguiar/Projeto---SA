@@ -1,5 +1,4 @@
 <?php
-
 //puxando dados da tablea register_page.php
 $usuario = isset($_POST["user"]) ? ($_POST["user"]) : "";
 $senhaUser = MD5(isset($_POST["pass"]) ? ($_POST["pass"]) : "");
@@ -13,73 +12,21 @@ $select = mysqli_query($conexao,"SELECT * FROM users");
 $query_select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$usuario' OR u_email='$emailUser'");
 $array = mysqli_fetch_assoc($query_select);
 
-
-if($usuario == "" || $usuario == null){
-     echo"<script language='javascript' type='text/javascript'>
-     alert('O campo usuario deve ser preenchido');window.location.href='../pages/user/register_page.php';</script>";
-
-}
-elseif($array['u_user'] == $usuario){
-
-    echo"<script language='javascript' type='text/javascript'>
-    alert('O usuário cadastrado já existe!!'); window.location.href='../pages/user/register_page.php';</script>";
-  //  die();
-
-}
-
-elseif($senhaUser != $csenhaUser){
-
-    echo"<script language='javascript' type='text/javascript'>
-    alert('As senhas não conferem!!'); window.location.href='../pages/user/register_page.php';</script>";
-  //  die();
-
-}
-
-elseif($array['u_email'] == $emailUser){
-
-    echo"<script language='javascript' type='text/javascript'>
-    alert('O email cadastrado já existe!!'); window.location.href='../pages/user/register_page.php';</script>";
-  //  die();
-
-}
-elseif($senhaUser != $csenhaUser){
-    echo"<script language='javascript' type='text/javascript'>
-    alert('As senhas devem coincidir!!'); window.location.href='../pages/user/register_page.php';</script>";
-}
-else{
+if ($usuario == "" || $usuario == null) {
+    $erro = 1;
+} elseif ($array['u_user'] == $usuario) {
+    $erro = 2;
+} elseif ($senhaUser != $csenhaUser) {
+    $erro = 3;
+} elseif ($array['u_email'] == $emailUser) {
+    $erro = 4;
+} elseif (isset($erro)) {
     $query = "INSERT INTO users (u_user,u_pass,u_email) VALUES ('$usuario','$senhaUser','$emailUser')";
     $insert = mysqli_query($conexao, $query);
-        
-    if($insert){
-        echo"<script language='javascript' type='text/javascript'>
-        alert('O seu cadastro foi efetuado com sucesso!!');window.location.
-        href='../pages/user/login_page.php'</script>";
-    }else{
-        echo"<script language='javascript' type='text/javascript'>
-        alert('Não foi possível efetuar esse cadastro!!'); window.location.href='../pages/user/login_page.php'</script>";
-    }
 }
+
+if ($erro) {
+    header("Location: ../public/index.php?pagina=register&erro=".$erro);
+}
+
 ?>
-
-
-<!--$erro = null;
-if ($usuario == "" || $usuario == null) {
-    $erro = 'erro no nome';
-    if (isset($erro)) {
-        echo "<div class='alert alert-danger' role='alert'>
-        " . $erro . "
-      </div>";
-    }
-    
-} elseif ($login) {
-    $erro = 'erro login';
-}*/ -->
-
-
-
-
-
-
-
-
-

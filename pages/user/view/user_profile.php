@@ -1,4 +1,5 @@
     <?php
+  
     $userSession = $_SESSION['user'];
     if (isset($userSession)) :
         $slChar = mysqli_query($conexao, "SELECT * FROM characters,race WHERE users_id_user = $userSession[id_user]");
