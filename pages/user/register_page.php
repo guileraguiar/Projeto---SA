@@ -16,36 +16,42 @@
                 <center><label for="email" class="text-light fonteLabel">E-mail*</label></center>
                 <input type="email" class="form-control" maxlength="30" placeholder="seuemail@exemplo.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
                 <?php
-                $erro = (isset($_GET['erro'])) ? $_GET['erro'] : "";
+
+                $erro = (isset($_GET['erro'])) ? $_GET['erro'] : null;
                 if (isset($erro)) {
                     switch ($erro) {
                         case 1:
                             $msg = "Usuário preenchido incorretamente!";
                             break;
                         case 2:
-                            $msg = "Usuário preenchido já existente!";
+                            $msg = "Campo senha preenchido incorretamente!";
                             break;
                         case 3:
-                            $msg = "Senhas não coincidem!";
+                            $msg = "Campo confimação senha preenchido incorretamente!";
                             break;
                         case 4:
+                            $msg = "E-mail preenchido incorretamente!";
+                            break;
+                        case 5:
+                            $msg = "Usuário escolhido já existente!";
+                            break;
+                        case 6:
                             $msg = "E-mail preenchido já existente!";
                             break;
+                        case 7:
+                            $msg = "Senhas não se coincidem!";
+                            break;
                         default:
-                            # code...
+                            //header("Location:index.php?pagina=menu");
+                            $msg = "sucesso!";
                             break;
                     }
                     if (isset($msg)) {
                         echo "<div class='alert alert-danger' role='alert'>
                         " . $msg . "
                         </div>";
-                        $erro = "";
-                        $msg = "";
-                    }else{
-                        
                     }
                 }
-
                 ?>
                     <button type="submit" class="btn btn-light mx-auto d-block fonteLabel">Enviar</button>
 
@@ -53,7 +59,3 @@
         </div>
     </form>
 </div>
-<?php
-var_dump($_GET);
-echo "<h1>" . $erro . "</h1>";
-?>
