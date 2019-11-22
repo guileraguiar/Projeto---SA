@@ -12,6 +12,15 @@
                  <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="logar" value="logar">Entrar</button>
                  <br>
                  <?php 
+                    $registerSuccess = (isset($_GET['registerSuccess'])) ? $_GET['registerSuccess'] : null;
+                    if (isset($registerSuccess)) {
+                        $success = "Usuário cadastrado com succesoo!";
+                        if (isset($success)) {
+                            echo "<center><div class='alert alert-success' role='alert'>
+                            " . $success . "
+                            </div></center>";
+                        }
+                    }
                     $erro = (isset($_GET['erro'])) ? $_GET['erro'] : null;
                     if (isset($erro)) {
                         switch ($erro) {
@@ -21,15 +30,23 @@
                             case 2:
                                 $msg = "Campo senha preenchido incorretamente!";
                                 break;
+                            case 3:
+                                $logout = "Deslogado com sucesso";
+                                break;
                         default:
-                            $msg = "sucesso!";
+                            $msg = "Usuário ou senha incorretos!";
                             break;
                         break;
                         }
+                        if (isset($logout)){
+                            echo "<center><div class='alert alert-success' role='alert'>
+                            " . $logout . "
+                            </div></center>";
+                        }
                         if (isset($msg)) {
-                            echo "<div class='alert alert-danger' role='alert'>
+                            echo "<center><div class='alert alert-danger' role='alert'>
                             " . $msg . "
-                            </div>";
+                            </div></center>";
                         }
                     }            
                  ?>

@@ -17,10 +17,14 @@ if (!isset($usuario) || empty($usuario)) {
 
 // '$usuario' AND u_pass = '$senhaUser'") or die("Algo de errado aconteceu!!");
 if (erro($erro)) {
-    $verify = mysqli_query($conexao,"SELECT FROM users WHERE u_user='".$usuario."' AND u_pass = '".$senhaUser."'");
-  
-    if (mysqli_num_rows($nLinhas) == 1) {
+    $verify = mysqli_query($conexao,"SELECT * FROM users WHERE u_user='".$usuario."' AND u_pass = '".$senhaUser."'");
+    $verify_line = mysqli_num_rows($verify);
+    if (($verify_line) == 1) {
+        $array = mysqli_fetch_all($verify,MYSQLI_ASSOC);
+        $_SESSION['user'] = $array[0];
         header("Location: ../public/index.php?pagina=menu");
+    }else{
+        header("Location: ../public/index.php?pagina=login&erro=" . $erro);
     }
 } else { 
     header("Location: ../public/index.php?pagina=login&erro=" . $erro);

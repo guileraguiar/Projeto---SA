@@ -47,9 +47,9 @@
                             break;
                     }
                     if (isset($msg)) {
-                        echo "<div class='alert alert-danger' role='alert'>
+                        echo "<center><div class='alert alert-danger' role='alert'>
                         " . $msg . "
-                        </div>";
+                        </div></center>";
                     }
                 }
                 ?>
