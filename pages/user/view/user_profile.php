@@ -30,7 +30,7 @@
                 </div>
                 <div class="col">
                     <p class="profileTxt">********
-                        <a href="../alter_pass.php"><input type="image" width="15px" src="images/botoes/iconeEditar.png" /></a>
+                        <a href="../public/index.php?pagina=alterPass"><input type="image" width="15px" src="images/botoes/iconeEditar.png" /></a>
                     </p>
                 </div>
             </div>

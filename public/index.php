@@ -42,7 +42,7 @@
             include '../pages/menu.php';
             break;
         case 'games':
-            include '../pages/user/TheGame.php';
+            include '../pages/TheGame.php';
             break;
         case 'login':
             include '../pages/user/login_page.php';

@@ -2,13 +2,13 @@
 session_start();
 require_once "../bd/connection_bd.php";
 $userSession = $_SESSION['user'];
-$select_query = mysqli_query($conexao, "SELECT u_pass FROM users WHERE u_user = '" . $userSession["u_user"] . "'");
+$select_query = mysqli_query($conexao, "SELECT u_pass FROM users");
 if (isset($_SESSION['user'])) {
 
     $senhaUser = $_POST["newPass"];
     $csenhaUser = $_POST["cNewPass"];
     $senhaAtual = $_POST["pass"];
-
+    $erro = null;
     if (!isset($senhaUser) || empty($senhaUser)) {
         $erro = 1;
     } elseif (!isset($csenhaUser) || empty($csenhaUser)) {
@@ -18,7 +18,7 @@ if (isset($_SESSION['user'])) {
     }
     
     while ($dados_users = mysqli_fetch_assoc($select_query)) {
-        if ($select_query['u_pass'] != $senhaAtual) {
+        if ($dados_users['u_pass'] != $senhaAtual) {
             $erro = 4;
         }elseif ($senhaUser != $csenhaUser) {
             $erro = 5;
