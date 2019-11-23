@@ -1,6 +1,5 @@
 <?php
 session_start();
-    require_once "../bd/connection_bd.php";
 if (isset($_SESSION['user'])){
     $userSession = $_SESSION['user'];
     

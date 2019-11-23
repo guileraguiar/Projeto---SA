@@ -1,12 +1,8 @@
     <?php
+  
     $userSession = $_SESSION['user'];
     if (isset($userSession)) :
-        $slChar = mysqli_query($conexao, "SELECT * FROM characters,race WHERE users_id_user = $userSession[id_user]");
-        $select = mysqli_query($conexao, "SELECT u_user FROM users WHERE u_user = " . $userSession["u_user"] . "");
-        $selectEmail = mysqli_query($conexao, "SELECT u_email FROM users WHERE u_user = " . $userSession["u_email"] . "");
-        $selectEmail = mysqli_query($conexao, "SELECT id_user FROM users WHERE u_user = " . $userSession["id_user"] . "");
-        $selectEmail = mysqli_query($conexao, "SELECT u_pass FROM users WHERE u_user = " . $userSession["u_pass"] . "");
-        $arrayChar = mysqli_fetch_assoc($slChar);
+        $select = mysqli_query($conexao, "SELECT * FROM users WHERE u_user = " . $userSession["u_user"] . "");
         ?>
         <br>
         <div class="container fundobranco w-50 p-12" style="width:auto; height:auto; margin-top:20px;">
@@ -34,7 +30,7 @@
                 </div>
                 <div class="col">
                     <p class="profileTxt">********
-                        <a href="../alter_pass.php"><input type="image" width="15px" src="images/botoes/iconeEditar.png" /></a>
+                        <a href="../public/index.php?pagina=alterPass"><input type="image" width="15px" src="images/botoes/iconeEditar.png" /></a>
                     </p>
                 </div>
             </div>

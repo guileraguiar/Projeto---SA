@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html <?php require_once '../bd/connection_bd.php'; ?>>
 <html lang="pt_BR">
 
 <head>
@@ -27,10 +27,14 @@
 
 
 <header>
-    <?php include '../actions/verify/verify_nav.php'; ?> ?>
+    <?php
+    
+        include '../actions/verify/verify_nav.php';
+    ?>
 </header>
 <img src="images/TITULO.png" class="mx-auto d-block titulo" alt="">
-<body class="fadeInPages" style="background-size: 100%;background-image: url(images/fundo.png); ">
+
+<body class="fadeInPages" style="background-size: 100%;background-image: url(https://i.ytimg.com/vi/THSAX5vybIw/maxresdefault.jpg); ">
     <?php
     $pagina = $_GET['pagina'];
     switch ($pagina) {
@@ -38,7 +42,7 @@
             include '../pages/menu.php';
             break;
         case 'games':
-            include '../pages/user/TheGame.php';
+            include '../pages/TheGame.php';
             break;
         case 'login':
             include '../pages/user/login_page.php';
