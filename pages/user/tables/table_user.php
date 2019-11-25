@@ -12,6 +12,7 @@ include '../actions/verify/verify_lvlAccess.php';
                         <th scope="col">ID</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Nível</th>
                         <th scope="col">Ação</th>
                     </tr>
                 <tbody>
@@ -25,10 +26,31 @@ include '../actions/verify/verify_lvlAccess.php';
                         echo "<th>" . $valor["id_user"] . "</th>";
                         echo "<th>" . $valor["u_user"] . "</th>";
                         echo "<th>" . $valor["u_email"] . "</th>";
+                        echo "<th>" . $valor["u_type"] . "</th>";
                         echo "<th>";
-                        echo "<a href='../actions/delete.php?codigo=" . $valor['id_user'] . "'>Excluir</a>";
+                        echo "<a href='../actions/tableDelete_val.php?codigo=" . $valor['id_user'] . "'>Excluir</a>";
                         echo "</th>";
                         echo "</tr>";
+                        $msgDel = (isset($_GET['msgDel'])) ? $_GET['msgDel'] : null;
+                        if (isset($msgDel)) {
+                            switch ($msgDel) {
+                                case 1:
+                                    $msg = "Usuário foi excluído com sucesso!";
+                                    break;
+                                case 2:
+                                    $msg = "Não foi possível excluir este usuário!";
+                                    break;
+                            default:
+                                $msg = "Selecione alguma opção!";
+                                break;
+                            break;
+                            }
+                        }
+                        if (isset($msg)){
+                            echo "<center><div class='alert alert-success' role='alert'>
+                            " . $msg . "
+                            </div></center>";
+                        }
                     }
                     mysqli_close($conexao);
                     ?>
