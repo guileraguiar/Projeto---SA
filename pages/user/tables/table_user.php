@@ -16,7 +16,30 @@ include '../actions/verify/verify_lvlAccess.php';
                         <th scope="col">Ação</th>
                     </tr>
                 <tbody>
-                    <?php
+                <?php $msgDel = (isset($_GET['msgDel'])) ? $_GET['msgDel'] : null;
+                        if (isset($msgDel)) {
+                            switch ($msgDel) {
+                                case 1:
+                                    $msg = "Usuário foi excluído com sucesso!";
+                                    break;
+                                case 2:
+                                    $msg2 = "Não foi possível excluir este usuário!";
+                                    break;
+                            default:
+                                $msg = "Selecione alguma opção!";
+                                break;
+                            }
+                        }
+                        if (isset($msg)){
+                            echo "<center><div class='alert alert-success' role='alert'>
+                            " . $msg . "
+                            </div></center>";
+                        }elseif(isset($msg2)){
+                            echo "<center><div class='alert alert-success' role='alert'>
+                            " . $msg2 . "
+                            </div></center>";
+                        }
+                   
                     $busca = mysqli_query($conexao, "SELECT * FROM users");
                     $arrUser = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
@@ -31,26 +54,6 @@ include '../actions/verify/verify_lvlAccess.php';
                         echo "<a href='../actions/tableDelete_val.php?codigo=" . $valor['id_user'] . "'>Excluir</a>";
                         echo "</th>";
                         echo "</tr>";
-                        $msgDel = (isset($_GET['msgDel'])) ? $_GET['msgDel'] : null;
-                        if (isset($msgDel)) {
-                            switch ($msgDel) {
-                                case 1:
-                                    $msg = "Usuário foi excluído com sucesso!";
-                                    break;
-                                case 2:
-                                    $msg = "Não foi possível excluir este usuário!";
-                                    break;
-                            default:
-                                $msg = "Selecione alguma opção!";
-                                break;
-                            break;
-                            }
-                        }
-                        if (isset($msg)){
-                            echo "<center><div class='alert alert-success' role='alert'>
-                            " . $msg . "
-                            </div></center>";
-                        }
                     }
                     mysqli_close($conexao);
                     ?>
