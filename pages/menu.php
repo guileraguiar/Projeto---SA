@@ -37,7 +37,7 @@ if (!isset($_SESSION['user'])) :
             <br>
             <br>
             <center>
-                <h5>Você Sábia?</h5>
+                <h5>Você Sabia?</h5>
             </center>
             <center>
                 <p style="color:white; font-family: 'Courgette', cursive;">O jogo Agonizing Village 2 foi inspirado em The Witcher 3, tanto com o
@@ -48,7 +48,7 @@ if (!isset($_SESSION['user'])) :
             <br>
             <br>
             <center>
-                <h5>Você Sábia?</h5>
+                <h5>Você Sabia?</h5>
             </center>
             <center>
                 <p style="color:white; font-family: 'Courgette', cursive;">A logo de Agonizing Village 2 é uma referência ao seu jogo

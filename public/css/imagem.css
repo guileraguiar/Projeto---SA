@@ -149,7 +149,6 @@ h1{
 }
 .profileBTxt{
     font-size: 18px;
-    margin-left: 20px;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     
@@ -191,4 +190,30 @@ hr {
 }
 .battleback{
     background-color:#290333;
+}
+
+.bodyWiki{
+    margin:auto;
+    width:1300px;
+    height:380px; 
+    margin:50px;
+    margin-left:350px;
+}
+
+.blockWiki{
+    display:table;
+}
+
+.contentsWiki{
+    display:table-cell;
+    float:left;
+}
+
+.textWiki{
+    margin-top:50px;
+    display: table-cell;
+    float:left;
+    width:300px;
+    margin-left:10px;
+    text-align:center;
 }
