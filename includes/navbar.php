@@ -22,6 +22,11 @@
           <i class="fab fa-facebook-f"></i> Login
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?pagina=pageWiki">
+          <i class="fab fa-facebook-f"></i> Wiki
+        </a>
+      </li>
     </ul>
   </div>
 </nav>

@@ -59,6 +59,9 @@
         case 'alterPass';
             include '../pages/user/alter_pass.php';
             break;
+        case 'pageWiki';
+            include '../pages/user/wiki_pageOne.php';
+            break;
         default:
             include '../pages/initial.php';
             break;
