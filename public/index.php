@@ -25,9 +25,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </head>
 
-
 <header>
-
+    <?php include '../actions/verify/verify_nav.php';?>
 </header>
 
 <body class="fadeInPages" style="background-size: 100%;background-image: url('images/indexBackground.png'); ">

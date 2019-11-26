@@ -21,9 +21,9 @@ if (isset($userSession)) {
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle clicavel" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i><?php echo $userSession["u_user"]; ?></a>
+      <li class="nav-item dropdown clicavel">
+        <a class="nav-link dropdown-toggle clicavel " id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user "></i><?php echo $userSession["u_user"]; ?></a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info clicavel" aria-labelledby="navbarDropdownMenuLink-4">
           <a class="dropdown-item" href="index.php?pagina=account">Minha Conta</a>
           <a class="dropdown-item" href="http://localhost/SteelFreak/actions/logout.php">Log out</a>
