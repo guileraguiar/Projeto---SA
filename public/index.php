@@ -36,7 +36,7 @@
 
 <body class="fadeInPages" style="background-size: 100%;background-image: url(https://i.ytimg.com/vi/THSAX5vybIw/maxresdefault.jpg); ">
     <?php
-    $pagina = $_GET['pagina'];
+    $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
     switch ($pagina) {
         case 'menu':
             include '../pages/menu.php';
