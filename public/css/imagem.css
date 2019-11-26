@@ -218,8 +218,19 @@ hr {
     text-align:center;
 }
 
-
-
+.backgroundWiki{
+    margin-top:75px;
+}
+.fontNavNav{
+    font-family: 'Martel', serif;
+}
+.wordColor{
+    color:#F2AA1D;
+}
+.fixedBody{
+    background-attachment: fixed;
+    background-size: 100%;
+}
 
 /*NavBar*/
 
@@ -293,3 +304,4 @@ section {
 	}
 
 }
+

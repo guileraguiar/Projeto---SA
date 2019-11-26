@@ -29,7 +29,8 @@
     <?php include '../actions/verify/verify_nav.php';?>
 </header>
 
-<body class="fadeInPages" style="background-size: 100%;background-image: url('images/indexBackground.png'); ">
+<body class="fadeInPages fixedBody" style="background-size: 100%;background-image: url('images/indexBackground.png'); ">
+<img src="images/TITULO.png" class="mx-auto d-block titulo" alt="">
     <?php
     $pagina = $_GET['pagina'];
     switch ($pagina) {

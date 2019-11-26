@@ -3,7 +3,7 @@ if (isset($userSession)) {
   $select = mysqli_query($conexao, "SELECT u_user FROM users WHERE u_user = " . $userSession["u_user"] . "");
 }
 ?>
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-nowrap">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-nowrap fontNavNav">
   <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"> </a> <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
     <span class="navbar-toggler-icon"></span>
   </button>
