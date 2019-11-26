@@ -27,14 +27,10 @@
 
 
 <header>
-    <?php
-    
-        include '../actions/verify/verify_nav.php';
-    ?>
-</header>
-<img src="images/TITULO.png" class="mx-auto d-block titulo" alt="">
 
-<body class="fadeInPages" style="background-size: 100%;background-image: url(https://i.ytimg.com/vi/THSAX5vybIw/maxresdefault.jpg); ">
+</header>
+
+<body class="fadeInPages" style="background-size: 100%;background-image: url('images/indexBackground.png'); ">
     <?php
     $pagina = $_GET['pagina'];
     switch ($pagina) {
