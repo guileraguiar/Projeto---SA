@@ -8,12 +8,13 @@ if (isset($_SESSION['user'])) {
 }
 if (!isset($_SESSION['user'])) :
     ?>
+    <img src="images/TITULO.png"   style=" margin-bottom:20px; margin-top:20px; "class="mx-auto d-block" alt="" height="150" width="300">
     <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
         <center style="margin-top:50px;">
             <h1>Bem Vindo!</h1>
         </center>
         <center>
-            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px;">
+            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px; ">
                 <br>
                 <center>
                     <h4>Já tem a sua conta? Não? Crie agora!</h4>
@@ -33,10 +34,17 @@ if (!isset($_SESSION['user'])) :
                 </form>
                 <br>
             </div>
-            <br>
-            <br>
-            <br>
-            <center>
+    </div>
+    <div class="container fundoBackground" style="width:750px; margin-bottom:50px; ">
+        <div>
+            <iframe  width="600" height="371" src="images\fasasdafa.mp4" frameborder="0" allowfullscreen ></iframe>
+        </div>
+        <img style="width:300px;" src="images/logoav2.png" alt="" style="">
+    </div>
+<?php
+endif;
+?>
+<!-- <center>
                 <h5>Você Sabia?</h5>
             </center>
             <center>
@@ -55,8 +63,4 @@ if (!isset($_SESSION['user'])) :
                     anterior (Agonizing Village), referindo-se ao lobo Fenrir, na qual Fenrir estava em apuros, e você poderia decidir se iria salva-lo, ou deixa-lo sozinho
                     em seu sofrimento...
                 </p><img style="width:300px;" src="images/logoav2.png" alt="">
-            </center>
-    </div>
-<?php
-endif;
-?>
+            </center> -->
