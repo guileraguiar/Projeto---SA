@@ -1,3 +1,4 @@
+<img src="images/logoav2.png" class="mx-auto d-block" alt="" height="200" width="200">
 <div class="container fundobranco" style="width:500px; margin-bottom:50px; ">
     <form action="../actions/register_validate.php" method="post">
         <div class="form-row">

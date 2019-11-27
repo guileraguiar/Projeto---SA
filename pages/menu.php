@@ -8,12 +8,13 @@ if (isset($_SESSION['user'])) {
 }
 if (!isset($_SESSION['user'])) :
     ?>
+    <img src="images/TITULO.png"   style=" margin-bottom:20px; margin-top:20px; "class="mx-auto d-block" alt="" height="150" width="300">
     <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
         <center style="margin-top:50px;">
             <h1>Bem Vindo!</h1>
         </center>
         <center>
-            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px;">
+            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px; ">
                 <br>
                 <center>
                     <h4>Já tem a sua conta? Não? Crie agora!</h4>
@@ -27,20 +28,27 @@ if (!isset($_SESSION['user'])) :
                 <br>
                 <br>
                 <center>
-                    <h4>Dúvidas sobre o funcionamento das batalhas? Comece com uma simples demonstração agora mesmo!</h4>
+                    <h4>Dúvidas sobre o funcionamento do jogo? leia o guia com todos os detalhes!</h4>
                 </center>
                 <a href="index.php?pagina=x" class="btn btn-dark">Introdução</a>
                 </form>
                 <br>
             </div>
-            <br>
-            <br>
-            <br>
-            <center>
-                <h5>Você Sábia?</h5>
+    </div>
+    <div class="container fundoBackground" style="width:750px; margin-bottom:50px; ">
+        <div>
+            <iframe  width="600" height="371" src="images\fasasdafa.mp4" frameborder="0" allowfullscreen ></iframe>
+        </div>
+        <img style="width:300px;" src="images/logoav2.png" alt="" style="">
+    </div>
+<?php
+endif;
+?>
+<!-- <center>
+                <h5>Você Sabia?</h5>
             </center>
             <center>
-                <p style="color:white; font-family: 'Courgette', cursive;">O jogo Agonizing Village 2 foi inspirado em The Witcher 3, tanto com o
+                <p class="fonteLabel">O jogo Agonizing Village 2 foi inspirado em The Witcher 3, tanto com o
                     nome do personagem Geraldo do Rio(Geralt of Rivia), como também, o seu ambiente, totalmente inspirado no game.
                 </p>
             </center>
@@ -48,15 +56,11 @@ if (!isset($_SESSION['user'])) :
             <br>
             <br>
             <center>
-                <h5>Você Sábia?</h5>
+                <h5>Você Sabia?</h5>
             </center>
             <center>
-                <p style="color:white; font-family: 'Courgette', cursive;">A logo de Agonizing Village 2 é uma referência ao seu jogo
+                <p class="fonteLabel">A logo de Agonizing Village 2 é uma referência ao seu jogo
                     anterior (Agonizing Village), referindo-se ao lobo Fenrir, na qual Fenrir estava em apuros, e você poderia decidir se iria salva-lo, ou deixa-lo sozinho
                     em seu sofrimento...
                 </p><img style="width:300px;" src="images/logoav2.png" alt="">
-            </center>
-    </div>
-<?php
-endif;
-?>
+            </center> -->
