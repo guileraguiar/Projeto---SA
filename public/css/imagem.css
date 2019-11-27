@@ -51,7 +51,7 @@ body{
 
 .titulo{
     width: 300px;
-
+    
 }
 
 .imgIndex{
@@ -64,10 +64,16 @@ body{
 }
 
 .fundobranco{
-    background-color:rgb(43, 43, 44);
+    background-image: url("../images/brickgrey.png");
     border-radius:10px;
     padding:10px;
-    opacity: 0.9;
+}
+.fundobranco2{
+    border-radius:10px;
+    padding:10px;
+    background-image: url("../images/fundoDiv.jpg");
+    /* background-color: rgb(43, 43, 44); */
+    /* opacity: 0.9; */
 }
 
 .colortonav{
@@ -194,16 +200,23 @@ hr {
 
 .bodyWiki{
     margin:auto;
-    width:1300px;
     height:380px; 
     margin:50px;
-    margin-left:350px;
+    margin-left:215px;
 }
 
 .blockWiki{
     display:table;
 }
-
+.blockWiki2{
+    width:930px; 
+    margin-left:100px;
+    height:400px;
+    margin-bottom:100px;
+}
+.textPosition{
+    margin-top:50px;
+}
 .contentsWiki{
     display:table-cell;
     float:left;
@@ -217,10 +230,10 @@ hr {
     margin-left:10px;
     text-align:center;
 }
-
 .backgroundWiki{
     margin-top:75px;
 }
+
 .fontNavNav{
     font-family: 'Martel', serif;
 }
