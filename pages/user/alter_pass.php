@@ -14,7 +14,7 @@
             <input type="password" style="width:400px;  height:30px;text-align:center;" class=" mx-auto d-block form-control" maxlength="100" placeholder="Nova senha" name="newPass"><br>
 
             <center><label for="cpass" class="text-light fonteLabel">Confirmar senha</label></center>
-            <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" minlength="6" placeholder="Confirmar nova senha" name="cNewPass"><br>
+            <input type="password" style="width:400px; height:30px;text-align:center;" class="form-control mx-auto d-block" placeholder="Confirmar nova senha" name="cNewPass"><br>
 
             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
             <?php
@@ -46,8 +46,7 @@
                         $msg = "Nova senha e Confirmação de senha não coincidem";
                         break;
                     default:
-                        $msg = "Verifique o preenchimento dos campos!";
-                        break;
+                        $msg = null;
                         break;
                 }
                 if (isset($msg)) {
