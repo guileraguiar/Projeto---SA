@@ -14,7 +14,7 @@
 </section>
 <div class="container" style="text-align:center;">
     <div class="fundobranco2 profileBTxt blockWiki2">
-    <center><h3 style="color:yellow;">O JOGO</h3></center>
+    <center><h3 style="color:yellow;">ATRIBUTOS DE GERALDO</h3></center>
     <p class="borderText textPosition" >O JOGO AGONIZING VILLAGE 3, É TOTALMENTE FOCADO NA EXPLORAÇÃO DO AMBIENTE, POIS APENAS ASSIM O JOGADOR CONSEGUIRÁ ENCONTRAR PISTAS E ITENS QUE POSSAM O AUXILIAR NA PROGREÇÃO DA HISTÓRIA E DO PERSONAGEM. POR MEIO DA LEITURA DE PERGAMINHOS ENCONTRADOS NO DECORRER DA AVENTURA, GERALDO SE INFORMARÁ MAIS SOBRE O PARADEIRO DO REI.</p>  
  <a href="?pagina=pageWiki3" class="proximo" style="margin-left:750px; color:yellow;">Próximo</a>   
     </div>
