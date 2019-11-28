@@ -24,13 +24,13 @@ if (!isset($_SESSION['user'])) :
                 <center>
                     <h4 class="h44">Calma lá, você já tem? Então entre agora!</h4>
                 </center>
-                <a href="index.php?pagina=login" class="btn btn-outline-warning">Login</a>
+                <a href="index.php?pagina=login" class="btn btn-dark">Login</a>
                 <br>
                 <br>
                 <center>
                     <h4 class="h44">Dúvidas sobre o funcionamento do jogo? leia o guia com todos os detalhes!</h4>
                 </center>
-                <a href="index.php?pagina=x" class="btn btn-warning" style="color:white;">Introdução</a>
+                <a href="index.php?pagina=x" class="btn btn-dark">Introdução</a>
                 </form>
                 <br>
             </div>

@@ -2,13 +2,13 @@
 <section class="bodyWiki">
     <div class="blockWiki fundobranco backgroundWiki row" style="text-align:center;">
         <div class="textWiki profileBTxt col-sm" style="">
-            <img src="images/geraldocostas.png" class="mx-auto d-block" alt="" height="200" width="200">
+            <img src="images/shield.png" class="mx-auto d-block" alt="" height="200" width="200">
         </div>
         <div class="textWiki profileBTxt col-sm">
-            <img src="images/geraldofrente.png" class="mx-auto d-block" alt="" height="200" width="200">
+            <img src="images/lifeicon.png" class="mx-auto d-block" alt="" height="200" width="200">
         </div>
         <div class="textWiki profileBTxt col-sm">
-            <img src="images/geraldolado.png" class="mx-auto d-block" alt="" height="200" width="200">
+            <img src="images/sword.png" class="mx-auto d-block" alt="" height="200" width="200" style="margin-bottom:50px;">
         </div>
     </div>
 </section>

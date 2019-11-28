@@ -18,15 +18,7 @@
 
             <button type="submit" class="btn btn-light mx-auto d-block fonteLabel" name="alterar">Alterar</button>
             <?php
-            $alterSuccess = (isset($_GET['alterSuccess'])) ? $_GET['alterSuccess'] : null;
-            if (isset($alterSucess)) {
-                $success = "Senha alterada com sucesso!";
-                if (isset($success)) {
-                    echo "<center><div class='alert alert-success' role='alert'>
-                            " . $success . "
-                            </div></center>";
-                }
-            }
+           
             $erro = (isset($_GET['erro'])) ? $_GET['erro'] : null;
             if (isset($erro)) {
                 switch ($erro) {
@@ -54,6 +46,13 @@
                             " . $msg . "
                             </div></center>";
                 }
+            }
+            $alterSuccess = (isset($_GET['alterSuccess'])) ? $_GET['alterSuccess'] : null;
+            if (isset($alterSuccess)) {
+                $success = "Senha alterada com sucesso!";
+                    echo "<center><div class='alert alert-success' role='alert'>
+                            " . $success . "
+                            </div></center>";
             }
             ?>
         </div>
