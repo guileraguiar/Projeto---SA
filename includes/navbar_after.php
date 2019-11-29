@@ -4,7 +4,7 @@ if (isset($userSession)) {
 }
 ?>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-nowrap fontNavNav">
-  <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"> </a> <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
+  <a class="navbar-brand" href="?pagina=menu"><img src="images/logoav3.png" width="60px"> </a> <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
