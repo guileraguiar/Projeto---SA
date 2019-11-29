@@ -1,4 +1,5 @@
- <div class="container fundobranco" style="width:500px;">
+<img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
+ <div class="container fundobranco" style="width:500px; margin-bottom:50px;"  >
      <form action="../actions/login_validate.php" method="post">
          <div class="form-row">
              <div class="col">
@@ -52,7 +53,6 @@
                  ?>
              </div>
          </div>
-     </form>
-     <p class="text-center text-danger">
-     </p>
+     </form> 
+     
  </div>

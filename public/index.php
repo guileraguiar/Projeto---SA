@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Bem Vindo</title>
     <!-- CSS //-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">
@@ -23,20 +23,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <style>
+        body {
+            cursor: url(images/dwarven_gauntlet.png), default;
+            /* document.location.href = ""; no evento onlick */
+        }
+    </style>
 </head>
 
-
 <header>
-    <?php
-    
-        include '../actions/verify/verify_nav.php';
-    ?>
+    <?php include '../actions/verify/verify_nav.php'; ?>
 </header>
-<img src="images/TITULO.png" class="mx-auto d-block titulo" alt="">
 
-<body class="fadeInPages" style="background-size: 100%;background-image: url(https://i.ytimg.com/vi/THSAX5vybIw/maxresdefault.jpg); ">
+<body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
     <?php
-    $pagina = $_GET['pagina'];
+    $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
     switch ($pagina) {
         case 'menu':
             include '../pages/menu.php';
@@ -59,11 +60,28 @@
         case 'alterPass';
             include '../pages/user/alter_pass.php';
             break;
+        case 'pageWiki';
+            include '../pages/user/wiki_pageOne.php';
+            break;
+        case 'pageWiki2';
+            include '../pages/user/wiki_pageTwo.php';
+            break;
+        case 'pageWiki3';
+            include '../pages/user/wiki_pageThree.php';
+            break;
         default:
             include '../pages/initial.php';
             break;
     }
     ?>
 </body>
+<div class="py-3 bg-dark fonteNavNav fixar-rodape">
+    <div class="text-center">
+        <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"> </a>
+        <small> &copy;2018 SteelFreak™</small>
+        <a class="navbar-brand " href="?pagina=menu"><img src="images/facebookIcon.png" width="80px"> </a>
+        <a class="navbar-brand" href="?pagina=menu"><img src="images/original.png" width="80px"> </a>
+    </div>
+</div>
 
 </html>

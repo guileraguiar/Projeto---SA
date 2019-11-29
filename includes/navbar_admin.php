@@ -4,7 +4,7 @@ if (isset($userSession)) {
   $select = mysqli_query($conexao, "SELECT u_user FROM users WHERE u_user = " . $userSession["u_user"] . "");
 }
 ?>
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color colortonav">
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color bg-dark fontNavNav">
   <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@ if (isset($userSession)) {
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown clicavel">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i><?php echo $userSession["u_user"]; ?> </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">

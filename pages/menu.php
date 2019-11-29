@@ -8,55 +8,50 @@ if (isset($_SESSION['user'])) {
 }
 if (!isset($_SESSION['user'])) :
     ?>
-    <div class="container fundobranco" style="width:750px; margin-bottom:50px;">
+    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
+    <div class="container fundoBackground" style="width:750px; margin-bottom:50px;">
         <center style="margin-top:50px;">
-            <h1>Bem Vindo!</h1>
+            <h1>Bem Vindo Visitante!</h1>
         </center>
         <center>
-            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px;">
+            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px;background-color:#80808099;">
                 <br>
                 <center>
-                    <h4>Já tem a sua conta? Não? Crie agora!</h4>
+                    <h4 class="h44">Já tem a sua conta? Não? Crie agora!</h4>
                 </center>
-                <a href="index.php?pagina=register" class="btn btn-dark">Cadastrar</a>
+                <a href="index.php?pagina=register" class="btn btn-light mx-auto d-block fonteLabel" title="Red">Cadastrar</a>
                 <br>
                 <center>
-                    <h4>Calma lá, você já tem? Então entre agora!</h4>
+                    <h4 class="h44">Calma lá, você já tem? Então entre agora!</h4>
                 </center>
-                <a href="index.php?pagina=login" class="btn btn-dark">Login</a>
+                <a href="index.php?pagina=login" class="btn btn-light mx-auto d-block fonteLabel">Login</a>
                 <br>
                 <br>
                 <center>
-                    <h4>Dúvidas sobre o funcionamento das batalhas? Comece com uma simples demonstração agora mesmo!</h4>
+                    <h4 class="h44">Dúvidas sobre o funcionamento do jogo? leia o guia com todos os detalhes!</h4>
                 </center>
-                <a href="index.php?pagina=x" class="btn btn-dark">Introdução</a>
-                </form>
+                <a href="index.php?pagina=x" class="btn btn-light mx-auto d-block fonteLabel">Introdução</a>
                 <br>
             </div>
-            <br>
-            <br>
-            <br>
-            <center>
-                <h5>Você Sábia?</h5>
-            </center>
-            <center>
-                <p style="color:white; font-family: 'Courgette', cursive;">O jogo Agonizing Village 2 foi inspirado em The Witcher 3, tanto com o
-                    nome do personagem Geraldo do Rio(Geralt of Rivia), como também, o seu ambiente, totalmente inspirado no game.
-                </p>
-            </center>
-            <br>
-            <br>
-            <br>
-            <center>
-                <h5>Você Sábia?</h5>
-            </center>
-            <center>
-                <p style="color:white; font-family: 'Courgette', cursive;">A logo de Agonizing Village 2 é uma referência ao seu jogo
-                    anterior (Agonizing Village), referindo-se ao lobo Fenrir, na qual Fenrir estava em apuros, e você poderia decidir se iria salva-lo, ou deixa-lo sozinho
-                    em seu sofrimento...
-                </p><img style="width:300px;" src="images/logoav2.png" alt="">
-            </center>
+    </div>
+    <div class="container fundoBackground" style="width:750px; margin-bottom:50px; ">
+        <div>
+            <iframe width="600" height="371" src="images\fasasdafa.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <img style="width:300px;" src="images/logoav3.png" alt="" style="">
     </div>
 <?php
 endif;
-?>
+if (isset($_SESSION['user'])) :
+    ?>
+    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
+    <div class="container fundoBackground" style="width:750px; margin-bottom:50px;">
+        <center style="margin-top:50px;">
+            <h1>Bem Vindo <?php echo $userSession['u_user']; ?>!</h1>
+        </center>
+        <center>
+            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px;background-color:#80808099;">
+
+            </div>
+    </div>
+<?php endif ?>
