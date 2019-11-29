@@ -38,7 +38,7 @@ if (!isset($_SESSION['user'])) :
         <div>
             <iframe width="600" height="371" src="images\fasasdafa.mp4" frameborder="0" allowfullscreen></iframe>
         </div>
-        <img style="width:300px;" src="images/logo3.png" alt="" style="">
+        <img style="width:300px;" src="images/logoav3.png" alt="" style="">
     </div>
 <?php
 endif;
