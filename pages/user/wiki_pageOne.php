@@ -1,5 +1,5 @@
 <img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
-<section class="bodyWiki" style="margin-bottom:70px;">
+<section class="bodyWiki">
     <div class="blockWiki fundoBackground backgroundWiki">
         <div class="contentsWiki">
             <iframe width="600" height="371" src="https://www.youtube.com/embed/F9Bo89m2f6g" frameborder="0" allowfullscreen></iframe>
@@ -9,6 +9,13 @@
         </div>
     </div>
 </section>
+<div class="container">
+<h4 style="color:yellow;" class="midH4">Quais foram as <br>inspirações do jogo?</h4>
+    <div class="fundoBackground profileBTxt blockWiki2">
+        
+    <p class="borderText textPosition">O mais novo jogo produzido pela SteelFreak, Agonizing Village 3, foi totalmente baseado em seus jogos passados, Agonizing Village 1 e 2, que também tiveram muita inspiração em The Witcher, o jogo se passa em uma ambientação medieval, dando mais intensidade </p>  
+    </div>
+</div>
 <div class="container">
 <center><h4 style="color:yellow;">QUEM É GERALDO ?</h4></center>
     <div class="fundobranco2 profileBTxt blockWiki2">

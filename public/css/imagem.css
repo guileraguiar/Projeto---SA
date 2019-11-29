@@ -68,8 +68,21 @@ body {
 }
 
 .fundoBackground {
-    box-shadow: 0 30px 100px 20px #0a0a0a;
     background-image: url("../images/brickgrey.png");
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fundoStory {
+    box-shadow: 0 30px 100px 20px #0a0a0a;
+    background-image: url("../images/paper.jpg");
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fundoMenuOn {
+    box-shadow: 0 30px 100px 20px #0a0a0a;
+    background-image: url("../images/mountain.jpg");
     border-radius: 10px;
     padding: 10px;
 }
@@ -228,11 +241,18 @@ hr {
     background-color: #290333;
 }
 
-.bodyWiki {
+.bodyWikiTwo{
     margin: auto;
     height: 380px;
+    margin-left: 20%;
+    margin-bottom:2%;
+}
 
-    margin-left: 215px;
+.bodyWiki{
+    margin: auto;
+    height: 380px;
+    margin-left: 20%;
+    margin-bottom:5.5%;
 }
 
 .blockWiki {
@@ -446,3 +466,10 @@ iframe{
     color:white;
 }
 
+.midDiv{
+    margin-left:20%;
+}
+
+.midH4{
+    margin-left:0%;
+}

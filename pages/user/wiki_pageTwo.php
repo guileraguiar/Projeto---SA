@@ -1,5 +1,5 @@
 <img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
-<section class="bodyWiki">
+<section class="bodyWikiTwo">
     <div class="blockWiki fundobranco backgroundWiki row" style="text-align:center;">
         <div class="textWiki profileBTxt col-sm" style="">
             <img src="images/geraldocostas.png" class="mx-auto d-block" alt="" height="200" width="200">
