@@ -15,7 +15,7 @@
         
     <p class="borderText textPosition">Geraldo do rio, um experiente dominador das artes da magia negra, convocado pelo reino de  rettferdighet
  para ir em busca do Rei Ianes III, detentor das terras do norte, o qual não se sabe o paradeiro, porém Geraldo, assumiu a responsabilidade de buscar, ou seria punido severamente, e morreria decapitado, Geraldo colocará suas melhores habilidades em prática, anos de alquimia e técnicas de luta postos em vigor. </p>  
- <a href="?pagina=pageWiki2" class="proximo" style="margin-left:750px; color:yellow;">Próximo</a>   
+    <a href="?pagina=pageWiki2" class="proximo" style="color:yellow;">Próximo</a>   
     </div>
 </div>
 
