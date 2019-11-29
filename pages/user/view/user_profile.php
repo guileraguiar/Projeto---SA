@@ -8,10 +8,11 @@
         <br>
         <div class="container fundobranco w-50 p-12 mb-5" style="width:auto; height:auto; margin-top:20px;">
             <div class="row" style="padding:20px;">
-                <div class="col-sm-5"style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'>
+                <div class="col-sm-0"style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'>
                 </div>
-                <div class="col-sm-7">
-                    <h4 style="margin-top:80px;" class="minhaconta">Minha conta / <?php echo $userSession["u_user"] ?></h4>
+                <div class="col-sm-12">
+                    <h4 style="margin-top:40px;" class="minhaconta">Minha conta/<?php echo $userSession["u_user"] ?></h4>
+                    <br>
                 </div>
             </div>
             <!-- Dados da conta //-->
@@ -53,6 +54,18 @@
             </div>
             <br>
         </div>
+        <style>
+        
+.fixar-rodape {
+    bottom:0;
+    width:100%;
+    margin: auto auto;
+    padding: 10px 5px;
+    position: absolute;
+    }
+
+
+        </style>
     <?php
     endif;
     ?>

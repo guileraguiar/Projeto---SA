@@ -96,14 +96,14 @@ h4 {
     font-family: 'Press Start 2P', cursive;
 }
 
-/* 
+ 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #EC00FF;
-   border-top: 3px solid #EC00FF;   
-  } */
+    position: absolute;
+    bottom:0;
+    width:100%;
+    margin: auto auto;
+    padding: 10px 5px;
+  } 
 
 .character {
     height: 10%;
@@ -203,7 +203,7 @@ hr {
 
 .minhaconta {
     color: #fff;
-    font-family: 'Playfair Display', cursive;
+    font-family: 'Press Start 2P', cursive;
     font-size: 25px;
 }
 
@@ -414,16 +414,14 @@ div.body-content {
     margin-bottom: 40px;
 }
 
-footer.fixar-rodape {
-    background: #EC00FF;
-    border-top: 5px solid #EC00FF;
-    bottom: 0;
-    left: 0;
-    height: 40px;
-    position: fixed;
-    width: 100%;
+/*.fixar-rodape {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    margin: auto auto;
+    padding: 10px 5px;
 }
-
+*/
 .trailer {
     float: left;
     width: 644px;
