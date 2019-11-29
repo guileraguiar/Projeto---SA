@@ -5,21 +5,7 @@ $codigo = $_GET["codigo"];
 
 if (isset($codigo)) {
 
-    
-  
-
-    
+    $select = mysqli_query($conexao, "SELECT u_type FROM users");
+    $deleteUsers = mysqli_query($conexao, "DELETE FROM users WHERE id_user='" . $codigo . "' AND u_type <> 2");
 }
-
-function erro($erro)
-{
-    if (isset($erro)) {
-        return false;
-    }
-    return true;
-}
-
 mysqli_close($conexao);
-// header("Location:../public/index.php?pagina=viewUsers&msgDel='. $msgDel.'");
-// header("Location:../public/index.php?pagina=viewUsers&msgDel='. $msgDel.'");
-//header("Location: ../public/index.php?pagina=viewUsers");

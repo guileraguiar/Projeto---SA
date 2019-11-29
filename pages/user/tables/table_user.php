@@ -17,7 +17,8 @@ include '../actions/verify/verify_lvlAccess.php';
                         <th scope="col">Ação</th>
                     </tr>
                 <tbody>
-                <?php $msgDel = (isset($_GET['msgDel'])) ? $_GET['msgDel'] : null;
+                <?php 
+                $msgDel = (isset($_GET['msgDel'])) ? $_GET['msgDel'] : null;
                         if (isset($msgDel)) {
                             switch ($msgDel) {
                                 case 1:
