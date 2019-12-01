@@ -55,8 +55,8 @@ include '../actions/verify/verify_users.php';
                         echo "<th>" . $valor["u_email"] . "</th>";
                         echo "<th>" . $valor["u_type"] . "</th>";
                         echo "<th>";
-                        echo "<a href='../actions/tableDelete_val.php?codigo=" . $valor['id_user'] . "'>Excluir</a>";
-                        echo "</th>";
+                        echo "<a href='../actions/tableDelete_val.php?codigo=". $valor['id_user'] ."&tipo=".$valor['u_type']."'>Excluir</a>";
+                        echo "</th>";;
                         echo "</tr>";
                     }
                     mysqli_close($conexao);
