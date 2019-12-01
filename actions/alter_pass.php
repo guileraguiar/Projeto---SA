@@ -1,26 +1,60 @@
-<?php 
+<?php require_once "../bd/connection_bd.php";
 session_start();
-    $login = $_SESSION['user'];
-    
-    if (isset($_SESSION['user'])){
-        require_once "../bd/connection_bd.php";
-        $senhaBanco = mysqli_query($conexao,"SELECT u_pass FROM users WHERE u_user = '".$login["u_user"]."'");
-        
-        $senhaUser = MD5(isset($_POST["newPass"])?($_POST["newPass"]):"");
-        $csenhaUser = MD5(isset($_POST["cNewPass"])?($_POST["cNewPass"]):"");
-        $senhaAtual = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
+$select_query = mysqli_query($conexao, "SELECT * FROM users WHERE id_user =" . $_SESSION['user']['id_user']);
 
-        if($senhaAtual != $login['u_pass']){
-             echo"<script language='javascript' type='text/javascript'>
-             alert('As senhas devem coincidir!!');window.location.href='../pages/user/alter_pass.php';</script>";
+if (isset($_SESSION['user'])) {
 
-        }else if (($login['u_pass'] == $senhaAtual) && ($senhaUser == $csenhaUser)){
-            $select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '".$login["u_user"]."'");
-            $query = mysqli_query($conexao,"UPDATE users SET u_pass ='$senhaUser' WHERE u_user = '".$login["u_user"]."'");
-        
-            echo"<script language='javascript' type='text/javascript'>
-            alert('Senha alterada com sucesso!!');window.location.
-             href='../menu.php'</script>";
+    // var_dump($_SESSION['user']);
+    // var_dump($_SESSION['user']['id_user']);
+    $senhaUser = returnCritp($_POST["newPass"]);
+    $csenhaUser = returnCritp($_POST["cNewPass"]);
+    $senhaAtual = returnCritp($_POST["pass"]);
+    $erro = null;
+
+    if (!isset($senhaUser) || empty($senhaUser)) {
+        $erro = 1;
+    } elseif (!isset($csenhaUser) || empty($csenhaUser)) {
+        $erro = 2;
+    } elseif (!isset($senhaAtual) || empty($senhaAtual)) {
+        $erro = 3;
+    } elseif ($senhaUser != $csenhaUser) {
+        $erro = 5;
+    }
+
+    while ($dados_users = mysqli_fetch_assoc($select_query)) {
+        if ($senhaAtual != $dados_users['u_pass']) {
+            $erro = 4;
+        }
+    }
+    // $87nrBBr/CbukI;
+    // '$usuario' AND u_pass = '$senhaUser'") or die("Algo de errado aconteceu!!");
+    /* CONTINUAR DAQUI AMANHÃ 
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    if (error($erro)) {
+        $query = mysqli_query($conexao, "UPDATE users SET u_pass ='$senhaUser' WHERE id_user =" .  $_SESSION['user']['id_user']);
+        $alterSuccess = 1;
+        header("Location: ../public/index.php?pagina=alterPass&alterSuccess=" . $alterSuccess);
+    } else {
+        header("Location: ../public/index.php?pagina=alterPass&erro=" . $erro);
     }
 }
-?>
+
+/* Valida se tem erro */
+function error($erro)
+{
+    if (isset($erro)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+/* Recebe a string de senha do usuario e logo em seguida criptagra e retorna o valor criptorgafado */
+function returnCritp($senhaUser)
+{
+    /* Dados do crypt */
+    $salt = '72b302bf297a228a75730123efef7c41'; //banana
+    $_saltCost = '8';
+
+    return crypt($senhaUser, $_saltCost . $salt);
+}

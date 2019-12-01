@@ -1,62 +1,56 @@
 <?php
-session_start();
+require_once "../bd/connection_bd.php";
+$query_user = mysqli_query($conexao, "SELECT * FROM users");
+
 //puxando dados da tablea register_page.php
-$usuario = isset($_POST["user"])?($_POST["user"]):"";
-$senhaUser = MD5(isset($_POST["pass"])?($_POST["pass"]):"");
-$csenhaUser = MD5(isset($_POST["cpass"])?($_POST["cpass"]):"");
-$emailUser = isset($_POST["email"])?($_POST["email"]):"";
+$usuario = $_POST["user"];
+$senhaUser = $_POST["pass"];
+$csenhaUser = $_POST["cpass"];
+$emailUser = $_POST["email"];
+$erro = null;
 
-require_once "../bd/connection_bd.php"; 
-
-$select = mysqli_query($conexao,"SELECT * FROM users");
-
-$query_select = mysqli_query($conexao,"SELECT * FROM users WHERE u_user = '$usuario' OR u_email='$emailUser'");
-$array = mysqli_fetch_assoc($query_select);
-
-
-if($usuario == "" || $usuario == null){
-     echo"<script language='javascript' type='text/javascript'>
-     alert('O campo usuario deve ser preenchido');window.location.href='../pages/user/register_page.php';</script>";
-
+if (!isset($usuario) || empty($usuario)) {
+    $erro = 1;
+} elseif (!isset($senhaUser) || empty($senhaUser)) {
+    $erro = 2;
+} elseif (!isset($csenhaUser) || empty($csenhaUser)) {
+    $erro = 3;
+} elseif ($senhaUser != $csenhaUser) {
+    $erro = 7;
+} elseif (!isset($emailUser) || empty($emailUser)) {
+    $erro = 4;
 }
-elseif($array['u_user'] == $usuario){
-
-    echo"<script language='javascript' type='text/javascript'>
-    alert('O usuário cadastrado já existe!!'); window.location.href='../pages/user/register_page.php';</script>";
-  //  die();
-
-}
-
-elseif($senhaUser != $csenhaUser){
-
-    echo"<script language='javascript' type='text/javascript'>
-    alert('As senhas não conferem!!'); window.location.href='../pages/user/register_page.php';</script>";
-  //  die();
-
-}
-
-elseif($array['u_email'] == $emailUser){
-
-    echo"<script language='javascript' type='text/javascript'>
-    alert('O email cadastrado já existe!!'); window.location.href='../pages/user/register_page.php';</script>";
-  //  die();
-
-}
-elseif($senhaUser != $csenhaUser){
-    echo"<script language='javascript' type='text/javascript'>
-    alert('As senhas devem coincidir!!'); window.location.href='../pages/user/register_page.php';</script>";
-}
-else{
-    $query = "INSERT INTO users (u_user,u_pass,u_email) VALUES ('$usuario','$senhaUser','$emailUser')";
-    $insert = mysqli_query($conexao, $query);
-        
-    if($insert){
-        echo"<script language='javascript' type='text/javascript'>
-        alert('O seu cadastro foi efetuado com sucesso!!');window.location.
-        href='../pages/user/login_page.php'</script>";
-    }else{
-        echo"<script language='javascript' type='text/javascript'>
-        alert('Não foi possível efetuar esse cadastro!!'); window.location.href='../pages/user/login_page.php'</script>";
+/* Valida se tem usuario/email repetido */
+while ($dados_users = mysqli_fetch_assoc($query_user)) {
+    if ($dados_users['u_user'] == $usuario) {
+        $erro = 5;
+    } elseif ($dados_users['u_email'] == $emailUser) {
+        $erro = 6;
     }
 }
-?>
+/* insere no banco */
+if (erro($erro)) {
+    /* Dados do crypt */
+    $salt = '72b302bf297a228a75730123efef7c41'; //banana
+    $_saltCost = '8';
+
+    $value = crypt($senhaUser, $_saltCost . $salt);
+    // if (crypt($senhaUser, $_saltCost . $salt) ==  $value) {
+    //     echo "ss";
+    // }
+    $query = "INSERT INTO users (u_user, u_pass, u_email) VALUES ('$usuario','$value','$emailUser')";
+    $insert = mysqli_query($conexao, $query);
+    $registerSuccess = 1;
+    header("Location: ../public/index.php?pagina=login&registerSuccess=" . $registerSucces);
+} else {
+    header("Location: ../public/index.php?pagina=register&erro=" . $erro);
+}
+
+/* Valida se tem erro */
+function erro($erro)
+{
+    if (isset($erro)) {
+        return false;
+    }
+    return true;
+}

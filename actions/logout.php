@@ -2,7 +2,8 @@
 session_start();
 if (isset($_SESSION['user'])){
     session_destroy();
-    header('Location:http://localhost/SteelFreak/menu.php');
+    $erro = 3;
+    header('Location:../public/index.php?pagina=login&erro='.$erro);
     exit();
 }
 
