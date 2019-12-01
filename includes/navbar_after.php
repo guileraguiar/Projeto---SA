@@ -21,6 +21,11 @@ if (isset($userSession)) {
           <span class="sr-only">(current)</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?pagina=pageWiki">
+          <i class="fab fa-facebook-f">Sobre</i> 
+        </a>
+      </li>
       <li class="nav-item dropdown clicavel">
         <a class="nav-link dropdown-toggle clicavel " id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user "></i><?php echo $userSession["u_user"]; ?></a>

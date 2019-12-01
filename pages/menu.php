@@ -8,7 +8,7 @@ if (isset($_SESSION['user'])) {
 }
 if (!isset($_SESSION['user'])) :
     ?>
-    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
+    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt=""height="300" width="300">
     <div class="container fundoBackground" style="width:750px; margin-bottom:50px;">
         <center style="margin-top:50px;">
             <h1>Bem Vindo Visitante!</h1>
@@ -49,7 +49,7 @@ if (isset($_SESSION['user'])) :
     <div class="container fundoMenuOn profileBTxt" style="width:750px; margin-bottom:50px;">
     <div>
         <p style="color:black;">
-            Experimente agora mesmo nosso jogo!! entre na aba Games e selecione o jogo Agonizing Village 3, nossa mais nova criação, vinda diretamente das catacumbas de rettferdighet.
+            Experimente agora mesmo nosso jogo!! entre na aba Games, e selecione o jogo Agonizing Village 3, nossa mais nova criação, vinda diretamente das catacumbas de rettferdighet!
         </p>
     </div>
     

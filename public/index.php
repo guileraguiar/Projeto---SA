@@ -34,9 +34,17 @@
 <header>
     <?php include '../actions/verify/verify_nav.php'; ?>
 </header>
-
+<?php 
+if(!isset($_SESSION['user'])):
+?>
 <body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
-    <?php
+<?php
+endif;
+if(isset($_SESSION['user'])):
+?>
+<body class=" bodyIndex fadeInPages teste">
+<?php
+endif;
     $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
     switch ($pagina) {
         case 'menu':

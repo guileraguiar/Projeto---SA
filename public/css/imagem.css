@@ -86,7 +86,14 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
-
+.teste{
+    background: url(../images/gifmenu.gif) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+}
 .fundobranco {
     box-shadow: 0 30px 100px 10px #0a0a0a;
     background-image: url("../images/wallBrick.jpg");
@@ -94,7 +101,25 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
+.alterPass{
+    width:40%;
+    margin-bottom:5%;
+    margin-top:3%;
+}
+.fixar-rodape {
+    bottom:0;
+    width:100%;
+    margin: auto;
+    padding: 10px 5px;
+    position: relative;
+}
 
+.account{
+    width:50%;
+    height:10%;
+    margin-top:3%;
+    margin-bottom:5%;
+}
 .fundobranco2 {
     box-shadow: 0 0 100px 0 #0a0a0a;
     border-radius: 10px;
@@ -110,13 +135,13 @@ h4 {
 }
 
  
-.footer {
+/* .footer {
     position: absolute;
     bottom:0;
     width:100%;
     margin: auto auto;
     padding: 10px 5px;
-  } 
+  }  */
 
 .character {
     height: 10%;
@@ -244,15 +269,28 @@ hr {
 .bodyWikiTwo{
     margin: auto;
     height: 380px;
-    margin-left: 20%;
-    margin-bottom:2%;
+    margin-left: 16.3%;
+    margin-bottom:-50px;
 }
 
 .bodyWiki{
     margin: auto;
     height: 380px;
-    margin-left: 20%;
+    margin-left: 16.3%;
     margin-bottom:5.5%;
+}
+
+.bodyWiki4{
+    margin: auto;
+    height: 380px;
+    margin-left: 16.3%;
+    margin-bottom:1.5%;
+}
+
+
+.sizeContainerOne{
+    height:100px;
+    margin-bottom:5%;
 }
 
 .blockWiki {
@@ -262,13 +300,40 @@ hr {
 .blockWiki2 {
     width: 930px;
     margin-left: 100px;
+    height: 350px;
+    margin-bottom: 100px;
+}
+.page3 {
+    width: 930px;
+    margin-left: 100px;
+    height: 270px;
+    margin-bottom: 100px;
+}
+.blockWiki4 {
+    width: 930px;
+    margin-left: 100px;
     height: 400px;
     margin-bottom: 100px;
 }
 
-.textPosition {
-    margin-top: 50px;
+.blockWiki3 {
+    width: 930px;
+    margin-left: 100px;
+    height: 300px;
+    margin-bottom: 60px;
 }
+
+.textPosition {
+    margin-top: 2%;
+    color:white;
+    text-align:center;
+}
+
+.textPosition2{
+    margin-top: 4%;
+    color:white;
+}
+
 
 .contentsWiki {
     display: table-cell;
