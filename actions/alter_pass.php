@@ -4,6 +4,8 @@ $select_query = mysqli_query($conexao, "SELECT * FROM users WHERE id_user =" . $
 
 if (isset($_SESSION['user'])) {
 
+    // var_dump($_SESSION['user']);
+    // var_dump($_SESSION['user']['id_user']);
     $senhaUser = returnCritp($_POST["newPass"]);
     $csenhaUser = returnCritp($_POST["cNewPass"]);
     $senhaAtual = returnCritp($_POST["pass"]);
@@ -24,16 +26,16 @@ if (isset($_SESSION['user'])) {
             $erro = 4;
         }
     }
-
+    // $87nrBBr/CbukI;
     // '$usuario' AND u_pass = '$senhaUser'") or die("Algo de errado aconteceu!!");
     /* CONTINUAR DAQUI AMANHÃ 
     ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
     if (error($erro)) {
-        $query = mysqli_query($conexao, "UPDATE users SET u_pass ='$senhaUser' WHERE u_user = '" . $userSession["u_user"] . "'");
+        $query = mysqli_query($conexao, "UPDATE users SET u_pass ='$senhaUser' WHERE id_user =" .  $_SESSION['user']['id_user']);
         $alterSuccess = 1;
-        //header("Location: ../public/index.php?pagina=alterPass&alterSuccess=" . $alterSuccess);
+        header("Location: ../public/index.php?pagina=alterPass&alterSuccess=" . $alterSuccess);
     } else {
-        //header("Location: ../public/index.php?pagina=alterPass&erro=" . $erro);
+        header("Location: ../public/index.php?pagina=alterPass&erro=" . $erro);
     }
 }
 

@@ -24,8 +24,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <style>
-        body{
-            cursor:url(images/dwarven_gauntlet.png),default;
+        body {
+            cursor: url(images/dwarven_gauntlet.png), default;
+            /* document.location.href = ""; no evento onlick */
         }
     </style>
 </head>
@@ -33,9 +34,17 @@
 <header>
     <?php include '../actions/verify/verify_nav.php'; ?>
 </header>
-
+<?php 
+if(!isset($_SESSION['user'])):
+?>
 <body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
-    <?php
+<?php
+endif;
+if(isset($_SESSION['user'])):
+?>
+<body class=" bodyIndex fadeInPages teste">
+<?php
+endif;
     $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
     switch ($pagina) {
         case 'menu':
@@ -64,6 +73,9 @@
             break;
         case 'pageWiki2';
             include '../pages/user/wiki_pageTwo.php';
+            break;
+        case 'pageWiki3';
+            include '../pages/user/wiki_pageThree.php';
             break;
         default:
             include '../pages/initial.php';

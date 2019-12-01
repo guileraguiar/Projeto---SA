@@ -1,8 +1,10 @@
 <?php 
 include '../actions/verify/verify_lvlAccess.php';
+include '../actions/verify/verify_users.php';
 ?>
+<img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
     <center>
-        <div class="container fundobranco" style="margin-top: 50px;">
+        <div class="container fundobranco mb-5" style="margin-top: 50px;">
             <center>
                 <h1 class="fonteLabel">Visualização de Usuários</h1>
             </center>
@@ -16,7 +18,8 @@ include '../actions/verify/verify_lvlAccess.php';
                         <th scope="col">Ação</th>
                     </tr>
                 <tbody>
-                <?php $msgDel = (isset($_GET['msgDel'])) ? $_GET['msgDel'] : null;
+                <?php 
+                $msgDel = (isset($_GET['msgDel'])) ? $_GET['msgDel'] : null;
                         if (isset($msgDel)) {
                             switch ($msgDel) {
                                 case 1:
@@ -29,16 +32,17 @@ include '../actions/verify/verify_lvlAccess.php';
                                 $msg = "Selecione alguma opção!";
                                 break;
                             }
+                            if (isset($msg)){
+                                echo "<center><div class='alert alert-success' role='alert'>
+                                " . $msg . "
+                                </div></center>";
+                            }elseif(isset($msg2)){
+                                echo "<center><div class='alert alert-danger' role='alert'>
+                                " . $msg2 . "
+                                </div></center>";
+                            }
                         }
-                        if (isset($msg)){
-                            echo "<center><div class='alert alert-success' role='alert'>
-                            " . $msg . "
-                            </div></center>";
-                        }elseif(isset($msg2)){
-                            echo "<center><div class='alert alert-success' role='alert'>
-                            " . $msg2 . "
-                            </div></center>";
-                        }
+                       
                    
                     $busca = mysqli_query($conexao, "SELECT * FROM users");
                     $arrUser = mysqli_fetch_all($busca, MYSQLI_ASSOC);
