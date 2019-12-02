@@ -1,5 +1,3 @@
-
-
 <?php
 if (isset($_SESSION['user'])) {
     $userSession = $_SESSION['user'];
@@ -10,7 +8,7 @@ if (isset($_SESSION['user'])) {
 }
 if (!isset($_SESSION['user'])) :
     ?>
-    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt=""height="300" width="300">
+    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
     <div class="container fundoBackground" style="width:750px; margin-bottom:50px;">
         <center style="margin-top:50px;">
             <h1>Bem Vindo Visitante!</h1>
@@ -41,15 +39,6 @@ if (!isset($_SESSION['user'])) :
             <iframe width="600" height="371" src="images\fasasdafa.mp4" frameborder="0" allowfullscreen></iframe>
         </div>
         <img style="width:300px;" src="images/logoav3.png" alt="" style="">
-        <style>
- .fixar-rodape{   
-    bottom:0;
-    width:100%;
-    margin: auto auto;
-    padding: 10px 5px;
-    position: absolute;
-}
-</style>
     </div>
 <?php
 endif;
@@ -59,22 +48,10 @@ if (isset($_SESSION['user'])) :
     <img id="anim" src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
     <h1>Bem Vindo <?php echo $userSession['u_user']; ?>!</h1>
     <div class="container fundoMenuOn profileBTxt" style="width:750px; margin-bottom:50px;">
-    <div>
-        <p style="color:black;">
-            Experimente agora mesmo nosso jogo!! entre na aba Games, e selecione o jogo Agonizing Village 3, nossa mais nova criação, vinda diretamente das catacumbas de rettferdighet!
-        </p>
-    </div>
-    <style>
- .fixar-rodape{   
-    bottom:0;
-    width:100%;
-    margin: auto auto;
-    padding: 10px 5px;
-    position: absolute;
-}
-</style>
-
-
-        
+        <div>
+            <p style="color:black;">
+                Experimente agora mesmo nosso jogo!! entre na aba Games, e selecione o jogo Agonizing Village 3, nossa mais nova criação, vinda diretamente das catacumbas de rettferdighet!
+            </p>
+        </div>
     </div>
 <?php endif ?>

@@ -6,14 +6,5 @@
         <br>
         <br>
 
-</div>
-<style>
- .fixar-rodape{   
-    bottom:0;
-    width:100%;
-    margin: auto auto;
-    padding: 10px 5px;
-    position: absolute;
-}
-</style>
+    </div>
 </body>
