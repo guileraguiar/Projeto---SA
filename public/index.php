@@ -9,6 +9,8 @@
     <!-- CSS //-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">
+    <link rel="stylesheet" href="css/gallery.theme.css">
+    <link rel="stylesheet" href="css/gallery.min.css">
     <!-- Fontes //-->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
@@ -85,7 +87,7 @@ endif;
 </body>
 <div class="py-3 bg-dark fonteNavNav fixar-rodape">
     <div class="text-center">
-        <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"> </a>
+        <a class="navbar-brand" href="?pagina=menu"><img src="images/logoav3.png" width="80px"> </a>
         <small> &copy;2018 SteelFreak™</small>
         <a class="navbar-brand " href="?pagina=menu"><img src="images/facebookIcon.png" width="80px"> </a>
         <a class="navbar-brand" href="?pagina=menu"><img src="images/original.png" width="80px"> </a>
