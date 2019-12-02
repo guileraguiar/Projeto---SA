@@ -16,7 +16,7 @@ if (!isset($_SESSION['user'])) :
             <h1>Bem Vindo Visitante!</h1>
         </center>
         <center>
-            <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px;background-color:#80808099;">
+            <div class="containerBranco " style="width:600px; margin-top:50px; margin-bottom:50px;background-color:#80808099;">
                 <br>
                 <center>
                     <h4 class="h44">Já tem a sua conta? Não? Crie agora!</h4>
