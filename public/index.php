@@ -58,28 +58,28 @@ endif;
             case 'login':
                 include '../pages/user/login_page.php';
                 break;
-            case 'register';
+            case 'register':
                 include '../pages/user/register_page.php';
                 break;
-            case 'viewUsers';
+            case 'viewUsers':
                 include '../pages/user/tables/table_user.php';
                 break;
-            case 'account';
+            case 'account':
                 include '../pages/user/view/user_profile.php';
                 break;
-            case 'alterPass';
+            case 'alterPass':
                 include '../pages/user/alter_pass.php';
                 break;
-            case 'pageWiki';
+            case 'pageWiki':
                 include '../pages/user/wiki_pageOne.php';
                 break;
-            case 'pageWiki2';
+            case 'pageWiki2':
                 include '../pages/user/wiki_pageTwo.php';
                 break;
-            case 'pageWiki3';
+            case 'pageWiki3':
                 include '../pages/user/wiki_pageThree.php';
                 break;
-            case 'alterUsersTable';
+            case 'alterUsersTable':
                 include '../pages/user/tables/alterUsers.php';
                 break;
             default:
