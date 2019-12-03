@@ -1,0 +1,13 @@
+.circle {
+  border: 2px solid #AD235E;
+  border-radius: 150px;
+  width: 200px;
+  height: 190px; 
+  background-position: center;
+  background-color:#F2A2B1;
+  margin-left:5%;
+  }
+
+.imgCircle{
+  margin-top:10%;
+}

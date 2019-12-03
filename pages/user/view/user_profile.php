@@ -4,25 +4,36 @@
     if (isset($userSession)) :
         $select = mysqli_query($conexao, "SELECT * FROM users WHERE u_user = " . $userSession["u_user"] . "");
         ?>
-        <img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
+        <!-- <img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200"> -->
         <br>
         <div class="container fundobranco account">
-            <div class="row" style="padding:20px;">
-                <div class="col-sm-0"style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'>
+            <div class="row">
+                <div class="col-sm-0" style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'>
+                </div>
+                <div class="circle">
+                    <img class="imgCircle" height="160" src="../public/images/geraldofrente.png">
+                    <?php if ($userSession['u_type'] == 2) : ?>
+                        <img class="ml-4 mt-5" height="160" src="../public/images/coroa.png">
+                    <?php endif; ?>
                 </div>
                 <div class="col-sm-12">
-                    <h4 style="margin-top:40px;" class="minhaconta">Minha conta/<?php echo $userSession["u_user"] ?></h4>
+                    <?php if ($userSession['u_type'] == 2) : ?>
+                        <h4 class="minhaconta mt-3">Administrador/<?php echo $userSession["u_user"] ?></h4>
+                    <?php endif; ?>
+                    <?php if ($userSession['u_type'] == 1) : ?>
+                        <h4 class="minhaconta mt-3">Minha conta/<?php echo $userSession["u_user"] ?></h4>
+                    <?php endif; ?>
                     <br>
                 </div>
             </div>
+
             <!-- Dados da conta //-->
-            <div style="margin-top:10px ;" class="row no-gutters">
+            <div class="row no-gutters">
                 <div class="col">
                     <h4 class="profileBTxt">|Usuário:</h4>
                 </div>
                 <div class="col">
                     <p class="profileTxt"><?php echo $userSession["u_user"] ?>
-                        <a href="../../../actions/Rename/rename_login.php"><input type="image" width="15px" src="images/botoes/iconeEditar.png" /></a>
                     </p>
                 </div>
             </div>
@@ -53,15 +64,6 @@
                 </div>
             </div>
             <br>
-            <style>
- .fixar-rodape{   
-    bottom:0;
-    width:100%;
-    margin: auto auto;
-    padding: 10px 5px;
-    position: absolute;
-}
-</style>
         </div>
     <?php
     endif;

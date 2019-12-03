@@ -16,6 +16,12 @@ if (isset($userSession)) {
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="index.php?pagina=historyGame">
+          <i class="fab fa-facebook-f"></i> Historia
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=games">
           <i class="fab fa-facebook-f"></i> Games
           <span class="sr-only">(current)</span>
@@ -23,7 +29,7 @@ if (isset($userSession)) {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=pageWiki">
-          <i class="fab fa-facebook-f">Sobre</i> 
+          <i class="fab fa-facebook-f">Sobre</i>
         </a>
       </li>
       <li class="nav-item dropdown clicavel">

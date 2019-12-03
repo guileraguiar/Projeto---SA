@@ -70,9 +70,11 @@
     padding: 10px;
 }
 
+
 .fundoStory {
-    box-shadow: 0 30px 100px 20px #0a0a0a;
-    background-image: url("../images/paper.jpg");
+    box-shadow: 0 30px 100px 10px #0a0a0a;
+    background-image: url("../images/wallBrick.jpg");
+    /* background-color: rgb(41, 41, 54); */
     border-radius: 10px;
     padding: 10px;
 }
@@ -98,6 +100,14 @@
     border-radius: 10px;
     padding: 10px;
 }
+
+.fundobranco3{
+    box-shadow: 0 30px 100px 10px #0a0a0a;
+    background-image: url("../images/brick.jpg");
+    /* background-color: rgb(41, 41, 54); */
+    border-radius: 10px;
+    padding: 10px;
+}
 .alterPass{
     width:40%;
     margin-bottom:5%;
@@ -115,7 +125,7 @@
     box-shadow: 0 0 100px 0 #0a0a0a;
     border-radius: 10px;
     padding: 10px;
-    background-image: url("../images/fundoDiv.jpg");
+    background-image: url("../images/brick.jpg");
     /* background-color: rgb(43, 43, 44); */
     /* opacity: 0.9; */
 }
@@ -308,16 +318,17 @@ hr {
     margin-bottom: 100px;
 }
 .page3 {
-    width: 930px;
-    margin-left: 100px;
-    height: 270px;
-    margin-bottom: 100px;
+    width: 750px;
+    margin-left:16%;
+    height: 290px;
+    margin-bottom: 5%;
+    
 }
 .blockWiki4 {
     width: 930px;
     margin-left: 100px;
     height: 400px;
-    margin-bottom: 100px;
+    margin-bottom: 5%;
 }
 
 .blockWiki3 {

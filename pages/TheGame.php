@@ -17,7 +17,7 @@ if (isset($_SESSION['user'])) :
     ?>
 
 <center>
-    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt=""height="300" width="300">
+    <!-- <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt=""height="300" width="300"> -->
     <div class="container fundoBackground fundobranco" style="width:1200; margin-bottom:50px;">
 
             <h1 class="gameName">JOGOS</h1>
