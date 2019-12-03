@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="container">
-    <div class="fundobranco2 profileBTxt blockWiki4">
+    <div class="fundobranco2 profileBTxt blockWiki4 profileBTxt ">
         <center>
             <h4 style="color:yellow;">QUEM É GERALDO ?</h4>
         </center>

@@ -13,7 +13,7 @@
     </div>
 </section>
 <div class="container" style="text-align:center;">
-    <div class="fundobranco2 profileBTxt page3">
+    <div class="fundobranco3 profileBTxt page3">
         <center>
             <h3 style="color:yellow;">ATRIBUTOS DE GERALDO</h3>
         </center>
