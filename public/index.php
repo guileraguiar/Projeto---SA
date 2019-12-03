@@ -88,7 +88,7 @@ endif;
         }
         ?>
         </body>
-        <div class="py-3 bg-dark fonteNavNav fixar-rodape">
+        <div class="py-3 bg-dark fonteNavNav footer">
     <div class="text-center">
         <a class="navbar-brand" href="?pagina=menu"><img src="images/logoav3.png" width="80px"> </a>
         <small> &copy;2018 SteelFreak™</small>
