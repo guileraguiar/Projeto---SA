@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/imagem.css">
     <link rel="stylesheet" href="css/gallery.theme.css">
     <link rel="stylesheet" href="css/gallery.min.css">
-    <link rel="stylesheet" href="css/typewriter2.scss">
+    <link rel="stylesheet" href="css/typewriter2.css">
+    <link rel="stylesheet" href="css/circleImage.css">
     <!-- Fontes //-->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
