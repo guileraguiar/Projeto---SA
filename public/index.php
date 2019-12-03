@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/imagem.css">
     <link rel="stylesheet" href="css/gallery.theme.css">
     <link rel="stylesheet" href="css/gallery.min.css">
+    <link rel="stylesheet" href="css/typewriter2.scss">
     <!-- Fontes //-->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
@@ -25,6 +26,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script   src="js/typewriter.js"></script>
     <style>
         body {
             cursor: url(images/dwarven_gauntlet.png), default;
@@ -38,55 +40,60 @@
 </header>
 <?php
 if (!isset($_SESSION['user'])) :
-?>
-<body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
-<?php
-endif;
-if (isset($_SESSION['user'])) :
-?>
-<body class=" bodyIndex fadeInPages teste">
-<?php
-endif;
-        $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
-        switch ($pagina) {
-            case 'menu':
-                include '../pages/menu.php';
-                break;
-            case 'games':
-                include '../pages/TheGame.php';
-                break;
-            case 'login':
-                include '../pages/user/login_page.php';
-                break;
-            case 'register':
-                include '../pages/user/register_page.php';
-                break;
-            case 'viewUsers':
-                include '../pages/user/tables/table_user.php';
-                break;
-            case 'account':
-                include '../pages/user/view/user_profile.php';
-                break;
-            case 'alterPass':
-                include '../pages/user/alter_pass.php';
-                break;
-            case 'pageWiki':
-                include '../pages/user/wiki_pageOne.php';
-                break;
-            case 'pageWiki2':
-                include '../pages/user/wiki_pageTwo.php';
-                break;
-            case 'pageWiki3':
-                include '../pages/user/wiki_pageThree.php';
-                break;
-            case 'alterUsersTable':
-                include '../pages/user/tables/alterUsers.php';
-                break;
-            default:
-                include '../pages/initial.php';
-                break;
-        }
+    ?>
+
+    <body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
+    <?php
+    endif;
+    if (isset($_SESSION['user'])) :
         ?>
+
+        <body class=" bodyIndex fadeInPages teste">
+            <?php
+            endif;
+            $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
+            switch ($pagina) {
+                case 'menu':
+                    include '../pages/menu.php';
+                    break;
+                case 'games':
+                    include '../pages/TheGame.php';
+                    break;
+                case 'login':
+                    include '../pages/user/login_page.php';
+                    break;
+                case 'register':
+                    include '../pages/user/register_page.php';
+                    break;
+                case 'viewUsers':
+                    include '../pages/user/tables/table_user.php';
+                    break;
+                case 'account':
+                    include '../pages/user/view/user_profile.php';
+                    break;
+                case 'alterPass':
+                    include '../pages/user/alter_pass.php';
+                    break;
+                case 'pageWiki':
+                    include '../pages/user/wiki_pageOne.php';
+                    break;
+                case 'pageWiki2':
+                    include '../pages/user/wiki_pageTwo.php';
+                    break;
+                case 'pageWiki3':
+                    include '../pages/user/wiki_pageThree.php';
+                    break;
+                case 'alterUsersTable':
+                    include '../pages/user/tables/alterUsers.php';
+                    break;
+                case 'historyGame':
+                    include '../pages/user/historyGame.php';
+                    break;
+                default:
+                    include '../pages/initial.php';
+                    break;
+            }
+            ?>
         </body>
         <div class="py-3 bg-dark fonteNavNav footer">
             <div class="text-center">
@@ -96,5 +103,6 @@ endif;
                 <a class="navbar-brand" href="?pagina=menu"><img src="images/original.png" width="80px"> </a>
             </div>
         </div>
-</div>
+        </div>
+
 </html>
