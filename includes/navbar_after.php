@@ -29,7 +29,7 @@ if (isset($userSession)) {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=pageWiki">
-          <i class="fab fa-facebook-f">Sobre</i> 
+          <i class="fab fa-facebook-f">Sobre</i>
         </a>
       </li>
       <li class="nav-item dropdown clicavel">

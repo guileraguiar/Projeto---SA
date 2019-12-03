@@ -9,6 +9,6 @@
             </div>
         </div>
         <p class="borderText textPosition2"></p>
-        <button  class="btn btn-light mx-auto d-block fonteLabel">JOGAR</button>
+        <a href="index.php?pagina=theGame" class="btn btn-light mx-auto d-block fonteLabel">JOGAR</a>
     </div>
 </div>
