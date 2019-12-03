@@ -97,9 +97,6 @@ endif;
                 break;
         }
         ?>
-            <?php
-            endif;
-            ?>
         </body>
         <div class="py-3 bg-dark fonteNavNav footer">
             <div class="text-center">
