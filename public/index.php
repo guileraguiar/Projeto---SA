@@ -55,6 +55,12 @@ endif;
             case 'games':
                 include '../pages/TheGame.php';
                 break;
+            case 'AV1':
+                include '../pages/pageAV1.php';
+                break;
+            case 'AV2':
+                include '../pages/pageAV2.php';
+                break;    
             case 'login':
                 include '../pages/user/login_page.php';
                 break;
