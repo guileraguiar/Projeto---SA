@@ -19,7 +19,7 @@ if (isset($userSession)) {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=viewUsers">
-          <i class="fab fa-facebook-f"></i> Visualização de Usuários
+          <i class="fab fa-facebook-f"></i> Gerenciar Usuários
           <span class="sr-only">(current)</span>
         </a>
       </li>

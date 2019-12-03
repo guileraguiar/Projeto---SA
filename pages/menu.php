@@ -19,18 +19,18 @@ if (!isset($_SESSION['user'])) :
                 <center>
                     <h4 class="h44">Já tem a sua conta? Não? Crie agora!</h4>
                 </center>
-                <a href="index.php?pagina=register" class="btn btn-light mx-auto d-block fonteLabel" title="Red">Cadastrar</a>
+                <a href="index.php?pagina=register" class="btn btn-light mx-auto d-block fonteLabel" title="Cadastre-se">Cadastrar</a>
                 <br>
                 <center>
                     <h4 class="h44">Calma lá, você já tem? Então entre agora!</h4>
                 </center>
-                <a href="index.php?pagina=login" class="btn btn-light mx-auto d-block fonteLabel">Login</a>
+                <a href="index.php?pagina=login" class="btn btn-light mx-auto d-block fonteLabel" title="Efetue seu login">Login</a>
                 <br>
                 <br>
                 <center>
                     <h4 class="h44">Dúvidas sobre o funcionamento do jogo? leia o guia com todos os detalhes!</h4>
                 </center>
-                <a href="index.php?pagina=pageWiki" class="btn btn-light mx-auto d-block fonteLabel">Introdução</a>
+                <a href="index.php?pagina=pageWiki" class="btn btn-light mx-auto d-block fonteLabel" title="vá para o guia do jogo">Guia</a>
                 <br>
             </div>
     </div>
