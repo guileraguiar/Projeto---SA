@@ -42,17 +42,62 @@
 </header>
 <?php
 if (!isset($_SESSION['user'])) :
-    ?>
-
-    <body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
-    <?php
-    endif;
-    if (isset($_SESSION['user'])) :
+?>
+<body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
+<?php
+endif;
+if (isset($_SESSION['user'])) :
+?>
+<body class=" bodyIndex fadeInPages teste">
+<?php
+endif;
+        $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
+        switch ($pagina) {
+            case 'menu':
+                include '../pages/menu.php';
+                break;
+            case 'games':
+                include '../pages/TheGame.php';
+                break;
+            case 'AV1':
+                include '../pages/pageAV1.php';
+                break;
+            case 'AV2':
+                include '../pages/pageAV2.php';
+                break;    
+            case 'login':
+                include '../pages/user/login_page.php';
+                break;
+            case 'register';
+                include '../pages/user/register_page.php';
+                break;
+            case 'viewUsers';
+                include '../pages/user/tables/table_user.php';
+                break;
+            case 'account';
+                include '../pages/user/view/user_profile.php';
+                break;
+            case 'alterPass';
+                include '../pages/user/alter_pass.php';
+                break;
+            case 'pageWiki';
+                include '../pages/user/wiki_pageOne.php';
+                break;
+            case 'pageWiki2';
+                include '../pages/user/wiki_pageTwo.php';
+                break;
+            case 'pageWiki3';
+                include '../pages/user/wiki_pageThree.php';
+                break;
+            case 'alterUsersTable';
+                include '../pages/user/tables/alterUsers.php';
+                break;
+            default:
+                include '../pages/initial.php';
+                break;
+        }
         ?>
-
-        <body class=" bodyIndex fadeInPages teste">
             <?php
-            endif;
             $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
             switch ($pagina) {
                 case 'menu':

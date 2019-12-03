@@ -113,13 +113,7 @@
     margin-bottom:5%;
     margin-top:3%;
 }
-.fixar-rodape {
-    bottom:0;
-    width:100%;
-    margin: auto;
-    padding: 10px 5px;
-    position: relative;
-}
+
 
 .account{
     width:50%;
@@ -173,8 +167,7 @@ h5 {
 }
 
 .sinopse{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 75px;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
