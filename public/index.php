@@ -97,8 +97,6 @@ endif;
                 break;
         }
         ?>
-
-        <body class=" bodyIndex fadeInPages teste">
             <?php
             endif;
             ?>
