@@ -7,23 +7,23 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=menu">
-          <i class="fab fa-facebook-f">Menu</i> 
+          <i class="fab fa-facebook-f">Menu</i>
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=register">
-          <i class="fab fa-facebook-f">Cadastrar</i> 
+          <i class="fab fa-facebook-f">Cadastrar</i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=login">
-          <i class="fab fa-facebook-f">Logar</i> 
+          <i class="fab fa-facebook-f">Logar</i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pagina=pageWiki">
-          <i class="fab fa-facebook-f">Sobre</i> 
+          <i class="fab fa-facebook-f">Sobre</i>
         </a>
       </li>
     </ul>
