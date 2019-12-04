@@ -1,8 +1,6 @@
     <?php
-    include '../actions/verify/verify_users.php';
-    if (isset($userSession)) :
-        $select = mysqli_query($conexao, "SELECT * FROM users WHERE u_user = " . $userSession["u_user"] . "");
-        ?>
+    include '../actions/verify/verify_login.php';
+   ?>
         <!-- <img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200"> -->
         <br>
         <div class="container fundobranco account">
@@ -64,6 +62,3 @@
             </div>
             <br>
         </div>
-    <?php
-    endif;
-    ?>

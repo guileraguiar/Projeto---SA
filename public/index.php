@@ -58,6 +58,9 @@ if (!isset($_SESSION['user'])) :
             case 'menu':
                 include '../pages/menu.php';
                 break;
+            case 'Issues':
+                include '../pages/knownIssues.php';
+                break;
             case 'games':
                 include '../pages/TheGame.php';
                 break;
@@ -90,6 +93,12 @@ if (!isset($_SESSION['user'])) :
                 break;
             case 'pageWiki3':
                 include '../pages/user/wiki_pageThree.php';
+                break;
+            case 'controlsPage':
+                include '../pages/user/controls_page.php';
+                break;
+            case 'prepared':
+                include '../pages/user/prepared.php';
                 break;
             case 'alterUsersTable':
                 include '../pages/user/tables/alterUsers.php';

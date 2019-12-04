@@ -21,7 +21,7 @@
         <center>
             <h4 style="color:yellow;">QUEM É GERALDO ?</h4>
         </center>
-        <p class="borderText textPosition2">Geraldo do rio, um experiente dominador das artes da magia negra, convocado pelo reino de rettferdighet
+        <p class="borderText textPosition2">Geraldo do rio, um experiente dominador das artes da magia negra, convocado pelo reino de Rettferdighet
             para ir em busca do Rei Ianes III, detentor das terras do norte, o qual não se sabe o paradeiro, porém Geraldo, assumiu a responsabilidade de buscar, ou seria punido severamente, e morreria decapitado, Geraldo colocará suas melhores habilidades em prática, anos de alquimia e técnicas de luta postos em vigor. </p>
         <a href="?pagina=pageWiki2" class="proximo" style="color:yellow;">Próximo</a>
     </div>
