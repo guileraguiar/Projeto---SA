@@ -264,6 +264,7 @@ var CaveScene = new Phaser.Class({
 
     onMeetSpider: function(player, zone) {    
         if (spider==false) {
+            this.cameras.main.shake(300);  
             this.player.body.setVelocityX(0);
             this.player.body.setVelocityY(0);
             this.sys.install('DialogModalPlugin');
@@ -289,6 +290,7 @@ var CaveScene = new Phaser.Class({
     },
     onMeetEnemy: function(player, zone) {        
         // we move the zone to some other location
+        this.cameras.main.shake(300);  
         zone.x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
         zone.y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
         

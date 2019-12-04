@@ -41,11 +41,12 @@ var goldenKey = false;
 var houseKey = false;
 
 // Atributos do Personagem
-    var level = 1;
+    var level = 15;
     var hp = 100;
     var mana = 100;
     var def = 1;
     var atk = 5;
+    var experience = 1;
     var magicDescription = ["Incendiar","Barreira","Aprisionar"];
     var ignite = (level+atk)/2;
     var barreira = false;
@@ -102,3 +103,5 @@ var spider = false;
 var npc7 = false;
 
 var options;
+
+var endGame;

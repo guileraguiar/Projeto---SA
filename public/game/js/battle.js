@@ -17,7 +17,7 @@ var BattleScene = new Phaser.Class({
         this.sys.events.on('wake', this.startBattle, this);             
     },
     startBattle: function() {
-        var enemyRandom = Math.floor(Math.random() * 3);
+        var enemyRandom = Math.floor(Math.random() * 6);
         // player character - geraldo
         var geraldo = new PlayerCharacter(this, 250, 50, "player", 1, "Geraldo");        
         this.add.existing(geraldo);
@@ -27,7 +27,7 @@ var BattleScene = new Phaser.Class({
         if (enemyRandom == 0) {
             var bat = new Enemy(this, 290, 100, "bat", null, "Morc");
             this.add.existing(bat);
-            var bat2 = new Enemy(this, 490, 100, "bat", null,"Crawl");
+            var bat2 = new Enemy(this, 490, 100, "bat", null,"Greel");
             this.add.existing(bat2);
             this.enemies = [ bat, bat2 ];
         }else if (enemyRandom==1){
@@ -42,6 +42,26 @@ var BattleScene = new Phaser.Class({
             var skeleton2 = new Enemy(this, 490, 100, "skeleton", null,"Mancer");
             this.add.existing(skeleton2);
             this.enemies = [ skeleton, skeleton2 ];
+        }else if (enemyRandom==3){
+            var bat = new Enemy(this, 290, 100, "bat", null, "Zabbu");
+            this.add.existing(bat);
+            var ghost = new Enemy(this, 490, 100, "ghost", null,"Bell");
+            this.add.existing(ghost);
+            this.enemies = [ ghost, bat ];
+        }else if (enemyRandom==4){
+            var skeleton = new Enemy(this, 290, 100, "bat", null, "Raqki");
+            this.add.existing(skeleton);
+            var skeleton2 = new Enemy(this, 490, 100, "skeleton", null,"Ettercap");
+            this.add.existing(skeleton2);
+            this.enemies = [ skeleton, skeleton2 ];
+        }else if (enemyRandom==5){
+            var ghost = new Enemy(this, 190, 100, "ghost", null, "Ankheg");
+            this.add.existing(ghost);
+            var bat = new Enemy(this, 590, 100, "bat", null,"Zarathan");
+            this.add.existing(bat);
+            var skeleton = new Enemy(this, 390, 100, "skeleton", null, "Necro");
+            this.add.existing(skeleton);
+            this.enemies = [ ghost, bat, skeleton ];
         }
         // array with heroes
         this.heroes = [ geraldo];
@@ -85,7 +105,8 @@ var BattleScene = new Phaser.Class({
         }
     },     
     // check for game over or victory
-    checkEndBattle: function() {        
+    checkEndBattle: function() {    
+        debugger    
         var victory = true;
         // if all enemies are dead we have victory
         for(var i = 0; i < this.enemies.length; i++) {
@@ -97,6 +118,7 @@ var BattleScene = new Phaser.Class({
         for(var i = 0; i < this.heroes.length; i++) {
             if(this.heroes[i].living)
                 gameOver = false;
+                endGame = gameOver;
         }
         return victory || gameOver;
     },
@@ -122,10 +144,18 @@ var BattleScene = new Phaser.Class({
             this.units[i].destroy();            
         }
         this.units.length = 0;
+
+        if (endGame==false){
         // sleep the UI
         this.scene.sleep('UIScene');
         // return to WorldScene and sleep current BattleScene
         this.scene.switch('CaveScene');
+        }else{
+            this.scene.events.emit("Message", "Geraldo foi derrotado!");
+            this.scene.sleep("UIScene");
+            this.scene.start("MainMenu");
+       
+        }
     }
 });
 
@@ -147,30 +177,36 @@ var Unit = new Phaser.Class({
         this.menuItem = null;
 
         //Atributos inimigos
-        if(this.lvl <= 5){
+        if(level <= 5){
             hpEnemy = hpEnemy;
             defEnemy = defEnemy;
             atkEnemy = atkEnemy;
-        }else if(this.lvl > 5 && this.lvl <= 10){
+            experience += 20;
+        }else if(level > 5 && level <= 10){
             hpEnemy = hpEnemy*2;
             defEnemy = defEnemy*2;
             atkEnemy = atkEnemy*2;
-        }else if (this.lvl > 10 && this.lvl <= 15 ){
+            experience += 17;
+        }else if (level > 10 && level <= 15 ){
             hpEnemy = hpEnemy*3;
             defEnemy = defEnemy*3;
             atkEnemy = atkEnemy*3;
-        }else if (this.lvl > 15 && this.lvl <= 20 ){
+            experience += 15;
+        }else if (level > 15 && level <= 20 ){
             hpEnemy = hpEnemy*4;
             defEnemy = defEnemy*4;
             atkEnemy = atkEnemy*4;
-        }else if (this.lvl > 20 && this.lvl <= 25 ){
+            experience += 13;
+        }else if (level > 20 && level <= 25 ){
                 hpEnemy = hpEnemy*5;
                 defEnemy = defEnemy*5;
                 atkEnemy = atkEnemy*5;
-        }else if (this.lvl > 25){
+                experience += 11;
+        }else if (level > 25){
             hpEnemy = hpEnemy*6;
             defEnemy = defEnemy*6;
             atkEnemy = atkEnemy*6;
+            experience += 9;
         }
     },
     // we will use this to notify the menu item when the unit is dead
@@ -178,12 +214,23 @@ var Unit = new Phaser.Class({
         this.menuItem = item;
     },
     // attack the target unit
-    attack: function(target) {
-        if(target.living) {
-            target.takeDamage(atk);
-            this.scene.events.emit("Message", this.type + " atacou " + target.type + " e causou " + atk + " de dano!");
+    attack: function (target) {
+        // console.log(this.type);
+        if (this.type == "Geraldo") {
+            if (target.living) {
+                target.takeDamage(atk);
+                this.scene.events.emit("Message", "Geraldo atacou " + target.type + " e causou " + atk + " de dano");
+
+            }
+        } else {
+            // console.log(this.type);
+            if (target.living) {
+                target.takeDamage(atkEnemy);
+                this.scene.events.emit("Message", this.type + " atacou " + target.type + " e causou " + atkEnemy + " de dano");
+
+            }
         }
-    },   
+    },
     
     magic: function(target) {
         if(target.living) {
@@ -209,7 +256,7 @@ var Unit = new Phaser.Class({
         // console.log(this.type);
         if (this.type == "Geraldo") {
             console.log("Vida Geraldo: " + hp)
-            hp =- atkEnemy + def;
+            hp -= atkEnemy + def;
             console.log("Vida Geraldo: " + hp)
 
             if (hp <= 0) {
