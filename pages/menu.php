@@ -8,7 +8,7 @@ if (isset($_SESSION['user'])) {
 }
 if (!isset($_SESSION['user'])) :
     ?>
-    <img src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
+    <img src="images/logoav3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
     <div class="container fundoBackground" style="width:750px; margin-bottom:50px;">
         <center style="margin-top:50px;">
             <h1>Bem Vindo Visitante!</h1>
@@ -16,22 +16,22 @@ if (!isset($_SESSION['user'])) :
         <center>
             <div class="containerBranco" style="width:600px; margin-top:50px; margin-bottom:50px;background-color:#80808099;">
                 <br>
-                    <h4 class="h44">Já tem a sua conta? Não? Crie agora!</h4>
-                </center>
-                <a href="index.php?pagina=register" class="btn btn-light mx-auto d-block fonteLabel" title="Cadastre-se">Cadastrar</a>
-                <br>
-                    <h4 class="h44">Calma lá, você já tem? Então entre agora!</h4>
-                </center>
-                <a href="index.php?pagina=login" class="btn btn-light mx-auto d-block fonteLabel" title="Efetue seu login">Login</a>
-                <br>
-                <br>
-                    <h4 class="h44">Dúvidas sobre o funcionamento do jogo? leia o guia com todos os detalhes!</h4>
-                </center>
-                <a href="index.php?pagina=pageWiki" class="btn btn-light mx-auto d-block fonteLabel" title="vá para o guia do jogo">Guia</a>
-                <br>
-            </div>
+                <h4 class="h44">Já tem a sua conta? Não? Crie agora!</h4>
+        </center>
+        <a href="index.php?pagina=register" class="btn btn-light mx-auto d-block fonteLabel" title="Cadastre-se">Cadastrar</a>
+        <br>
+        <h4 class="h44">Calma lá, você já tem? Então entre agora!</h4>
+        </center>
+        <a href="index.php?pagina=login" class="btn btn-light mx-auto d-block fonteLabel" title="Efetue seu login">Login</a>
+        <br>
+        <br>
+        <h4 class="h44">Dúvidas sobre o funcionamento do jogo? leia o guia com todos os detalhes!</h4>
+        </center>
+        <a href="index.php?pagina=pageWiki" class="btn btn-light mx-auto d-block fonteLabel" title="vá para o guia do jogo">Guia</a>
+        <br>
     </div>
-</center>
+    </div>
+    </center>
     <div class="container fundoBackground" style="width:750px; margin-bottom:50px; ">
         <div>
             <iframe width="600" height="371" src="images\fasasdafa.mp4" frameborder="0" allowfullscreen></iframe>
@@ -43,13 +43,57 @@ endif;
 if (isset($_SESSION['user'])) :
     ?>
 
-    <img id="anim" src="images/logo3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
+    <img id="anim" src="images/logoav3.png" style=" margin-bottom:20px; margin-top:20px; " class="mx-auto d-block" alt="" height="300" width="300">
     <h1>Bem Vindo <?php echo $userSession['u_user']; ?>!</h1>
     <div class="container fundoMenuOn profileBTxt" style="width:750px; margin-bottom:50px;">
         <div>
             <p style="color:black;">
                 Experimente agora mesmo nosso jogo!! entre na aba Games, e selecione o jogo Agonizing Village 3, nossa mais nova criação, vinda diretamente das catacumbas de rettferdighet!
             </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="BlockDevs containerDevs profileBTxt2">
+            <img class="mt-3 imgDevs" src="images/developers/felipe.jpg" class="mx-auto d-block" alt="" height="300" width="300">
+            <div class="miniBlock">
+                <p>
+                    Desenvolvedor js, responsável pela criação do game.
+                </p>
+            </div>
+        </div>
+        <div class="BlockDevs containerDevs profileBTxt2">
+            <img class="mt-3 imgDevs" src="images/developers/alisson.jpg" class="mx-auto d-block" alt="" height="300" width="300">
+            <div class="miniBlock">
+                <p>
+                    Consultor de helps, auxiliou em todas as partes do projeto.
+                </p>
+            </div>
+        </div>
+        <div class="BlockDevs containerDevs profileBTxt2">
+            <img class="mt-3 imgDevs" src="images/developers/aguiar.jpg" class="mx-auto d-block" alt="" height="300" width="300">
+            <div class="miniBlock">
+                <p>
+                    Desenvolvedor PHP e Web designer, responsável pela parte visual.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="BlockDevs containerDevs profileBTxt2" style="margin-left:23%;">
+            <img class="mt-3 imgDevs" src="images/developers/artur.jpg" class="mx-auto d-block" alt="" height="300" width="300">
+            <div class="miniBlock">
+                <p>
+                    Desenvolvedor PHP e Web designer, responsável pela construção do site.
+                </p>
+            </div>
+        </div>
+        <div class="BlockDevs containerDevs profileBTxt2">
+            <img class="mt-3 imgDevs" src="images/developers/falcao.jpg" class="mx-auto d-block" alt="" height="300" width="300">
+            <div class="miniBlock">
+                <p>
+                    Desenvolvedor PHP e tester, responsável pelas bebidas do rolê.
+                </p>
+            </div>
         </div>
     </div>
 <?php endif ?>

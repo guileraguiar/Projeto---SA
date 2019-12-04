@@ -44,13 +44,13 @@
 if (!isset($_SESSION['user'])) :
     ?>
 
-    <body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
+    <body class=" bodyIndex fadeInPages ">
     <?php
     endif;
     if (isset($_SESSION['user'])) :
         ?>
 
-        <body class=" bodyIndex fadeInPages teste">
+        <body class=" bodyIndex fadeInPages backgroundReal">
         <?php
         endif;
         $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
