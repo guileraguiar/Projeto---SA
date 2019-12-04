@@ -1,8 +1,5 @@
 /*Mouse*/
 
-body {
-    cursor: url(../images/botoes/lightCursor.ani), default;
-}
 
 .clicavel {
     cursor: pointer;
@@ -79,12 +76,12 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
-
 .fundoMenuOn {
     box-shadow: 0 30px 100px 20px #0a0a0a;
     background-image: url("../images/mountain.jpg");
     border-radius: 10px;
     padding: 10px;
+    animation-play-state: 100% paused;
 }
 .teste{
     background: url(../images/gifmenu.gif) no-repeat center center;
@@ -106,13 +103,7 @@ body {
     margin-bottom:5%;
     margin-top:3%;
 }
-.fixar-rodape {
-    bottom:0;
-    width:100%;
-    margin: auto;
-    padding: 10px 5px;
-    position: relative;
-}
+
 
 .account{
     width:50%;
@@ -135,13 +126,13 @@ h4 {
 }
 
  
-/* .footer {
-    position: absolute;
+.footer {
+    position: relative;
     bottom:0;
     width:100%;
     margin: auto auto;
     padding: 10px 5px;
-  }  */
+ }
 
 .character {
     height: 10%;
@@ -157,6 +148,19 @@ h4 {
 h5 {
     color: #fff;
     font-family: 'Press Start 2P', cursive;
+}
+
+.gameName{
+    margin-top: 50px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.sinopse{
+    margin-top: 75px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
 }
 
 h1 {

@@ -9,6 +9,8 @@
     <!-- CSS //-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">
+    <link rel="stylesheet" href="css/gallery.theme.css">
+    <link rel="stylesheet" href="css/gallery.min.css">
     <!-- Fontes //-->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
@@ -34,62 +36,71 @@
 <header>
     <?php include '../actions/verify/verify_nav.php'; ?>
 </header>
-<?php 
-if(!isset($_SESSION['user'])):
+<?php
+if (!isset($_SESSION['user'])) :
 ?>
 <body class=" bodyIndex fadeInPages " style="background-image: url('images/backgroundAll.png');">
 <?php
 endif;
-if(isset($_SESSION['user'])):
+if (isset($_SESSION['user'])) :
 ?>
 <body class=" bodyIndex fadeInPages teste">
 <?php
 endif;
-    $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
-    switch ($pagina) {
-        case 'menu':
-            include '../pages/menu.php';
-            break;
-        case 'games':
-            include '../pages/TheGame.php';
-            break;
-        case 'login':
-            include '../pages/user/login_page.php';
-            break;
-        case 'register';
-            include '../pages/user/register_page.php';
-            break;
-        case 'viewUsers';
-            include '../pages/user/tables/table_user.php';
-            break;
-        case 'account';
-            include '../pages/user/view/user_profile.php';
-            break;
-        case 'alterPass';
-            include '../pages/user/alter_pass.php';
-            break;
-        case 'pageWiki';
-            include '../pages/user/wiki_pageOne.php';
-            break;
-        case 'pageWiki2';
-            include '../pages/user/wiki_pageTwo.php';
-            break;
-        case 'pageWiki3';
-            include '../pages/user/wiki_pageThree.php';
-            break;
-        default:
-            include '../pages/initial.php';
-            break;
-    }
-    ?>
-</body>
-<div class="py-3 bg-dark fonteNavNav fixar-rodape">
-    <div class="text-center">
-        <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"> </a>
-        <small> &copy;2018 SteelFreak™</small>
-        <a class="navbar-brand " href="?pagina=menu"><img src="images/facebookIcon.png" width="80px"> </a>
-        <a class="navbar-brand" href="?pagina=menu"><img src="images/original.png" width="80px"> </a>
-    </div>
+        $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : null;
+        switch ($pagina) {
+            case 'menu':
+                include '../pages/menu.php';
+                break;
+            case 'games':
+                include '../pages/TheGame.php';
+                break;
+            case 'AV1':
+                include '../pages/pageAV1.php';
+                break;
+            case 'AV2':
+                include '../pages/pageAV2.php';
+                break;    
+            case 'login':
+                include '../pages/user/login_page.php';
+                break;
+            case 'register';
+                include '../pages/user/register_page.php';
+                break;
+            case 'viewUsers';
+                include '../pages/user/tables/table_user.php';
+                break;
+            case 'account';
+                include '../pages/user/view/user_profile.php';
+                break;
+            case 'alterPass';
+                include '../pages/user/alter_pass.php';
+                break;
+            case 'pageWiki';
+                include '../pages/user/wiki_pageOne.php';
+                break;
+            case 'pageWiki2';
+                include '../pages/user/wiki_pageTwo.php';
+                break;
+            case 'pageWiki3';
+                include '../pages/user/wiki_pageThree.php';
+                break;
+            case 'alterUsersTable';
+                include '../pages/user/tables/alterUsers.php';
+                break;
+            default:
+                include '../pages/initial.php';
+                break;
+        }
+        ?>
+        </body>
+        <div class="py-3 bg-dark fonteNavNav footer">
+            <div class="text-center">
+                <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"> </a>
+                <small> &copy;2018 SteelFreak™</small>
+                <a class="navbar-brand " href="?pagina=menu"><img src="images/facebookIcon.png" width="80px"> </a>
+                <a class="navbar-brand" href="?pagina=menu"><img src="images/original.png" width="80px"> </a>
+            </div>
+        </div>
 </div>
-
 </html>
