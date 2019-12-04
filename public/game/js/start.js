@@ -46,7 +46,7 @@ var houseKey = false;
     var mana = 100;
     var def = 1;
     var atk = 5;
-    var experience = 1;
+    var experience = 0;
     var magicDescription = ["Incendiar","Barreira","Aprisionar"];
     var ignite = (level+atk)/2;
     var barreira = false;
@@ -68,6 +68,9 @@ var houseKey = false;
     var hpEnemy = 10;
     var defEnemy = 1;
     var atkEnemy = 2;
+    var expEnemy;
+//Se 'boss' for true, os dados de inimigo serão atualizados
+    var boss = false;
 
 //XP ganha de acordo com level
 /*
@@ -102,6 +105,6 @@ var spider = false;
 //NPCs que não repetem a fala
 var npc7 = false;
 
+//
 var options;
-
 var endGame;

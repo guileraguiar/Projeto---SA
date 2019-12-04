@@ -16,59 +16,67 @@ var BattleScene = new Phaser.Class({
         }else if (spawnPoint=="florest"){
             var background = this.add.image(384, 192, "florestBackground");
         }else{
-            var background = this.add.image(384, 192, "bossBackground");
+            var background = this.add.image(384, 192, "caveBackground");
         }
         this.startBattle();
         // on wake event we call startBattle too
         this.sys.events.on('wake', this.startBattle, this);             
     },
     startBattle: function() {
-        var enemyRandom = Math.floor(Math.random() * 6);
+        
+        
         // player character - geraldo
         var geraldo = new PlayerCharacter(this, 250, 50, "player", 1, "Geraldo");        
         this.add.existing(geraldo);
         geraldo.visible=false;
         console.log(enemyRandom);
-        
-        if (enemyRandom == 0) {
-            var bat = new Enemy(this, 290, 100, "bat", null, "Morc");
-            this.add.existing(bat);
-            var bat2 = new Enemy(this, 490, 100, "bat", null,"Greel");
-            this.add.existing(bat2);
-            this.enemies = [ bat, bat2 ];
-        }else if (enemyRandom==1){
-            var ghost = new Enemy(this, 290, 100, "ghost", null, "Gousty");
-            this.add.existing(ghost);
-            var ghost2 = new Enemy(this, 490, 100, "ghost", null,"Sleeper");
-            this.add.existing(ghost2);
-            this.enemies = [ ghost, ghost2 ];
-        }else if (enemyRandom==2){
-            var skeleton = new Enemy(this, 290, 100, "skeleton", null, "Necro");
-            this.add.existing(skeleton);
-            var skeleton2 = new Enemy(this, 490, 100, "skeleton", null,"Mancer");
-            this.add.existing(skeleton2);
-            this.enemies = [ skeleton, skeleton2 ];
-        }else if (enemyRandom==3){
-            var bat = new Enemy(this, 290, 100, "bat", null, "Zabbu");
-            this.add.existing(bat);
-            var ghost = new Enemy(this, 490, 100, "ghost", null,"Bell");
-            this.add.existing(ghost);
-            this.enemies = [ ghost, bat ];
-        }else if (enemyRandom==4){
-            var skeleton = new Enemy(this, 290, 100, "bat", null, "Raqki");
-            this.add.existing(skeleton);
-            var skeleton2 = new Enemy(this, 490, 100, "skeleton", null,"Ettercap");
-            this.add.existing(skeleton2);
-            this.enemies = [ skeleton, skeleton2 ];
-        }else if (enemyRandom==5){
-            var ghost = new Enemy(this, 190, 100, "ghost", null, "Ankheg");
-            this.add.existing(ghost);
-            var bat = new Enemy(this, 590, 100, "bat", null,"Zarathan");
-            this.add.existing(bat);
-            var skeleton = new Enemy(this, 390, 100, "skeleton", null, "Necro");
-            this.add.existing(skeleton);
-            this.enemies = [ ghost, bat, skeleton ];
+        if (boss==true){
+            var drawed = new Enemy(this, 290, 100, "finalboss", null, "drawed");
+            this.add.existing(drawed);
+            this.enemies = [ drawed ];
+        }else{
+            var enemyRandom = Math.floor(Math.random() * 6);
+            if (enemyRandom == 0) {
+                var bat = new Enemy(this, 290, 100, "bat", null, "Morc");
+                this.add.existing(bat);
+                var bat2 = new Enemy(this, 490, 100, "bat", null,"Greel");
+                this.add.existing(bat2);
+                this.enemies = [ bat, bat2 ];
+            }else if (enemyRandom==1){
+                var ghost = new Enemy(this, 290, 100, "ghost", null, "Gousty");
+                this.add.existing(ghost);
+                var ghost2 = new Enemy(this, 490, 100, "ghost", null,"Sleeper");
+                this.add.existing(ghost2);
+                this.enemies = [ ghost, ghost2 ];
+            }else if (enemyRandom==2){
+                var skeleton = new Enemy(this, 290, 100, "skeleton", null, "Necro");
+                this.add.existing(skeleton);
+                var skeleton2 = new Enemy(this, 490, 100, "skeleton", null,"Mancer");
+                this.add.existing(skeleton2);
+                this.enemies = [ skeleton, skeleton2 ];
+            }else if (enemyRandom==3){
+                var bat = new Enemy(this, 290, 100, "bat", null, "Zabbu");
+                this.add.existing(bat);
+                var ghost = new Enemy(this, 490, 100, "ghost", null,"Bell");
+                this.add.existing(ghost);
+                this.enemies = [ ghost, bat ];
+            }else if (enemyRandom==4){
+                var skeleton = new Enemy(this, 290, 100, "bat", null, "Raqki");
+                this.add.existing(skeleton);
+                var skeleton2 = new Enemy(this, 490, 100, "skeleton", null,"Ettercap");
+                this.add.existing(skeleton2);
+                this.enemies = [ skeleton, skeleton2 ];
+            }else if (enemyRandom==5){
+                var ghost = new Enemy(this, 190, 100, "ghost", null, "Ankheg");
+                this.add.existing(ghost);
+                var bat = new Enemy(this, 590, 100, "bat", null,"Zarathan");
+                this.add.existing(bat);
+                var skeleton = new Enemy(this, 390, 100, "skeleton", null, "Necro");
+                this.add.existing(skeleton);
+                this.enemies = [ ghost, bat, skeleton ];
+            }
         }
+        
         // array with heroes
         this.heroes = [ geraldo];
         // array with enemies
@@ -152,10 +160,15 @@ var BattleScene = new Phaser.Class({
         this.units.length = 0;
 
         if (endGame==false){
-        // sleep the UI
-        this.scene.sleep('UIScene');
-        // return to WorldScene and sleep current BattleScene
-        this.scene.switch('CaveScene');
+            //atualiza experiencia do personagem
+            experience += this.enemies.length*expEnemy;
+            if(experience>=20){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+            }
+            // sleep the UI
+            this.scene.sleep('UIScene');
+            // return to WorldScene and sleep current BattleScene
+            this.scene.switch('CaveScene');
         }else{
             this.scene.events.emit("Message", "Geraldo foi derrotado!");
             this.scene.sleep("UIScene");
@@ -181,38 +194,44 @@ var Unit = new Phaser.Class({
         atk;
         this.living = true;         
         this.menuItem = null;
-
-        //Atributos inimigos
-        if(level <= 5){
-            hpEnemy = hpEnemy;
-            defEnemy = defEnemy;
-            atkEnemy = atkEnemy;
-            experience += 20;
-        }else if(level > 5 && level <= 10){
-            hpEnemy = hpEnemy*2;
-            defEnemy = defEnemy*2;
-            atkEnemy = atkEnemy*2;
-            experience += 17;
-        }else if (level > 10 && level <= 15 ){
-            hpEnemy = hpEnemy*3;
-            defEnemy = defEnemy*3;
-            atkEnemy = atkEnemy*3;
-            experience += 15;
-        }else if (level > 15 && level <= 20 ){
-            hpEnemy = hpEnemy*4;
-            defEnemy = defEnemy*4;
-            atkEnemy = atkEnemy*4;
-            experience += 13;
-        }else if (level > 20 && level <= 25 ){
-                hpEnemy = hpEnemy*5;
-                defEnemy = defEnemy*5;
-                atkEnemy = atkEnemy*5;
-                experience += 11;
-        }else if (level > 25){
-            hpEnemy = hpEnemy*6;
-            defEnemy = defEnemy*6;
-            atkEnemy = atkEnemy*6;
-            experience += 9;
+        if (boss==true){
+            hpEnemy = 100;
+            defEnemy = 10;
+            atkEnemy = 15;
+            expEnemy = 200;
+        }else{
+            //Atributos inimigos
+            if(level <= 5){
+                hpEnemy = hpEnemy;
+                defEnemy = defEnemy;
+                atkEnemy = atkEnemy;
+                expEnemy = 20;
+            }else if(level > 5 && level <= 10){
+                hpEnemy = hpEnemy*2;
+                defEnemy = defEnemy*2;
+                atkEnemy = atkEnemy*2;
+                expEnemy = 17;
+            }else if (level > 10 && level <= 15 ){
+                hpEnemy = hpEnemy*3;
+                defEnemy = defEnemy*3;
+                atkEnemy = atkEnemy*3;
+                expEnemy = 15;
+            }else if (level > 15 && level <= 20 ){
+                hpEnemy = hpEnemy*4;
+                defEnemy = defEnemy*4;
+                atkEnemy = atkEnemy*4;
+                expEnemy = 13;
+            }else if (level > 20 && level <= 25 ){
+                    hpEnemy = hpEnemy*5;
+                    defEnemy = defEnemy*5;
+                    atkEnemy = atkEnemy*5;
+                    expEnemy = 11;
+            }else if (level > 25){
+                hpEnemy = hpEnemy*6;
+                defEnemy = defEnemy*6;
+                atkEnemy = atkEnemy*6;
+                expEnemy = 9;
+            }
         }
     },
     // we will use this to notify the menu item when the unit is dead
@@ -609,14 +628,14 @@ var Message = new Phaser.Class({
 
     initialize:
     function Message(scene, events) {
-        Phaser.GameObjects.Container.call(this, scene, 160, 30);
+        Phaser.GameObjects.Container.call(this, scene, 384, 30);
         var graphics = this.scene.add.graphics();
         this.add(graphics);
-        graphics.lineStyle(1, 0xffffff, 0.8);
-        graphics.fillStyle(0x031f4c, 0.3);        
-        graphics.strokeRect(-90, -15, 180, 30);
-        graphics.fillRect(-90, -15, 180, 30);
-        this.text = new Phaser.GameObjects.Text(scene, 0, 0, "", { color: "#ffffff", align: "center", fontSize: 13, wordWrap: { width: 170, useAdvancedWrap: true }});
+        graphics.lineStyle(1, 0xffffff, 1);
+        graphics.fillStyle(0x031f4c, 1);        
+        graphics.strokeRect(-202, -15, 404, 45);
+        graphics.fillRect(-202, -15, 404, 45);
+        this.text = new Phaser.GameObjects.Text(scene, 0, 0, "", { color: "#ffffff", align: "center", fontSize: 13, wordWrap: { width: 394, useAdvancedWrap: true }});
         this.add(this.text);
         this.text.setOrigin(0.5);        
         events.on("Message", this.showMessage, this);
@@ -627,7 +646,7 @@ var Message = new Phaser.Class({
         this.visible = true;
         if(this.hideEvent)
             this.hideEvent.remove(false);
-        this.hideEvent = this.scene.time.addEvent({ delay: 2000, callback: this.hideMessage, callbackScope: this });
+        this.hideEvent = this.scene.time.addEvent({ delay: 3000, callback: this.hideMessage, callbackScope: this });
     },
     hideMessage: function() {
         this.hideEvent = null;
