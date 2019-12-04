@@ -51,6 +51,7 @@ include '../actions/verify/verify_users.php';
                             " . $success . "
                             </div></center>";
             }
+            
             ?>
         </div>
     </form>

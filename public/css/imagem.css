@@ -72,8 +72,8 @@
 
 .imgDevs{
     border-radius:5%;
-    margin-bottom:20px;
-     margin-top:20px;
+    margin-bottom:10px;
+     margin-top:10px;
 }
 .fundoStory {
     box-shadow: 0 30px 100px 10px #8f09c4;
@@ -89,19 +89,19 @@
 }
 .miniBlock{
     background-color:rgb(219, 210, 210);
-    width:300px;
-    height:100px;
+    width:250px;
+    height:150px;
     border-radius:5%;
     opacity:0.5;
-    margin-left:4.5%;
+    margin-left:3.6%;
 }
 .containerDevs{
     box-shadow: 0 30px 100px 10px #0a0a0a;
     /* box-shadow: 0 30px 100px 10px #0a0a0a; */
     background-image: url("../images/brickTwo.jpg");
-    width: 330px;
+    width: 270px;
     border-radius: 5%;
-    height: 450px;
+    height: 400px;
     margin-bottom: 5%;
 }
 .fundoMenuOn {
@@ -113,6 +113,17 @@
 }
 .backgroundReal{
     background: url(../images/gifmenu.gif) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+}
+body {
+    overflow-x: hidden;
+    }
+.backgroundFalse{
+    background: url(../images/indexBackground.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -366,6 +377,7 @@ hr {
 .BlockDevs {
     margin-left: 100px;
     margin-bottom: 5%;
+    box-shadow: -10px 20px 30px 4px #0a0a0a;
 }
 
 .blockWiki3 {

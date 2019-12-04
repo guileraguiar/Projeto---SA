@@ -1,4 +1,4 @@
-<img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
+<img src="images/logoav3.png" class="mx-auto d-block" alt="" height="200" width="200">
 <section class="bodyWiki">
     <div class="blockWiki fundoBackground backgroundWiki">
         <div class="contentsWiki">

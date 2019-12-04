@@ -44,7 +44,7 @@
 if (!isset($_SESSION['user'])) :
     ?>
 
-    <body class=" bodyIndex fadeInPages ">
+    <body class=" bodyIndex fadeInPages backgroundFalse">
     <?php
     endif;
     if (isset($_SESSION['user'])) :

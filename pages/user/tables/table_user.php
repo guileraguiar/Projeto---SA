@@ -1,8 +1,7 @@
 <?php 
-include '../actions/verify/verify_lvlAccess.php';
 include '../actions/verify/verify_users.php';
 ?>
-<img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
+<img src="images/logoav3.png" class="mx-auto d-block" alt="" height="200" width="200">
     <center>
         <div class="container fundobranco mb-5" style="margin-top: 50px;">
             <center>
