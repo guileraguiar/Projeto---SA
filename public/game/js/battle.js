@@ -10,8 +10,14 @@ var BattleScene = new Phaser.Class({
     },
     create: function ()
     {    
-        // change the background to green
-        var background = this.add.image(384, 192, "caveBackground");
+
+        if(spawnPoint=="cave"){
+            var background = this.add.image(384, 192, "caveBackground");
+        }else if (spawnPoint=="florest"){
+            var background = this.add.image(384, 192, "florestBackground");
+        }else{
+            var background = this.add.image(384, 192, "bossBackground");
+        }
         this.startBattle();
         // on wake event we call startBattle too
         this.sys.events.on('wake', this.startBattle, this);             
