@@ -1,5 +1,5 @@
 <?php
-include '../actions/verify/verify_users.php';
+include '../actions/verify/verify_login.php';
 ?>
 <img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200">
 <h4 class="minhaconta midH4">Trocar Senha /<?php echo $userSession["u_user"] ?></h4>
@@ -51,6 +51,7 @@ include '../actions/verify/verify_users.php';
                             " . $success . "
                             </div></center>";
             }
+            
             ?>
         </div>
     </form>

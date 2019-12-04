@@ -1,9 +1,6 @@
     <?php
-    $userSession = $_SESSION['user'];
     include '../actions/verify/verify_login.php';
-    if (isset($userSession)) :
-        $select = mysqli_query($conexao, "SELECT * FROM users WHERE u_user = " . $userSession["u_user"] . "");
-        ?>
+   ?>
         <!-- <img src="images/logo3.png" class="mx-auto d-block" alt="" height="200" width="200"> -->
         <br>
         <div class="container fundobranco account">
@@ -18,10 +15,10 @@
                 </div>
                 <div class="col-sm-12">
                     <?php if ($userSession['u_type'] == 2) : ?>
-                        <h4 class="minhaconta mt-3">Administrador/<?php echo $userSession["u_user"] ?></h4>
+                        <h4 class="minhaconta mt-3">Administrador/<?php echo $userSession["u_user"]?></h4>
                     <?php endif; ?>
                     <?php if ($userSession['u_type'] == 1) : ?>
-                        <h4 class="minhaconta mt-3">Minha conta/<?php echo $userSession["u_user"] ?></h4>
+                        <h4 class="minhaconta mt-3">Minha conta/<?php echo $userSession["u_user"]?></h4>
                     <?php endif; ?>
                     <br>
                 </div>
@@ -33,7 +30,7 @@
                     <h4 class="profileBTxt">|Usuário:</h4>
                 </div>
                 <div class="col">
-                    <p class="profileTxt"><?php echo $userSession["u_user"] ?>
+                    <p class="profileTxt"><?php echo $userSession["u_user"]?>
                     </p>
                 </div>
             </div>
@@ -52,7 +49,7 @@
                     <h4 class="profileBTxt">|E-mail: </h4>
                 </div>
                 <div class="col">
-                    <p class="profileTxt"><?php echo $userSession["u_email"] ?></p>
+                    <p class="profileTxt"><?php echo $userSession["u_email"]?></p>
                 </div>
             </div>
             <div class="row no-gutters">
@@ -60,11 +57,8 @@
                     <h4 class="profileBTxt">|ID: </h4>
                 </div>
                 <div class="col">
-                    <p class="profileTxt"><?php echo $userSession["id_user"] ?></p>
+                    <p class="profileTxt"><?php echo $userSession["id_user"]?></p>
                 </div>
             </div>
             <br>
         </div>
-    <?php
-    endif;
-    ?>
