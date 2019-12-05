@@ -113,11 +113,16 @@ if (!isset($_SESSION['user'])) :
         ?>
         </body>
         <div class="py-3 bg-dark fonteNavNav footer">
-            <div class="text-center">
+            <div class="text-center" style="margin-left:1%;">
+                <a class="navbar-brand" target="_blank" title="Facebook SteelFreak" href="https://www.youtube.com/channel/UCr4kxneBAvsg1seDgwvLZEQ?disable_polymer=true"><img src="images/youtube.png" width="80px"> </a>
                 <a class="navbar-brand" href="?pagina=menu"><img src="images/logo.png" width="80px"> </a>
                 <small> &copy;2018 SteelFreak™</small>
                 <a class="navbar-brand" target="_blank" title="Facebook SteelFreak" href="https://www.facebook.com/SteelFreak-106772890807670/"><img src="images/facebookIcon.png" width="80px"> </a>
                 <a class="navbar-brand" target="_blank" title="Twitter SteelFreak" href="https://twitter.com/freak_steel"><img src="images/original.png" width="80px"> </a>
+            </div>
+            <div>
+                <p>Contato</p>
+                <p>steelfreakbrasil@gmail.com</p>
             </div>
         </div>
         </div>
