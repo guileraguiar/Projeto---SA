@@ -1,10 +1,10 @@
 <img src="images/logoav3.png" class="mx-auto d-block" alt="" height="200" width="200">
-<section class="bodyWiki">
+<section class="bodyWiki" style="margin-left:20%;">
     <div class="blockWiki fundoBackground backgroundWiki">
         <div class="contentsWiki">
             <iframe width="600" height="371" src="images/feito.mp4" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="textWiki profileBTxt" style="border-color:red;">
+        <div class="textWiki profileBTxt" style="border-color:red;" >
             <p class="borderText">O mundo de Agonizing Village está pronto para te surpreender, assista o teaser agora mesmo e inicie a batalha!!</p>
         </div>
     </div>
