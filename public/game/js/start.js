@@ -3,7 +3,7 @@ var config = {
     parent: 'content',
     width: 768,
     height: 384,
-    zoom: 1.7,
+    zoom: 1.6,
     sound: Phaser.Sound,
     render: { pixelArt: true, antialias: true, autoResize: false },
     
@@ -11,7 +11,7 @@ var config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 0 },
-            debug: true // set to true to view zones
+            debug: false // set to true to view zones
         }
     },
     
@@ -41,11 +41,11 @@ var goldenKey = false;
 var houseKey = false;
 
 // Atributos do Personagem
-    var level = 15;
+    var level = 1;
     var hp = 100;
     var mana = 100;
     var def = 1;
-    var atk = 5;
+    var atk = 75;
     var experience = 0;
     var magicDescription = ["Incendiar","Barreira","Aprisionar"];
     var ignite = (level+atk)/2;
