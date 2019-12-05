@@ -1,5 +1,5 @@
 <img src="images/logoav3.png" class="mx-auto d-block" alt="" height="200" width="200">
-<section class="bodyWiki4">
+<section class="bodyWiki4" style="margin-left:20%;">
     <div class="blockWiki fundobranco backgroundWiki row" style="text-align:center;">
         <div class="textWiki profileBTxt col-sm" style="">
             <img src="images/shield.png" class="mx-auto d-block" alt="" height="200" width="200">
@@ -12,7 +12,7 @@
         </div>
     </div>
 </section>
-<div class="" style="text-align:center; margin-left:8.5%;">
+<div class="" style="text-align:center; margin-left:13%;">
     <div class="fundobranco2 profileBTxt blockWiki2">
         <center>
             <h3 style="color:yellow;">ATRIBUTOS DE GERALDO</h3>
