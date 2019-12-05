@@ -47,7 +47,7 @@ include '../actions/verify/verify_login.php';
             $alterSuccess = (isset($_GET['alterSuccess'])) ? $_GET['alterSuccess'] : null;
             if (isset($alterSuccess)) {
                 $success = "Senha alterada com sucesso!";
-                echo "<center><div class='alert alert-success' role='alert'>
+                echo "<center><div class='alert alert-success mt-3' role='alert'>
                             " . $success . "
                             </div></center>";
             }

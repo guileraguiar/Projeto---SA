@@ -57,11 +57,11 @@ if (isset($_SESSION['user'])) :
     
         <div class="container fundoBackground fundobranco" style="width:1200; margin-top:50px; margin-bottom:50px;">
 
-            <p class="sinopse">Baixar <a href="?pagina=AV1">Agonizing Village 1</a></p>
+            <p class="sinopse">Baixar <a href="?pagina=AV1" style="text-decoration: underline;">Agonizing Village 1</a></p>
             <a href="https://drive.google.com/file/d/1VjjR90bn697hAvDxT2nKDU9pI1igpk2t/view?usp=sharing"
                 style="margin-bottom:50px" target="_blank" class="btn btn-light mx-auto d-block fonteLabel">Baixar!</a>
 
-            <p class="sinopse">Baixar <a href="?pagina=AV2">Agonizing Village 2</a></p>
+            <p class="sinopse">Baixar <a href="?pagina=AV2" style="text-decoration: underline;">Agonizing Village 2</a></p>
             <a href="https://drive.google.com/file/d/1pxB1Gh4hM3oHxGoi75yHR7POxfzORBiX/view?usp=sharing"
             style="margin-bottom:50px" target="_blank" class="btn btn-light mx-auto d-block fonteLabel">Baixar!</a>
 
