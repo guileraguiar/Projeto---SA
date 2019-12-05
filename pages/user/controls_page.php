@@ -7,7 +7,7 @@
         <center>
             <h3 style="color:yellow;">CONTROLES</h3>
         </center>
-        <p class="borderText textPosition">Geraldo ao longo de sua jornada terá de correr muito, por isso, terá que ser controlado a partir das teclas W, A, S, D do seu teclado. Geraldo terá de ler muito, para entender o paradeiro do rei, por isso apenas precisará se aproximar de pessoas para que ocorram eventos de conversa. Ao batalhar, serão utilizados apenas as setas do teclado, para escolher qual de suas habilidades mais poderosas e estratégicas entrarão em combate. </p>
+        <p class="borderText textPosition">Geraldo ao longo de sua jornada terá de correr muito, por isso, terá que ser controlado a partir das teclas W, A, S, D do seu teclado. Geraldo terá de ler muito, para entender o paradeiro do rei, por isso apenas precisará se aproximar de pessoas para que ocorram eventos de conversa. Ao batalhar, serão utilizados apenas as setas do teclado, e espaço para confirmar a escolha, qual será a sua melhor habilidade a ser provada em combate ? </p>
         <div class="row p-4">
             <div class="col">
                 <a href="?pagina=pageWiki3" class="proximo" style="color:yellow;">Voltar</a>

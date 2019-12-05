@@ -15,7 +15,7 @@
                 <?php
                 $registerSuccess = (isset($_GET['registerSuccess'])) ? $_GET['registerSuccess'] : null;
                 if (isset($registerSuccess)) {
-                    $success = "Usuário cadastrado com succesoo!";
+                    $success = "Usuário cadastrado com successo!";
                     if (isset($success)) {
                         echo "<center><div class='alert alert-success' role='alert'>
                             " . $success . "
