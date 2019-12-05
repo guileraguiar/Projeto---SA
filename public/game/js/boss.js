@@ -16,7 +16,7 @@ var BossScene = new Phaser.Class({
             
         // map in json format
         this.load.tilemapTiledJSON('boss-map', 'assets/tilemaps/boss-castle.json');
-
+      
     },
 
     create: function ()
@@ -66,16 +66,34 @@ var BossScene = new Phaser.Class({
         // our player sprite created through the phycis system
         this.player = this.physics.add.sprite(376, 360, 'player', 6);
 
-        this.king = this.physics.add.sprite(568, 56, 'npc');
-        this.king.visible = false;
+        this.king = this.physics.add.sprite(568, 56, 'king');
+        this.king.visible = true;
+
+        this.closeGame = this.physics.add.sprite(600, 40, 'npc');
+        this.closeGame.visible = false;
+
+        this.prisionDoor = this.physics.add.sprite(568, 72, 'prision-door');
+        this.prisionDoor.visible = true;
+
+        this.scroll = this.physics.add.sprite(568, 40, 'scroll');
+        this.scroll.visible = false;
 
         this.humanBoss = this.physics.add.sprite(376, 56, 'human-boss');
         this.humanBoss.visible = true;
 
+        this.nearhumanboss = this.physics.add.sprite(376, 64, 'human-boss');
+        this.nearhumanboss.visible = false;
+
+        this.neardemonboss = this.physics.add.sprite(520, 184, 'human-boss');
+        this.neardemonboss.visible = false;
+
         this.demonBoss = this.physics.add.sprite(552, 184, 'demon-boss');
         this.demonBoss.visible = false;
 
-        this.leaveBoss = this.physics.add.sprite(376, 380, 'door');
+        this.edward = this.physics.add.sprite(552, 184, 'npc');
+        this.edward.visible = false;
+
+        this.leaveBoss = this.physics.add.sprite(376, 386, 'door');
         this.leaveBoss.visible = false;
         
         InventoryKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.I);
@@ -98,8 +116,14 @@ var BossScene = new Phaser.Class({
         
         this.physics.add.overlap(this.player, this.leaveBoss, this.onLeaveBoss, false, this);
         this.physics.add.overlap(this.player, this.king, this.displayMessageKing, this.processCallback, this);
-        this.physics.add.overlap(this.player, this.humanBoss, this.displayMessageBoss, this.processCallback, this);
-        this.physics.add.overlap(this.player, this.demonBoss, this.displayMessageDemonBoss, this.processCallback, this);
+        this.physics.add.overlap(this.player, this.prisionDoor, this.removePrisionDoor, false, this);
+        this.physics.add.overlap(this.player, this.closeGame, this.CloseGame, false, this);
+        this.physics.add.overlap(this.player, this.humanBoss, this.onMeetBoss, this.processCallback, this);
+        this.physics.add.overlap(this.player, this.edward, this.onMeetEdward, this.processCallback, this);
+        this.physics.add.overlap(this.player, this.scroll, this.onReadScroll, this.processCallback, this);
+        this.physics.add.overlap(this.player, this.nearhumanboss, this.onNearBoss, this.processCallback, this);
+        this.physics.add.overlap(this.player, this.neardemonboss, this.onNearDemon, this.processCallback, this);
+        this.physics.add.overlap(this.player, this.demonBoss, this.onMeetDemonBoss, this.processCallback, this);
         // we listen for 'wake' event
         this.sys.events.on('wake', this.wake, this);
        
@@ -111,7 +135,8 @@ var BossScene = new Phaser.Class({
         this.cursors.up.reset();
         this.cursors.down.reset();
     },
-    onLeaveCastle: function(player, zone) {   
+    onLeaveBoss: function(player, zone) {   
+        spawnPoint = "florest";
         this.anims.remove('left');    
         this.anims.remove('right'); 
         this.anims.remove('up'); 
@@ -140,42 +165,72 @@ var BossScene = new Phaser.Class({
     dialogCallback : function(){
         this.dialog = false;
     },
+    CloseGame: function() {
+        window.location.href = "http://localhost/SteelFreak/public/index.php?pagina=pageWiki"
+    },
+    onReadScroll: function() {
+        this.player.body.setVelocityX(0);
+        this.player.body.setVelocityY(0);
+        this.sys.install('FullScreenDialogModalPlugin');
+        this.sys.dialogModal.init();
+        this.sys.dialogModal.setText('Agonizing Village III\n\nVocê chegou ao fim de Agonizing Village III.\n\nO Rei Ianes conjurou uma magia com os poderes da Coroa e viajou entre o espaço-tempo, fugindo permanentemente (ou não?) de Geraldo.\nGeraldo, por sua vez, não retornou ao reinado pois seria acusado como um traidor e sua cabeça seria caçada. Portanto, o grande bruxo Geraldo saiu em viagem pelo mundo para aprimorar suas habilidades e se tornar poderoso o suficiente para conseguir abrir uma fenda no espaço-tempo e buscar a vingança contra o Rei Ianes. Mas esta é uma história para um próximo Agonizing Village.\n\nE aí? Gostou do jogo? Por favor, nos dê seu feedback: steelfrealbrasil@gmail.com \n\nNos despedimos por aqui por enquanto mas, sinta-se a vontade para sempre jogar nosso jogo Agonizing Village III.\n\nAgradecimento especial: Alisson Pospor\nProfessores(as): Juliana Martins, Jean Capote, João Pereira, que nos ensinaram, acompanharam e apoiaram a realizar este projeto.\n\nAnde até o bloco com símbolo de "!"', true);
+        this.dialog = true;
+        this.scroll.destroy();
+    },
 
+    removePrisionDoor: function() {
+        this.prisionDoor.destroy(); 
+        
+    },
     displayMessageKing: function() {
         this.player.body.setVelocityX(0);
         this.player.body.setVelocityY(0);
         this.sys.install('DialogModalPlugin');
         this.sys.dialogModal.init();
-        this.sys.dialogModal.setText('Rei Ianes diz:\nObrigado, grande guerreiro! Você salvou à mim e meu reinado desta terrível maldição. Eu cometi um erro grave ao vender minha alma à este demônio em troca da juventude eterna. Vamos, vamos voltar ao reinado para que possamos comemorar esta vitória!', true);
+        this.sys.dialogModal.setText('Rei Ianes diz:\nAgora que esse imbecil lhe contou tudo, não poderei deixar que se aproxime. Estou indo nesse, nos encontramos no inferno!\n\nAviso: Ianes utiliza os poderes de sua coroa mágica e foge pelo espaço-tempo.', true);
         this.dialog = true; 
+        this.king.destroy();
+        
     },
-    displayMessageBoss: function() {
-        this.player.body.setVelocityX(0);
-        this.player.body.setVelocityY(0);
-        this.sys.install('DialogModalPlugin');
-        this.sys.dialogModal.init();
-        this.sys.dialogModal.setText('Homem diz:\nAlto lá! Daqui ninguém poderá passar. Se quiserem continuar, terão que me enfrentar.', true);
-        this.dialog = true;
-        this.humanBoss.destroy(); 
-    },
-
-    displayMessageDemonBoss: function() {
+    onNearDemon: function() {
         this.player.body.setVelocityX(0);
         this.player.body.setVelocityY(0);
         this.sys.install('DialogModalPlugin');
         this.sys.dialogModal.init();
         this.sys.dialogModal.setText('??? diz:\nVocê não pensou que seria tão fácil, pensou?\nCONHEÇA MINHA VERDADEIRA FORMA!!!!', true);
         this.dialog = true;
+        this.cameras.main.shake(300);    
+        this.neardemonboss.destroy();
+    },
+    onMeetDemonBoss: function() {
+        FinalBoss = true;
+        this.player.body.setVelocityX(0);
+        this.player.body.setVelocityY(0);
+        this.cameras.main.shake(300);    
+      
+    
+        this.input.stopPropagation();
+        // start battle 
+        this.scene.switch('BattleScene');
         this.demonBoss.destroy(); 
     },
-    onMeetBoss: function(player, zone) {    
+    onNearBoss: function(player, zone) {         
+        this.player.body.setVelocityX(0);
+        this.player.body.setVelocityY(0);
+        this.sys.install('DialogModalPlugin');
+        this.sys.dialogModal.init();
+        this.sys.dialogModal.setText('Homem diz:\nAlto lá! Daqui ninguém poderá passar. Se quiserem continuar, terão que me enfrentar. ', true);
+        this.dialog = true;
+        this.cameras.main.shake(300);    
+        this.nearhumanboss.destroy();
+   
+},
+    onMeetBoss: function(player, zone) {     
+            boss = true;    
+            spawnPoint = "boss"
             this.player.body.setVelocityX(0);
             this.player.body.setVelocityY(0);
-            this.sys.install('DialogModalPlugin');
-            this.sys.dialogModal.init();
-            this.sys.dialogModal.setText('Homem diz:\nAlto lá! Daqui ninguém poderá passar. Se quiserem continuar, terão que me enfrentar. ', true);
-            this.dialog = true;
-            this.cameras.main.shake(300);    
+               
             // we move the zone to some other location
             zone.x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
             zone.y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
@@ -185,6 +240,16 @@ var BossScene = new Phaser.Class({
             this.humanBoss.destroy();
        
     },
+    onMeetEdward: function(player, zone) {         
+        this.player.body.setVelocityX(0);
+        this.player.body.setVelocityY(0);
+        this.sys.install('DialogModalPlugin');
+        this.sys.dialogModal.init();
+        this.sys.dialogModal.setText('Edward diz:\nO Rei.. não é quem você pensa que é, tome cuidado! Ele vendeu a alma há 50 anos atrás para os demônios, ele só foi sequestrado por causa de sua coroa mágica, feita de Ouro Élfico. Geraldo... você me salvou deste feitiço, agora poderei descansar em paz...  ', true);
+        this.dialog = true;
+        this.edward.destroy();
+   
+},
     openInvetory : function(){
         InventoryKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.I);
         this.player.body.setVelocityX(0);
