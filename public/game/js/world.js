@@ -304,20 +304,20 @@ var WorldScene = new Phaser.Class({
         // Horizontal movement
         if (this.cursors.left.isDown)
         {
-            this.player.body.setVelocityX(-45);
+            this.player.body.setVelocityX(-90);
         }
         else if (this.cursors.right.isDown)
         {
-            this.player.body.setVelocityX(45);
+            this.player.body.setVelocityX(90);
         }
         // Vertical movement
         if (this.cursors.up.isDown)
         {
-            this.player.body.setVelocityY(-45);
+            this.player.body.setVelocityY(-90);
         }
         else if (this.cursors.down.isDown)
         {
-            this.player.body.setVelocityY(45);
+            this.player.body.setVelocityY(90);
         }        
 
         // Update the animation last and give left/right animations precedence over up/down animations
