@@ -66,8 +66,7 @@ if (isset($_SESSION['user'])) :
             style="margin-bottom:50px" target="_blank" class="btn btn-light mx-auto d-block fonteLabel">Baixar!</a>
 
             <p class="sinopse">Jogar Agonizing Village 3</p>
-            <a href="https://drive.google.com/file/d/1VjjR90bn697hAvDxT2nKDU9pI1igpk2t/view?usp=sharing"
-            style="margin-bottom:50px" target="_blank" class="btn btn-light mx-auto d-block fonteLabel">Jogar!</a>
+            <a href="../public/game" style="margin-bottom:50px" target="_blank" class="btn btn-light mx-auto d-block fonteLabel">Jogar!</a>
         
         </div>
 </center>

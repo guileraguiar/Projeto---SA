@@ -7,8 +7,8 @@
             <div class="row">
                 <div class="col-sm-0" style='margin-left:5px; width:200px;' class='rounded float-left profileImage' alt='...'>
                 </div>
-                <div class="circle">
-                    <img class="imgCircle" height="160" src="../public/images/geraldofrente.png">
+                <div class="circle" style="margin-left:10%;">
+                    <img class="imgCircle" style="margin-left:1px;" height="160" src="../public/images/geraldofrente.png">
                     <?php if ($userSession['u_type'] == 2) : ?>
                         <img class="ml-4 mt-5" height="160" src="../public/images/coroa.png">
                     <?php endif; ?>

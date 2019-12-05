@@ -54,7 +54,7 @@ if (isset($_SESSION['user'])&& $userSession["u_type"] == 1) :
             </p>
         </div>
     </div>
-    <div class="row" style="margin-left:5%;">
+    <div class="row" style="margin-left:10.5%;">
         <div class="BlockDevs containerDevs profileBTxt2">
         <img class="mt-2 mb-3 imgDevs mold" src="images/developers/felipe.jpg" class="mx-auto d-block" alt=""  height="215" width="250">
             <div class="miniBlock">
@@ -80,7 +80,7 @@ if (isset($_SESSION['user'])&& $userSession["u_type"] == 1) :
             </div>
         </div>
     </div>
-    <div class="row" style="margin-left:4%;">
+    <div class="row" style="margin-left:6%;">
         <div class="BlockDevs containerDevs profileBTxt2" style="margin-left:23%;">
         <img class="mt-2 mb-3 imgDevs mold" src="images/developers/artur.jpg" class="mx-auto d-block" alt=""  height="215" width="250">
             <div class="miniBlock">
@@ -111,7 +111,7 @@ if (isset($_SESSION['user']) && $userSession["u_type"] == 2) :
             </p>
         </div>
     </div>
-    <div class="row" style="margin-left:5%;">
+    <div class="row" style="margin-left:10.5%;">
         <div class="BlockDevs containerDevs profileBTxt2">
         <img class="mt-2 mb-3 imgDevs mold" src="images/developers/felipe.jpg" class="mx-auto d-block" alt=""  height="215" width="250">
             <div class="miniBlock">
@@ -137,7 +137,7 @@ if (isset($_SESSION['user']) && $userSession["u_type"] == 2) :
             </div>
         </div>
     </div>
-    <div class="row" style="margin-left:4%;">
+    <div class="row" style="margin-left:6%;">
         <div class="BlockDevs containerDevs profileBTxt2" style="margin-left:23%;">
         <img class="mt-2 mb-3 imgDevs mold" src="images/developers/artur.jpg" class="mx-auto d-block" alt=""  height="215" width="250">
             <div class="miniBlock">
