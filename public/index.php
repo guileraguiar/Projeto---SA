@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bem Vindo</title>
+    <!-- favicon -->
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/logo.png"/>
     <!-- CSS //-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/imagem.css">
