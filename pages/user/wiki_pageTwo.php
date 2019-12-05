@@ -1,5 +1,5 @@
 <img src="images/logoav3.png" class="mx-auto d-block" alt="" height="200" width="200">
-<section class="bodyWikiTwo" style="margin-left:20.5%;">
+<section class="bodyWikiTwo" style="margin-left:20%;">
     <div class="blockWiki fundobranco backgroundWiki row" style="text-align:center;">
         <div class="textWiki profileBTxt col-sm" style="">
             <img src="images/geraldocostas.png" class="mx-auto d-block" alt="" height="200" width="200">
@@ -12,7 +12,7 @@
         </div>
     </div>
 </section>
-<div class="container" style="text-align:center;">
+<div class="container" style="text-align:center;"  style="margin-left:9.5%;">
     <div class="fundobranco2 profileBTxt blockWiki2">
         <center>
             <h3 style="color:yellow;">O JOGO</h3>
