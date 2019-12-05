@@ -246,7 +246,7 @@ var WorldScene = new Phaser.Class({
     },
 
     onEnterFlorest1: function(player, zone) {  
-        
+        backgroundSet = "florest";
         this.anims.remove('left');    
         this.anims.remove('right'); 
         this.anims.remove('up'); 
@@ -258,7 +258,7 @@ var WorldScene = new Phaser.Class({
         
     },
     onEnterFlorest2: function(player, zone) {  
-       
+        backgroundSet = "florest"
         this.anims.remove('left');    
         this.anims.remove('right'); 
         this.anims.remove('up'); 
@@ -283,7 +283,7 @@ var WorldScene = new Phaser.Class({
     },
 
     onEnterCave: function(player, zone) {  
-     
+        backgroundSet = "cave";
         this.anims.remove('left');    
         this.anims.remove('right'); 
         this.anims.remove('up'); 

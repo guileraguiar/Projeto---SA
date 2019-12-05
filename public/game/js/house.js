@@ -68,6 +68,9 @@ var HouseScene = new Phaser.Class({
         // our player sprite created through the phycis system
         this.player = this.physics.add.sprite(360, 245, 'player', 6);
 
+        this.startScroll = this.physics.add.sprite(360, 245, 'scroll');
+        this.startScroll.visible = false;
+
         this.leaveHouse = this.physics.add.sprite(360, 272, 'door');
         this.leaveHouse.visible = false;
         
@@ -118,6 +121,7 @@ var HouseScene = new Phaser.Class({
         this.physics.add.overlap(this.player, this.chest2, this.displayMessageChest2, this.processCallback, this);
         this.physics.add.overlap(this.player, this.armor, this.displayMessageArmor, this.processCallback, this);
         this.physics.add.overlap(this.player, this.scroll, this.displayMessageScroll, this.processCallback, this);
+        this.physics.add.overlap(this.player, this.startScroll, this.displayStartScroll, this.processCallback, this);
         this.physics.add.overlap(this.player, this.scroll2, this.displayMessageScroll2, this.processCallback, this);
         this.physics.add.overlap(this.player, this.bed, this.displayMessageBed, this.processCallback, this);
         this.physics.add.overlap(this.player, this.book, this.displayMessageBook, this.processCallback, this);
@@ -148,6 +152,15 @@ var HouseScene = new Phaser.Class({
 
     dialogCallback : function(){
         this.dialog = false;
+    },
+    displayStartScroll: function() {
+        this.player.body.setVelocityX(0);
+        this.player.body.setVelocityY(0);
+        this.sys.install('FullScreenDialogModalPlugin');
+        this.sys.dialogModal.init();
+        this.sys.dialogModal.setText('Bem Vindo à Agonizing Village III\n\nGeraldo acorda em sua casa com uma mensagem do Duque em sua porta que dizia: "Geraldo, você está sendo convocado para procurar o nosso Rei, Ianes. Realizaremos para você qualquer desejo que queiras desde que traga-o são e salvo para o nosso reinado. Lembre-se, caso recuse esta convocação, trataremos como desonra e desobediência direta à corte, sendo aplicada todas as leis impostas pelo Rei, em outras palavras, você será tratado como criminoso e terá uma recompensa por sua cabeça."\nGeraldo, ao ler esta mensagem, pega seus pertences e inicia sua jornada. Apesar de não temer o exército do império, seria um incomodo ter uma recompensa por sua cabeça.\n\nInstruções: Ao encostar em um objeto interativo, uma ação será realizada, preste atenção, existem objetos invisíveis.\n\nAções: Utilize as setas do teclado ou as teclas W A S D para andar.\n\nEm batalha: Setas CIMA e BAIXO realizam a navegação nos menus e BARRA DE ESPAÇO confirma a ação selecionada.\n\nBoa sorte!', true);
+        this.dialog = true;
+        this.startScroll.destroy();
     },
 
     openBlueDoor: function() {

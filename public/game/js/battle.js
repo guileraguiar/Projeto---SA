@@ -10,13 +10,13 @@ var BattleScene = new Phaser.Class({
     },
     create: function ()
     {    
-
-        if(spawnPoint=="cave"){
-            var background = this.add.image(384, 192, "caveBackground");
-        }else if (spawnPoint=="florest"){
-            var background = this.add.image(384, 192, "florestBackground");
+        debugger
+        if(backgroundSet=="cave"){
+            this.add.image(384, 192, "caveBackground");
+        }else if (backgroundSet=="florest"){
+            this.add.image(384, 192, "florestBackground");
         }else{
-            var background = this.add.image(384, 192, "caveBackground");
+            this.add.image(384, 192, "bossBackground");
         }
         this.startBattle();
         // on wake event we call startBattle too
@@ -30,10 +30,16 @@ var BattleScene = new Phaser.Class({
         this.add.existing(geraldo);
         geraldo.visible=false;
         console.log(enemyRandom);
-        if (boss==true){
-            var drawed = new Enemy(this, 290, 100, "finalboss", null, "drawed");
+        if(FinalBoss==true){
+            var drawed = new Enemy(this, 384, 192, "demonboss", null, "Demon");
             this.add.existing(drawed);
             this.enemies = [ drawed ];
+            
+        }else if (boss==true){
+            var drawed = new Enemy(this, 290, 192, "bossHuman", null, "Drawed");
+            this.add.existing(drawed);
+            this.enemies = [ drawed ];
+            drawed.setScale(2);
         }else{
             var enemyRandom = Math.floor(Math.random() * 6);
             if (enemyRandom == 0) {
@@ -164,11 +170,91 @@ var BattleScene = new Phaser.Class({
             experience += this.enemies.length*expEnemy;
             if(experience>=20){
                 this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=100){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=200){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=300){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=400){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=500){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=600){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=700){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=800){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
+            }else if(experience>=900){
+                this.scene.events.emit("Message", "Level UP! Aperte I e acompanhe seus status");
+                level += 1;
+                hp += 25;
+                mana += 10;
+                atk += 4;
+                def += 2;
             }
+            if(spawnPoint=="cave"){
             // sleep the UI
             this.scene.sleep('UIScene');
-            // return to WorldScene and sleep current BattleScene
+            // return to CaveScene and sleep current BattleScene
             this.scene.switch('CaveScene');
+            }else if(spawnPoint=="florest"){
+                // sleep the UI
+                this.scene.sleep('UIScene');
+                // return to FlorestScene and sleep current BattleScene
+                this.scene.switch('FlorestScene');
+            }else{
+                // sleep the UI
+                this.scene.sleep('UIScene');
+                // return to BossScene and sleep current BattleScene
+                this.scene.switch('BossScene');
+            }
         }else{
             this.scene.events.emit("Message", "Geraldo foi derrotado!");
             this.scene.sleep("UIScene");
@@ -194,11 +280,18 @@ var Unit = new Phaser.Class({
         atk;
         this.living = true;         
         this.menuItem = null;
-        if (boss==true){
+        if (FinalBoss==true){
+            hpEnemy = 200;
+            defEnemy = 10;
+            atkEnemy = 15;
+            expEnemy = 200;
+            
+        }else if (boss==true){
             hpEnemy = 100;
             defEnemy = 10;
             atkEnemy = 15;
             expEnemy = 200;
+            
         }else{
             //Atributos inimigos
             if(level <= 5){
@@ -321,7 +414,6 @@ var PlayerCharacter = new Phaser.Class({
     initialize:
     function PlayerCharacter(scene, x, y, texture, frame, type) {
         Unit.call(this, scene, x, y, texture, frame, type, hp, mana, atk, def, level);
-        // flip the image so I don"t have to edit it manually
         
     }
 });
@@ -437,10 +529,12 @@ var HeroesMenu = new Phaser.Class({
     Extends: Menu,
     
     initialize:
-            
-    function HeroesMenu(x, y, scene) {
-        Menu.call(this, x, y, scene);                    
-    }
+                
+        function HeroesMenu(x, y, scene) {
+            Menu.call(this, x, y, scene);    
+            this.addMenuItem("Vida: ");
+            this.addMenuItem("Mana: ");                       
+        }
 });
 
 var ActionsMenu = new Phaser.Class({
@@ -524,10 +618,10 @@ var UIScene = new Phaser.Class({
         this.actionsMenu = new ActionsMenu(260, 286, this);
         //Inimigos            
         this.enemiesMenu = new EnemiesMenu(353, 286, this);
-        //Menu de Item
-        //this.itemMenu = new ItemMenu(74, 286, this);
-        //Menu de Magia
-        //this.magicMenu = new MagicMenu(167, 286, this);
+        // Menu de Item
+        // this.itemMenu = new ItemMenu(74, 286, this);
+        // Menu de Magia
+        // this.magicMenu = new MagicMenu(167, 286, this);
 
 
         // the currently selected menu 
@@ -601,6 +695,7 @@ console.log("index: "+index)
     remapHeroes: function() {
         var heroes = this.battleScene.heroes;
         this.heroesMenu.remap(heroes);
+       
     },
     remapEnemies: function() {
         var enemies = this.battleScene.enemies;
@@ -612,9 +707,7 @@ console.log("index: "+index)
                 this.currentMenu.moveSelectionUp();
             } else if(event.code === "ArrowDown") {
                 this.currentMenu.moveSelectionDown();
-            } else if(event.code === "ArrowRight" || event.code === "Shift") {
-
-            } else if(event.code === "Space" || event.code === "ArrowLeft") {
+            } else if(event.code === "Space") {
                 this.currentMenu.confirm();
             } 
         }
