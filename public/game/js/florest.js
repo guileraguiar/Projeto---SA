@@ -230,12 +230,14 @@ var FlorestScene = new Phaser.Class({
         this.scene.sleep();
         this.scene.start('WorldScene');
     },
-    onEnterBossCastle: function(player, zone) {    
+    onEnterBossCastle: function(player, zone) {   
+        backgroundSet = "boss";
         this.anims.remove('left');    
         this.anims.remove('right'); 
         this.anims.remove('up'); 
         this.anims.remove('down');
         spawnFlorest = "spawn3";
+        spawnPoint = "boss";
         this.scene.sleep();
         this.scene.start('BossScene');
     },

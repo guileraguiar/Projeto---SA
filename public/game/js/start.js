@@ -41,11 +41,11 @@ var goldenKey = false;
 var houseKey = false;
 
 // Atributos do Personagem
-    var level = 15;
+    var level = 1;
     var hp = 100;
     var mana = 100;
     var def = 1;
-    var atk = 5;
+    var atk = 50;
     var experience = 0;
     var magicDescription = ["Incendiar","Barreira","Aprisionar"];
     var ignite = (level+atk)/2;
@@ -71,6 +71,7 @@ var houseKey = false;
     var expEnemy;
 //Se 'boss' for true, os dados de inimigo serão atualizados
     var boss = false;
+    var FinalBoss = false;
 
 //XP ganha de acordo com level
 /*
@@ -108,3 +109,4 @@ var npc7 = false;
 //
 var options;
 var endGame;
+var backgroundSet;
