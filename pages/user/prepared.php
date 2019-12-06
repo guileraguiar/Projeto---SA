@@ -23,7 +23,7 @@ if (isset($_SESSION['user'])) {
                     <a href="?pagina=controlsPage" class="proximo" style="color:yellow;">Voltar</a>
                 </div>
                 <div class="col">
-                    <a href="?pagina=registerPage" class="proximo" style="color:yellow;">Cadastrar-se</a>
+                    <a href="?pagina=register" class="proximo" style="color:yellow;">Cadastrar-se</a>
                 </div>
             </div>
         </div>
